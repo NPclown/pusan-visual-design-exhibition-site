@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from "../../logo.svg";
+import {Image} from 'react-bootstrap'
 
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
@@ -9,7 +9,7 @@ const Home = () =>{
     return (
         <div className="App">
           <Header></Header>
-          <img src={logo} className="App-logo" alt="logo" />
+          <Image src="/image/main/main.jpg" className="Main-logo" alt="logo" fluid />
           <Footer></Footer>
       </div>
     );
