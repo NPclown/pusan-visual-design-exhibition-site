@@ -1,7 +1,9 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
-import {Container, Row, Col, Dropdown, Form, Button} from 'react-bootstrap';
+import {Container, Row, Col, Form, Button} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
+import { faBars } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 import '../../assets/header.css'
 
@@ -11,11 +13,14 @@ const Header = () =>{
     return (
         <Container className="header"> 
             <Row>
-                <Col md={1}><Link to='/'>Home</Link></Col>
-                <Col md={1}><Link to='/profile'>프로필</Link></Col>
-                <Col md={1}><Link to='/art'>작품</Link></Col>
-                <Col md={1}><Link to='/guest'>방명록</Link></Col>
-                <Col md={1}><Link to='/about'>졸업주관</Link></Col>
+                <Link to='#'>
+                    <FontAwesomeIcon className="mobile--logo" icon={faBars}/>
+                </Link>
+                <Col className="menu"><Link to='/'>Home</Link></Col>
+                <Col className="menu"><Link to='/profile'>프로필</Link></Col>
+                <Col className="menu"><Link to='/art'>작품</Link></Col>
+                <Col className="menu"><Link to='/guest'>방명록</Link></Col>
+                <Col className="menu"><Link to='/about'>졸업주관</Link></Col>
                 <Col md={{span:5, offset:2}}>
                     <Form>
                         <Form.Row className="align-items-center">
