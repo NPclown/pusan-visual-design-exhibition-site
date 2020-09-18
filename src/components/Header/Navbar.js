@@ -1,35 +1,31 @@
-import React, { Component } from 'react';
+import React, {useState} from 'react';
 import { MenuItems } from "./MenuItems"
 import './Navbar.css'
 
-class Navbar extends Component {
-    state = { clicked: false }
+const Navbar = () => {
+    const [navbar, setNavbar] = useState(false)
 
-    handleClick = () => {
-        this.setState({ clicked: !this.state.clicked })
-    }
+    const showNavbar = () => setNavbar(!navbar)
 
-    render() {
-        return(
-            <nav className="NavbarItems">
-                <h1 className="navbar-logo">React<i className="fab fa-react"></i></h1>
-                <div className="menu-icon" onClick={this.handleClick}>
-                    <i className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}></i>
-                </div>
-                <ul className={this.state.clicked ? 'nav-menu active' : 'nav-menu'}>
-                    {MenuItems.map((item, index) => {
-                        return (
-                            <li key={index}>
-                                <a className={item.cName} href={item.url}>
-                                {item.title}
-                                </a>
-                            </li>
-                        )
-                    })}
-                </ul>
-            </nav>
-        )
-    }
+    return(
+        <nav className="NavbarItems">
+            <h1 className="navbar-logo">React<i className="fab fa-react"></i></h1>
+            <div className="menu-icon" onClick={showNavbar}>
+                <i className={navbar ? 'fas fa-times' : 'fas fa-bars'}></i>
+            </div>
+            <ul className={navbar ? 'nav-menu active' : 'nav-menu'}>
+                {MenuItems.map((item, index) => {
+                    return (
+                        <li key={index}>
+                            <a className={item.cName} href={item.url}>
+                            {item.title}
+                            </a>
+                        </li>
+                    )
+                })}
+            </ul>
+        </nav>
+    )
 }
 
 export default Navbar

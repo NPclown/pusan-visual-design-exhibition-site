@@ -8,10 +8,11 @@
 }
 
 .navbar-logo {
-    color: #fff;
+    color: rgb(56, 30, 30);
     justify-self: start;
     margin-left: 20px;
     cursor: pointer;
+    width: 250px;
 }
 
 .fa-react {
@@ -28,6 +29,8 @@
     width: 70vw;
     justify-content: end;
     margin-right: 2rem;
+    margin-top : auto;
+    margin-bottom : auto;
 }
 
 .nav-links {
@@ -95,7 +98,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        transform: translate(25%, 50%);
+        transform: translate(3%, 30%);
     }
 
     .menu-icon {
@@ -103,7 +106,7 @@
         position: absolute;
         top: 0;
         right: 0;
-        transform: translate(-100%, 60%);
+        transform: translate(-100%, 50%);
         font-size: 1.8rem;
         cursor: pointer;
     }
