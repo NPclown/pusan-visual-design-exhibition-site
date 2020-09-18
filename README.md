@@ -1,3 +1,9 @@
+# Express Module 적용 및 실행방법
+### Installation
+```yarn```
+### Run
+```npm start```
+
 # API 명세
 **방명록(guest_book) 관련**
 - [/api/get_guest_book](#get_guest_book)
