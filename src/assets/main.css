@@ -1,26 +1,43 @@
+@font-face{
+    font-family: KoPubDotum;
+    font-weight: bold;
+    src: url('./font/KoPubWorld_Dotum_Bold.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: KoPubDotum;
+    font-weight: medium;
+    src: url('./font/KoPubWorld_Dotum_Medium.ttf') format('truetype');
+}
+
+@font-face{
+    font-family: KoPubDotum;
+    font-weight: light;
+    src: url('./font/KoPubWorld_Dotum_Light.ttf') format('truetype');
+}
+
 .header {
     width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
+    height: 70px;
+    border : 3px solid;
     margin-right: auto;
     margin-left: auto;
-    max-width: 960px;
+    max-width: 1200px;
 }
 
 .content {
     width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
+    border : 3px solid;
     margin-right: auto;
     margin-left: auto;
-    max-width: 960px;
+    max-width: 1200px;
 }
 
 .footer {
     width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
+    height: 60px;
+    border : 3px solid;
     margin-right: auto;
     margin-left: auto;
-    max-width: 960px;
+    max-width: 1200px;
 }
