@@ -1,13 +1,17 @@
 import React from 'react';
 import {Image} from 'react-bootstrap';
-import './footer.css';
+import './Footer.css';
 
 const Footer = () =>{
     return (
         <div className="footer">
-            <div className="copyright">copyright <span className="copyright times">@</span> PNU Visual Design Graduation Exhibition All rights reserved.</div>
+            <div className="copyright">
+                <div>
+                    copyright <span className="times">@</span> PNU Visual Design Graduation Exhibition All rights reserved.
+                </div>
+            </div>
             <div className="logo">  
-                <Image src="/image/main/logo.png" alt="logo" fluid />
+                <Image className="test" src="/image/main/logo.png" alt="logo" fluid />
             </div>
         </div>
     );
