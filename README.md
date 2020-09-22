@@ -77,6 +77,7 @@
 |Attribute|Type|Description|Example|
 |---|---|---|---|
 |type|String|게시판 타입|visual_design  advertising_conti_design  design_seminar  digital_media_design|
+
 *type 항목은 다음 4가지 중 하나의 값이 전달되어야합니다.*
 - visual_design
 - advertising_conti_design
