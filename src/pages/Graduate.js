@@ -3,8 +3,6 @@ import React from 'react';
 import Picture from '../components/Profile/Picture'
 import Header from '../components/Header/Header'
 import Footer from '../components/Footer/Footer'
-import { Container } from 'react-bootstrap';
-import { Row, Col} from 'react-bootstrap';
 import '../assets/Picture.css'
 
 const persons = [
@@ -30,17 +28,17 @@ function Graduate() {
     return (
         <div className="Graduate">
           <Header></Header>
-          <Container>
-            <Row>
-              {persons.map((person,index) => {
-              return (
-                <Picture name = {person.name} image = {person.image} subject = {person.subject}></Picture>
-                )
-              }
-              ) //map( 의 ')'
-              }
-            </Row>
-          </Container>
+          <div className = "content">
+              <div className = "row1">
+                {persons.map((person,index) => {
+                return (
+                  <Picture name = {person.name} image = {person.image} subject = {person.subject}></Picture>
+                  )
+                }
+                ) 
+                }
+              </div>
+          </div>
           <Footer></Footer>
       </div>
     )
