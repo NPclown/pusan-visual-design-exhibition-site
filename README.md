@@ -14,6 +14,14 @@
 **4000번 포트로 서비스를 테스트해주세요!!**
 
 # API 명세
+**프로필 (profile) 관련**
+- [/api/get_profile_list](#get_profile_list)
+- [/api/get_profile_detail](#get_profile_detail) (구현 예정)
+
+**게시글 (article) 관련**
+- [/api/get_article_list](#get_article_list)
+- [/api/get_article_detail](#get_article_detail)
+
 **방명록(guest_book) 관련**
 - [/api/get_guest_book](#get_guest_book)
 - [/api/add_guest_book](#add_guest_book)
@@ -24,6 +32,99 @@
 - [/api/add_article_comment](#add_article_comment)
 - [/api/del_article_comment](#del_article_comment)
 
+
+## 프로필 (profile)
+### get_profile_list
+
+**URL** : `/api/get_profile_list`
+
+**Method** : `GET`
+
+**Required Attribute**
+
+|Attribute|Type|Description|Example|
+|---|---|---|---|
+|-|-|-|-|
+
+**Result**
+
+```json
+[
+    {
+        "id": "zVQ85_ij3dM0U5k7PmfQi",
+        "name": "유재석",
+        "description": "유재석 졸업생에 대한 설명입니다.",
+        "thumbnail_path": "/imgs/profile_1.jpg"
+    },
+    {
+        "id": "M7SD0HhvhaqJMBssI9xQX",
+        "name": "노홍철",
+        "description": "노홍철 졸업생에 대한 설명입니다.",
+        "thumbnail_path": "/imgs/profile_2.jpg"
+    },
+    ...
+]
+```
+
+## 게시글 (profile)
+### get_article_list
+**URL** : `/api/get_article_list`
+
+**Method** : `GET`
+
+**Required Attribute**
+
+|Attribute|Type|Description|Example|
+|---|---|---|---|
+|type|String|게시판 타입|visual_design  advertising_conti_design  design_seminar  digital_media_design|
+*type 항목은 다음 4가지 중 하나의 값이 전달되어야합니다.*
+- visual_design
+- advertising_conti_design
+- design_seminar
+- digital_media_design
+
+**Result**
+
+```json
+[
+    {
+        "id": "SOfcGSM6NXtpqszVhXMZ8",
+        "title": "init_data_article_visual_design_title_1",
+        "maker": "박지홍",
+        "thumbnail_path": "/imgs/profile_1.jpg"
+    },
+    {
+        "id": "M7SD0HhvhaqJMBssI9xQX",
+        "name": "노홍철",
+        "description": "노홍철 졸업생에 대한 설명입니다.",
+        "thumbnail_path": "/imgs/profile_2.jpg"
+    },
+    ...
+]
+```
+### get_article_detail
+**URL** : `/api/get_article_detail`
+
+**Method** : `GET`
+
+**Required Attribute**
+
+|Attribute|Type|Description|Example|
+|---|---|---|---|
+|article_id|String|게시글 ID|SOfcGSM6NXtpqszVhXMZ8|
+
+**Result**
+
+```json
+[
+    {
+        "id": "SOfcGSM6NXtpqszVhXMZ8",
+        "title": "init_data_article_visual_design_title_1",
+        "maker": "박지홍",
+        "img_path": "/imgs/article_1_original.jpg"
+    }
+]
+```
 
 ## 방명록 (guest_book)
 ### get_guest_book
@@ -73,7 +174,7 @@
 **Result**
 
 ```json
-Success | Fail
+True | False
 ```
 
 ### del_guest_book
@@ -92,7 +193,7 @@ Success | Fail
 **Result**
 
 ```json
-Success | Fail
+True | False
 ```
 
 ## 게시글 (article_comment)
@@ -100,13 +201,13 @@ Success | Fail
 
 **URL** : `/api/get_article_comment`
 
-**Method** : `POST`
+**Method** : `GET`
 
 **Required Attribute**
 
 |Attribute|Type|Description|Example|
 |---|---|---|---|
-|article_id|Int|게시글 아이디|1|
+|article_id|String|게시글 ID|SOfcGSM6NXtpqszVhXMZ8|
 
 **Result**
 
@@ -144,7 +245,7 @@ Success | Fail
 **Result**
 
 ```json
-Success | Fail
+True | False
 ```
 
 ### del_article_comment
@@ -164,5 +265,5 @@ Success | Fail
 **Result**
 
 ```json
-Success | Fail
+True | False
 ```
