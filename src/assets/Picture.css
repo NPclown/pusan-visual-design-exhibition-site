@@ -24,16 +24,22 @@
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #000000);  color: #f1f1f1;
   width: 100%;
   transition: .5s ease;
-  opacity:0;
-  color: white;
   font-size: 26px;
   padding: 8px;
   text-align: left;
+  opacity: 0;
+  font-family: KoPubDotum;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
 }
 
 /* When you mouse over the container, fade in the overlay title */
 .container1:hover .overlay {
-  opacity: 1;
+  opacity: 0.9;
 }
 
 .row1 {

@@ -11,6 +11,8 @@ function App() {
       <Switch>
         <Route exact path="/" render={(props) => <Home {...props} />} />
         <Route exact path="/profile" render={(props) => <Graduate {...props} />} />
+        <Route exact path="/profile/detail/:idx" render={(props) => <Graduate/*졸업자 상세페이지*/ {...props} />} />
+
       </Switch>
     </Router>
   );
