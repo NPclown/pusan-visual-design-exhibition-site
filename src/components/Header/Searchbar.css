@@ -1,0 +1,60 @@
+.SearchBarItems {
+    background: #ffffff;
+    height: 70px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    float : right;
+    
+    opacity: 0.9;
+    font-family: KoPubDotum;
+    font-size: 26px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+}
+
+select {
+    width: 100px;
+    border: 0px solid #999;
+    background: url('/arrow.jpg') no-repeat 100% 50%;
+    border-radius: 0px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    opacity: 0.9;
+    font-family: KoPubDotum;
+    font-size: 26px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+}
+    
+input {
+    margin: auto 10px auto 10px !important;
+    width : 150px;
+    height: 40px;
+    text-decoration: none; 
+    border: #000000 solid; 
+    border-width: 0 0 1.5px 0;
+
+    opacity: 0.9;
+    font-family: KoPubDotum;
+    font-size: 26px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+}
+
+i {
+    opacity: 0.9;
+    font-size: 40px;
+    color : #000000;
+}

@@ -4,6 +4,7 @@
     display: flex;
     justify-content: start;
     align-items: center;
+    float : left;
 
     opacity: 0.9;
     font-family: KoPubDotum;
@@ -36,7 +37,7 @@
     color: #000000;
     text-decoration: none; 
     border: #00964f solid; 
-    border-width: 0 0 6px 0;
+    border-width: 0 0 10px 0;
 }
 
 .nav-links-mobile {
