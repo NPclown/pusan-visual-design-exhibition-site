@@ -1,22 +1,15 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { MenuItems } from "./MenuItems"
 import './Navbar.css'
 
-const Navbar = () => {
-    const [navbar, setNavbar] = useState(false)
-
-    const showNavbar = () => setNavbar(!navbar)
-
+const Navbar = (props) => {
     return(
         <nav className="NavbarItems">
-            <div className="menu-icon" onClick={showNavbar}>
-                <i className={navbar ? 'fas fa-times' : 'fas fa-bars'}></i>
-            </div>
-            <ul className={navbar ? 'nav-menu active' : 'nav-menu'}>
+            <ul className='nav-menu'>
                 {MenuItems.map((item, index) => {
                     return (
                         <li key={index}>
-                            <a className={item.cName} href={item.url}>
+                            <a className={item.title===props.state?item.cActive:item.cName} href={item.url}>
                             {item.title}
                             </a>
                         </li>

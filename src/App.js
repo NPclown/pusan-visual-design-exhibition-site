@@ -3,8 +3,8 @@ import { HashRouter , MemoryRouter ,Link, Route, Switch, BrowserRouter as Router
 import Home from './pages/Home';
 import Graduate from './pages/Graduate'
 import GraduateDetail from './pages/GraduateDetail'
+import NoMatch from './pages/NoMatch';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
 
 function App() {
   return (
@@ -13,11 +13,10 @@ function App() {
         <Route exact path="/" render={(props) => <Home {...props} />} />
         <Route exact path="/profile" render={(props) => <Graduate {...props} />} />
         <Route exact path="/profile/detail/:idx" component={GraduateDetail } />
-
+        <Route exact path="*" render={(props) => <NoMatch {...props} />} />
       </Switch>
     </Router>
   );
 }
 
 export default App
-//<Route path="/posts/:postId" component={Post} />
