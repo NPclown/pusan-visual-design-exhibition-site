@@ -4,6 +4,7 @@ import Picture from '../components/Profile/Picture'
 import Header from '../components/Header/Header'
 import Footer from '../components/Footer/Footer'
 import '../assets/Picture.css';
+import { HashRouter , MemoryRouter ,Link, Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 
 const persons = [
   { idx:1, name:'LEE', subject:'과목1',image:'/image/박보검.JPG'},
@@ -30,9 +31,9 @@ const Graduate=({match})=> {
           <Header></Header>
           <div className = "content">
               <div className = "row1">
-                {persons.map((person) => {
+                {persons.map((person,index) => {
                 return (
-                <Link to = {'/profile/detail/${idx}'}>{idx}
+                  <Link to = {`profile/detail/${person.idx}`}>
                   <Picture name = {person.name} image = {person.image} subject = {person.subject} idx={person.idx}></Picture>
                   </Link>
                   )
