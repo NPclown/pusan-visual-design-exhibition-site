@@ -37,6 +37,18 @@
     border-width: 0 0 10px 0;
 }
 
+.small {
+    opacity: 0.9;
+    font-family: KoPubDotum;
+    font-size: 18px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #000000;    
+}
+
 .right:hover {
     cursor: pointer;
 }
@@ -47,14 +59,16 @@
 }
 
 .group {
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    grid-gap: 32px;
+    display: flex;
+    /* grid-template-columns: repeat(3, auto);
+    grid-gap: 32px; */
     list-style: none;
     margin-bottom: 30px;
 }
 
 .write {
+    min-width: 70px;
+    margin-right: 32px;
     opacity: 0.9;
     font-family: KoPubDotum;
     font-size: 16px;
@@ -67,6 +81,7 @@
 }
 
 .cont {
+    width: 965px;
     opacity: 0.9;
     font-family: KoPubDotum;
     font-size: 16px;
@@ -79,6 +94,8 @@
 }
 
 .date {
+    min-width: 95px;
+    margin-left : 32px;
     opacity: 0.9;
     font-family: KoPubDotum;
     font-size: 16px;
