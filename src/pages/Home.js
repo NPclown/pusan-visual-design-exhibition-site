@@ -9,7 +9,7 @@ import '../assets/main.css'
 const Home = () =>{
     return (
         <div className="App">
-          <Header></Header>
+          <Header state="홈"></Header>
           <div className="content">
               <div> 
                 <Image src="/image/main/main.jpg" className="Main-logo" alt="logo" fluid />
