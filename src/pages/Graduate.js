@@ -4,7 +4,7 @@ import Picture from '../components/Profile/Picture'
 import Header from '../components/Header/Header'
 import Footer from '../components/Footer/Footer'
 import '../assets/Picture.css';
-import { HashRouter , MemoryRouter ,Link, Route, Switch, BrowserRouter as Router } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const persons = [
   { idx:1, name:'LEE', subject:'과목1',image:'/image/박보검.JPG'},
@@ -47,4 +47,3 @@ const Graduate=({match})=> {
 }
 
   export default Graduate;
-  //       <button onClick={goNextPost}>Next post</button>
