@@ -1,18 +1,17 @@
 import React from 'react';
-import {Image} from 'react-bootstrap'
 
 import Header from '../components/Header/Header'
 import Footer from '../components/Footer/Footer'
-import '../assets/main.css'
 
 
-const Home = () =>{
+
+const NoMatch = () =>{
     return (
         <div className="App">
-          <Header state="홈"></Header>
+          <Header></Header>
           <div className="content">
               <div> 
-                <Image src="/image/main/main.jpg" className="Main-logo" alt="logo" fluid />
+                잘못된 접근입니다.
               </div>
           </div>
           <Footer></Footer>
@@ -20,5 +19,5 @@ const Home = () =>{
     );
 }
 
-export default Home;
+export default NoMatch;
 
