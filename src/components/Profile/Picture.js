@@ -1,15 +1,13 @@
 import React from 'react';
-import {Col} from 'react-bootstrap';
-import Image from 'react-bootstrap/Image'
 
-function Picture ({name,subject,image}) {
-
+function Picture ({props,name,subject,image,idx}) {
     return(
-        <Col bsPrefix = "pic" >
-        <Image src={image} fluid />
-        <h4>{name}</h4>
-        <h6>{subject}</h6>
-        </Col>
+        <div className = "container1" >
+            <img src={image} alt="Avatar" class="pic" />  
+            <div className = "overlay">
+                {name}
+            </div>
+        </div>
     )
 }
 export default Picture;
