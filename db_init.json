@@ -6,6 +6,20 @@
       "uploader_name": "박지홍",
       "password": 1233,
       "upload_time": 1600683745447
+    },
+    {
+      "id": "eIDUEks7Yb4xGSaGfMC9H",
+      "comment": "init_data_guest_book_2",
+      "uploader_name": "박지홍",
+      "password": 1234,
+      "upload_time": 1600683745447
+    },
+    {
+      "id": "4UIXGbB51WxUVAwNYOCFM",
+      "comment": "init_data_guest_book_3",
+      "uploader_name": "박지홍",
+      "password": 1235,
+      "upload_time": 1600683745447
     }
   ],
   "article_comment": [
