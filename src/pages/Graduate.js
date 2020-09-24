@@ -42,16 +42,16 @@ render() {
       <Header state="프로필"></Header>
         <div className = "content">
           <div className = "row1">
-            <div>{
+            {
               this.state.data.map((person) => {
                 return(
                   <Link to = {`profile/detail/${person.id}`}>
-                  <Picture></Picture>
+                  <Picture name={person.name} image={person.thumbnail_path}></Picture>
                   </Link>
                 )
               })
           }
-            </div>
+
           </div>
         </div>
            <Footer></Footer>
