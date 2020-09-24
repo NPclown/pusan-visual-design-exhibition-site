@@ -2,7 +2,7 @@ import React from 'react';
 
 const CommentCont = (props) =>{
     return (
-        <div className="group" id={props.key}>
+        <div className="group" key={props.id}>
             <li className="write">
                 {props.name}
             </li>

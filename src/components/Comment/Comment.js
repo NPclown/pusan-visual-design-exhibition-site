@@ -7,22 +7,22 @@ import './Comment.css'
 const Comment = (props) =>{
     const [state, setState] = useState({isLoading : true, comments : []})
 
-    const getData = async () => {
-        Axios.get(`/api/get_article_comment?article_id=${props.idx}`)
-        .then((res) => {
-            setState({isLoading : false, comments : res.data})
-        }).catch((err) => {
-            alert(err)
-            setState({isLoading : false, comments : []})
-        }) 
-    }
     const register = () => {
         alert('댓글 등록!!');
     }
 
     useEffect(() => {
+        const getData = async() => {
+            try{
+                var result = await Axios.get(`/api/get_article_comment?article_id=${props.idx}`);
+                setState({isLoading : false, comments : result.data})
+            } catch(error) {
+                alert(error)
+                setState({isLoading : false, comments : []})
+            }
+        }
         getData();
-    },[])
+    },[props.idx])
 
     return state.isLoading ? (
         <div className="loading">
@@ -36,8 +36,8 @@ const Comment = (props) =>{
             </div>
             <div className="comment-cont">
                 {
-                    state.comments.map((item) => (
-                        <CommentCont key={item.id} name={item.uploader_name} cont={item.comment} date="2020-09-24"></CommentCont>
+                    state.comments.map((item, index) => (
+                        <CommentCont key={index} id={item.id} name={item.uploader_name} cont={item.comment} date="2020-09-24"></CommentCont>
                     ))
                 }
             </div>
