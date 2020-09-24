@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Picture ({props,name,subject,image,idx}) {
+function Picture ({name,image}) {
     return(
         <div className = "container1" >
             <img src={image} alt="Avatar" class="pic" />  

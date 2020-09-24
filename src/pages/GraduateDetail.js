@@ -1,6 +1,6 @@
 import React from 'react';
 
-const GraduateDetail = ({match,location})=>{
+const GraduateDetail = ({match})=>{
     const {params: {idx}} = match
     return (
         <>
