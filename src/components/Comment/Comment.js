@@ -1,34 +1,45 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import CommentCont from './CommentCont';
 import Axios from 'axios';
 
 import './Comment.css'
+
 const Comment = (props) =>{
-    
+    const [state, setState] = useState({isLoading : true, comments : []})
+
     const register = () => {
         alert('댓글 등록!!');
-        Axios.get('/api/get_article_comment?article_id=SOfcGSM6NXtpqszVhXMZ8')
-        .then((res) => {
-            alert('성공')
-            console.log(res.data)
-        }).catch((err) => {
-            alert('실패')
-            alert(err)
-        })    
     }
 
-    return (
+    useEffect(() => {
+        const getData = async() => {
+            try{
+                var result = await Axios.get(`/api/get_article_comment?article_id=${props.idx}`);
+                setState({isLoading : false, comments : result.data})
+            } catch(error) {
+                alert(error)
+                setState({isLoading : false, comments : []})
+            }
+        }
+        getData();
+    },[props.idx])
+
+    return state.isLoading ? (
+        <div className="loading">
+            <span>Loading...</span>
+        </div>
+        ) : (
         <div className="comment">
             <div className="comment-title">
-                <div className="left">댓글(5)</div>
+                <div className="left">댓글 <span className="small">({state.comments.length})</span></div>
                 <div className="right" onClick={register}>댓글쓰기</div>                
             </div>
             <div className="comment-cont">
-                <CommentCont></CommentCont>
-                <CommentCont></CommentCont>
-                <CommentCont></CommentCont>
-                <CommentCont></CommentCont>
-                <CommentCont></CommentCont>
+                {
+                    state.comments.map((item, index) => (
+                        <CommentCont key={index} id={item.id} name={item.uploader_name} cont={item.comment} date="2020-09-24"></CommentCont>
+                    ))
+                }
             </div>
         </div>
     );
