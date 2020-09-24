@@ -13,7 +13,7 @@ export const MenuItems = [
     },
     {
         title: '작품',
-        url: '/art',
+        url: '/art/visual_design',
         cName: 'nav-links',
         cActive: 'nav-links active'
     },
