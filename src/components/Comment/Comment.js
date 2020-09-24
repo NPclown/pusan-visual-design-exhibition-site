@@ -7,11 +7,10 @@ const Comment = (props) =>{
     
     const register = () => {
         alert('댓글 등록!!');
-        Axios.post('/api/get_article_comment', {
-            article_id : 1
-        }).then((res) => {
+        Axios.get('/api/get_article_comment?article_id=SOfcGSM6NXtpqszVhXMZ8')
+        .then((res) => {
             alert('성공')
-            alert(res)
+            console.log(res.data)
         }).catch((err) => {
             alert('실패')
             alert(err)

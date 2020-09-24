@@ -1,9 +1,9 @@
 import React from 'react';
 
-function Picture ({props,name,subject,image,idx}) {
+function Picture ({name,image}) {
     return(
         <div className = "container1" >
-            <img src={image} alt="Avatar" class="pic" />  
+            <img src={"person.thumbnail_path"} alt="Avatar" class="pic" />  
             <div className = "overlay">
                 {name}
             </div>
