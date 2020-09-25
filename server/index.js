@@ -12,6 +12,25 @@ const types = ["visual_design", "advertising_conti_design", "design_seminar", "d
 index.use('/', express.static(path.resolve(__dirname, '../build')));
 index.use(express.json());
 
+function date_format(time) {
+    let date = new Date();
+    date.setTime(time);
+
+    let month = date.getMonth() + 1;
+    month = month.toString()
+    if (month.length == 1) {
+        month = "0" + month;
+    }
+
+    let day = date.getDay();
+    day = day.toString()
+    if (day.length == 1) {
+        day = "0" + day;
+    }
+
+    return `${date.getFullYear()}-${month}-${day}`
+}
+
 index.get('/api/get_profile_list', (req, res) => {
     try {
         let data = db.get('profile').value();
@@ -87,7 +106,12 @@ index.get('/api/get_article_comment', (req, res) => {
     try {
         let data = db.get('article_comment').value();
         data = data.filter(u => u.article_id === req.query.article_id);
-        data = data.map(u => ({id: u.id, comment: u.comment, uploader_name: u.uploader_name}));
+        data = data.map(u => ({
+            id: u.id,
+            comment: u.comment,
+            uploader_name: u.uploader_name,
+            upload_date: date_format(u.upload_time)
+        }));
         res.json(data);
     } catch (e) {
         console.log(e);

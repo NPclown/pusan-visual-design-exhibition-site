@@ -96,8 +96,8 @@
     },
     {
         "id": "M7SD0HhvhaqJMBssI9xQX",
-        "name": "노홍철",
-        "description": "노홍철 졸업생에 대한 설명입니다.",
+        "title": "노홍철",
+        "maker": "노홍철 졸업생에 대한 설명입니다.",
         "thumbnail_path": "/imgs/profile_2.jpg"
     },
     ...
@@ -217,12 +217,14 @@ True | False
     {
         "id": "Ihi4vLLfPRC6PwrbcDkuh",
         "comment": "작품이 엄청나시네요!",
-        "uploader_name": "박지홍"
+        "uploader_name": "박지홍",
+        "upload_date": "2020-09-05"
     },
     {
         "id": "CC8c550I3EQ5nS12dGT5P",
         "comment": "영혼과 정성이 느껴집니다",
-        "uploader_name": "박지홍"
+        "uploader_name": "박지홍",
+        "upload_date": "2020-09-05"
     }, 
     ...
 ]
