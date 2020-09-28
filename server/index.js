@@ -31,6 +31,29 @@ function date_format(time) {
     return `${date.getFullYear()}-${month}-${day}`
 }
 
+index.get('/api/search_profile', (req, res) => {
+    try {
+        let data = db.get('profile').value();
+        data = data.filter(u => u.name.includes(req.query.name));
+        res.json(data);
+    } catch (error) {
+        console.log(error);
+        res.send(false);
+    }
+});
+
+index.get('/api/search_article', (req, res) => {
+    try {
+        let data = db.get('article').value();
+        data = data.filter(u => u.title.includes(req.query.title));
+        data = data.map(u => ({id: u.id, title: u.title, maker: u.maker, thumbnail_path: u.thumbnail_path}));
+        res.json(data);
+    } catch (error) {
+        console.log(error);
+        res.send(false);
+    }
+});
+
 index.get('/api/get_profile_list', (req, res) => {
     try {
         let data = db.get('profile').value();

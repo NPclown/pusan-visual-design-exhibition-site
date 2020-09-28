@@ -16,11 +16,13 @@
 # API 명세
 **프로필 (profile) 관련**
 - [/api/get_profile_list](#get_profile_list)
+- [/api/search_profile](#search_profile)
 - [/api/get_profile_detail](#get_profile_detail) (구현 예정)
 
 **게시글 (article) 관련**
 - [/api/get_article_list](#get_article_list)
 - [/api/get_article_detail](#get_article_detail)
+- [/api/search_article](#search_article)
 
 **방명록(guest_book) 관련**
 - [/api/get_guest_book](#get_guest_book)
@@ -61,6 +63,39 @@
         "name": "노홍철",
         "description": "노홍철 졸업생에 대한 설명입니다.",
         "thumbnail_path": "/imgs/profile_2.jpg"
+    },
+    ...
+]
+```
+
+### search_profile
+##### 입력된 이름이 포함된 졸업자의 정보를 반환합니다.
+
+**URL** : `/api/search_profile`
+
+**Method** : `GET`
+
+**Required Attribute**
+
+|Attribute|Type|Description|Example|
+|---|---|---|---|
+|name|String|졸업자 성명|하|
+
+**Result**
+
+```json
+[
+    {
+        "id": "s6cyBm6On1nzn0JnEDNMV",
+        "name": "정준하",
+        "description": "정준하 졸업생에 대한 설명입니다.",
+        "thumbnail_path": "/imgs/profile_4.jpg"
+    },
+    {
+        "id": "ps13PokZwrIoQQgp2ZDgu",
+        "name": "하하",
+        "description": "하하 졸업생에 대한 설명입니다.",
+        "thumbnail_path": "/imgs/profile_5.jpg"
     },
     ...
 ]
@@ -126,6 +161,33 @@
     }
 ]
 ```
+
+### search_article
+##### 입력된 이름이 포함된 작품의 정보를 반환합니다.
+**URL** : `/api/search_article`
+
+**Method** : `GET`
+
+**Required Attribute**
+
+|Attribute|Type|Description|Example|
+|---|---|---|---|
+|title|String|작품 제목|init_data_article_visual_design_title_5|
+
+**Result**
+
+```json
+[
+    {
+        "id": "iM7bGyJvO-6AoiY1cEOTl",
+        "title": "init_data_article_visual_design_title_1",
+        "maker": "박지홍",
+        "thumbnail_path": "/imgs/article_5_thumbnail.jpg"
+    }
+]
+```
+
+
 
 ## 방명록 (guest_book)
 ### get_guest_book
