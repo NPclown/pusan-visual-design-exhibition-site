@@ -8,8 +8,8 @@ import 'video-react/dist/video-react.css';
 const ArtContent = (props) =>{
     return (
         <div>
-            <Image src="/image/main/main.jpg" className="Main-logo" alt="logo" fluid />
-            <Player src="/test_1200px.mp4" />
+            {props.image === "" ? ("") : (<Image src={props.image} alt="logo" fluid />)}
+            {props.video === "" ? ("") : (<Player src={props.video} />)}
         </div>
     );
 }
