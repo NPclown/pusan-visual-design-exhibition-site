@@ -1,20 +1,19 @@
 //졸업자 게시판
 import React,{useState,useEffect} from 'react';
-import Picture from '../components/Profile/Picture'
 import Header from '../components/Header/Header'
 import Footer from '../components/Footer/Footer'
-import '../assets/Picture.css';
+import ArtPicture from '../components/Art/ArtPicture'
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import '../assets/ArtPage.css';
 
-const Graduate = (props) => {
-  
+const ArtPage = (props) => {
   const [state, setState] = useState({isLoading : true, data : []})
 
   useEffect(() => {
     const getData = async() => {
         try{
-            var result = await axios.get(`/api/get_profile_list`);
+            var result = await axios.get(`/api/get_article_list?type=${props.match.params.type}`);
             setState({isLoading : false, data : result.data})
         } catch(error) {
             alert(error)
@@ -22,21 +21,21 @@ const Graduate = (props) => {
         }
     }
     getData();
-},[props.id])
-
+},[props.match.params.type])
+  
   return state.isLoading ? (
     <div className="loading">
         <span>Loading...</span>
     </div>) : (
-        <div className="Graduate">
-          <Header state="프로필"></Header>
+        <div className="ArtPage">
+          <Header state="작품"></Header>
             <div className = "content">
-              <div className = "row1">{
-              state.data.map((person) => {
-                return(
-                  <Link to = {`profile/detail/${person.id}`}>
-                  <Picture name={person.name} image={person.thumbnail_path}></Picture>
-                  </Link>
+              <div className = "art-row1">{
+                state.data.map((art) => {
+                    return(
+                     <Link to = {`detail/${art.id}`}>
+                     <ArtPicture title = {art.title} maker={art.maker} image={art.thumbnail_path}></ArtPicture>
+                     </Link>
                 )
               }
             )}
@@ -46,6 +45,4 @@ const Graduate = (props) => {
         </div>
   );
  }
-
-
-  export default Graduate;
+  export default ArtPage;
