@@ -23,9 +23,9 @@ const Article = (props) =>{
 
     return state.isLoading ? (<div>loading</div>) : (
         <div className = "row1">{
-            state.data.map((person) => {
+            state.data.map((person, index) => {
               return(
-                <Link to = {`profile/detail/${person.id}`}>
+                <Link to = {`/profile/detail/${person.id}`} key={index}>
                 <Picture name={person.name} image={person.thumbnail_path}></Picture>
                 </Link>
               )

@@ -6,16 +6,16 @@ import Axios from 'axios';
 import ArtPicture from '../Art/ArtPicture';
 
 const Article = (props) =>{
-    const [state, setState] = useState({isLoading : true, article : []})
+    const [state, setState] = useState({isLoading : true, data : []})
 
     useEffect(() => {
       const getData = async() => {
           try{
               var result = await Axios.get(`/api/search_article?title=${props.title}`);
-              setState({isLoading : false, article : result.data})
+              setState({isLoading : false, data : result.data})
           } catch(error) {
               alert(error)
-              setState({isLoading : false, article : []})
+              setState({isLoading : false, data : []})
           }
       }
       getData();
@@ -23,9 +23,9 @@ const Article = (props) =>{
 
     return state.isLoading ? (<div>loading</div>) : (
         <div className = "art-row1">{
-            state.article.map((art) => {
+            state.data.map((art, index) => {
                 return(
-                 <Link to = {`detail/${art.id}`}>
+                 <Link to = {`/art/detail/${art.id}`} key={index}>
                  <ArtPicture title = {art.title} maker={art.maker} image={art.thumbnail_path}></ArtPicture>
                  </Link>
             )
