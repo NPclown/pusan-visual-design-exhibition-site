@@ -37,7 +37,7 @@ const Comment = (props) =>{
             <div className="comment-cont">
                 {
                     state.comments.map((item, index) => (
-                        <CommentCont key={index} id={item.id} name={item.uploader_name} cont={item.comment} date="2020-09-24"></CommentCont>
+                        <CommentCont key={index} id={item.id} name={item.uploader_name} cont={item.comment} date={item.uploader_date}></CommentCont>
                     ))
                 }
             </div>

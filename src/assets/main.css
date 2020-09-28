@@ -41,3 +41,7 @@
     margin-left: auto;
     max-width: 1200px;
 }
+
+.img-fluid {
+    width : 100%;
+}
