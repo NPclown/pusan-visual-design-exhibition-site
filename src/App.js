@@ -4,10 +4,9 @@ import Home from './pages/Home';
 import Graduate from './pages/Graduate'
 import ArtDetail from './pages/ArtDetail';
 import GraduateDetail from './pages/GraduateDetail'
-import 'bootstrap/dist/css/bootstrap.min.css';
 import ArtPage from './pages/ArtPage';
 import NoMatch from './pages/NoMatch';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
