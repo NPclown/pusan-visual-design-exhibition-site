@@ -1,15 +1,11 @@
 
 import React, { useState } from 'react';
+import {Link} from 'react-router-dom';
 import './Searchbar.css'
 
 const Searchbar = () => {
     const [search, setSearch] = useState("");
     const [option, setOption] = useState("이름");
-
-    const submitSearch = (e) => {
-        e.preventDefault();
-        alert(`옵션: ${option}, 검색어: ${search}`)   
-    }
 
     return(
         <div className="SearchBarItems">
@@ -26,7 +22,7 @@ const Searchbar = () => {
                     onChange={e => setSearch(e.target.value)}
                 ></input>
             </div>
-            <i onClick={submitSearch} className='fas fa-search'></i>
+            <Link to = {`/search/${option==="이름" ? "name" : "title"}/${search}`}><i className='fas fa-search'></i></Link>
         </div>
     )
 }
