@@ -3,7 +3,7 @@ import React from 'react';
 function ArtPicture ({title,maker,image}) {
     return(
         <div className = "art-container1" >
-            <img src={image} alt="Avatar" class="art-pic" />  
+            <img src={image} alt="Avatar" className="art-pic" />  
             <div className = "art-overlay">
                 {title}
             </div>

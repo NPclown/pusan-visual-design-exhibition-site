@@ -5,6 +5,7 @@ import Graduate from './pages/Graduate'
 import ArtDetail from './pages/ArtDetail';
 import GraduateDetail from './pages/GraduateDetail'
 import ArtPage from './pages/ArtPage';
+import Search from './pages/Search';
 import NoMatch from './pages/NoMatch';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -17,6 +18,8 @@ function App() {
         <Route exact path="/profile/detail/:id" component={GraduateDetail } />
         <Route exact path="/art/detail/:idx" render={(props) => <ArtDetail {...props} />} />
         <Route exact path="/art/:type" render={(props) => <ArtPage {...props} />} />
+        <Route exact path="/search/title/:search" render={(props) => <Search {...props} />} />
+        <Route exact path="/search/name/:name" render={(props) => <Search {...props} />} />
         <Route exact path="*" render={(props) => <NoMatch {...props} />} />
       </Switch>
     </Router>
