@@ -5,6 +5,7 @@ import Footer from '../components/Footer/Footer'
 import ArtContent from '../components/Content/ArtContent'
 import Comment from '../components/Comment/Comment'
 import Title from '../components/Title/Title'
+import Loading from '../components/Etc/Loading';
 import '../assets/main.css'
 
 
@@ -29,11 +30,7 @@ const ArtDetail = (props) =>{
         <div className="App">
           <Header state="작품"></Header>
             {state.isLoading ? (
-            <div className="content">
-              <div className="loading">
-                <span>Loading...</span>
-              </div>
-            </div>
+              <Loading></Loading>
             ) : (
             <div className="content">
               <Title main={state.art.title} sub={state.art.maker}></Title>
