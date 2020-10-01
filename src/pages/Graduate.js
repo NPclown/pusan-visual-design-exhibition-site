@@ -7,6 +7,7 @@ import Loading from '../components/Etc/Loading';
 import '../assets/Picture.css';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import Title from '../components/Title/Title'
 
 const Graduate = (props) => {
   
@@ -32,6 +33,7 @@ const Graduate = (props) => {
         <Loading></Loading>
       ):(
         <div className = "content">
+          <Title sub="프로필을 클릭하거나 이름을 검색하여 원하는 분의 작품을 볼 수 있습니다."></Title>
           <div className = "row1">{
           state.data.map((person) => {
             return(

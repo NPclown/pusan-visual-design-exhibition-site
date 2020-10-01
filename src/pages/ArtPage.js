@@ -1,4 +1,3 @@
-//졸업자 게시판
 import React,{useState,useEffect} from 'react';
 import Header from '../components/Header/Header'
 import Footer from '../components/Footer/Footer'
@@ -7,6 +6,7 @@ import Loading from '../components/Etc/Loading';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import '../assets/ArtPage.css';
+import Title from '../components/Title/Title'
 
 const ArtPage = (props) => {
   const [state, setState] = useState({isLoading : true, data : []})
@@ -31,6 +31,7 @@ const ArtPage = (props) => {
             <Loading></Loading>
           ) : (
             <div className = "content">
+            <Title main={props.match.params.type} sub="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore."></Title>
               <div className = "art-row1">{
                 state.data.map((art) => {
                     return(
