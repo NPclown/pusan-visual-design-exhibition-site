@@ -1,0 +1,96 @@
+.modal{
+    width: 790px !important;
+    height: 628px !important;
+    right: 0 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    pointer-events: auto;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: .3rem;
+    outline: 0;
+    margin: 1.75rem auto;
+}
+.form-control{
+    width:330px !important;
+    margin-right: auto!important;
+    margin-left: auto!important;
+}
+
+.form-group{
+    margin-bottom: 31px !important;
+}
+.modal-content{
+    position: none !important;
+    border: none !important;
+    height: 625px !important;
+}
+
+.btn{
+    width: 160px !important;
+    height: 40px;
+    background-color: var(--emerald);
+    margin-left: auto;
+    margin-right: auto;
+}
+.modal-dialog{
+    max-width: none !important;
+    pointer-events: none !important;
+    margin:auto !important
+}
+.modal-title{
+    font-family: KoPubDotum;
+    font-size: 18px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000000;
+}
+.modal-title2{
+    font-family: KoPubDotum;
+    font-size: 106px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #000000;
+}
+.form-group{
+    margin-bottom: none !important;
+}
+.modal-name{
+    /* margin: 61px; */
+    margin-left:auto;
+    margin-right:auto;
+    opacity: 0.9;
+    font-family: KoPubDotum;
+    font-size: 18px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #000000;
+}
+.modal-comment{
+        width: 330px;
+        height: 72px;
+        border: solid 1px #ededed;
+        background-color: #ffffff;
+}
+.x-close{
+    object-fit: contain;
+    opacity: 0.9;
+    position: relative;
+    left: 670px;
+    top:-515px ;
+    cursor: pointer;
+}
