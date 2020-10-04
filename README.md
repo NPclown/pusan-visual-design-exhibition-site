@@ -53,14 +53,16 @@
 ```json
 [
     {
-        "id": "zVQ85_ij3dM0U5k7PmfQi",
-        "name": "유재석",
-        "thumbnail_path": "/imgs/profile_1.jpg"
+        "id": "HjWispfgiPOTYc8qEVe0G",
+        "name": "김남희",
+        "thumbnail_color": "/image/profile/HjWispfgiPOTYc8qEVe0G_color.jpg",
+        "thumbnail_gray": "/image/profile/HjWispfgiPOTYc8qEVe0G_gray.jpg"
     },
     {
-        "id": "M7SD0HhvhaqJMBssI9xQX",
-        "name": "노홍철",
-        "thumbnail_path": "/imgs/profile_2.jpg"
+        "id": "C5wY_m2Lj1GIc6Sl7n6Ry",
+        "name": "김수현",
+        "thumbnail_color": "/image/profile/C5wY_m2Lj1GIc6Sl7n6Ry_color.jpg",
+        "thumbnail_gray": "/image/profile/C5wY_m2Lj1GIc6Sl7n6Ry_gray.jpg"
     },
     ...
 ]

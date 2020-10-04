@@ -60,8 +60,8 @@ index.get('/api/get_profile_list', (req, res) => {
         data = data.map(u => ({
             id: u.id,
             name: u.name,
-            thumbnail_color: u.id + "_color",
-            thumbnail_gray: u.id + "_gray"
+            thumbnail_color: "/image/profile/"+u.id + "_color.jpg",
+            thumbnail_gray: "/image/profile/"+u.id + "_gray.jpg"
         }));
         res.json(data);
     } catch (error) {
