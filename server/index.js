@@ -57,7 +57,39 @@ index.get('/api/search_article', (req, res) => {
 index.get('/api/get_profile_list', (req, res) => {
     try {
         let data = db.get('profile').value();
-        data = data.map(u => ({id: u.id, name: u.name, description: u.description, thumbnail_path: u.thumbnail_path}));
+        data = data.map(u => ({
+            id: u.id,
+            name: u.name,
+            thumbnail_color: u.id + "_color",
+            thumbnail_gray: u.id + "_gray"
+        }));
+        res.json(data);
+    } catch (error) {
+        console.log(error);
+        res.send(false);
+    }
+});
+index.get('/api/get_profile_detail', (req, res) => {
+    try {
+        let data = db.get('profile').find({id: req.query.user_id}).value();
+        // 프로필에서 가져오는 데이터와 아티클에서 가져오는 걸 합쳐야해요, 지금은 붙여놨어요, 아티클 보내줘야 작업해요 ㅠㅠ
+        data = data.map(u => ({
+            id: u.id,
+            name: u.name,
+            description: u.description,
+            vd_id: u.vd_id,
+            vd_name: u.vd_name,
+            vd_thumbnail: u.vd_thumbnail,
+            acd_id: u.acd_id,
+            acd_name: u.acd_name,
+            acd_thumbnail: u.acd_thumbnail,
+            ds_id: u.ds_id,
+            ds_name: u.ds_name,
+            ds_thumbnail: u.ds_thumbnail,
+            dmd_id: u.dmd_id,
+            dmd_name: u.dmd_name,
+            dmd_thumbnail: u.dmd_thumbnail
+        }));
         res.json(data);
     } catch (error) {
         console.log(error);

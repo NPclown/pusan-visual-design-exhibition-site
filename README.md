@@ -17,7 +17,7 @@
 **프로필 (profile) 관련**
 - [/api/get_profile_list](#get_profile_list)
 - [/api/search_profile](#search_profile)
-- [/api/get_profile_detail](#get_profile_detail) (구현 예정)
+- [/api/get_profile_detail](#get_profile_detail)
 
 **게시글 (article) 관련**
 - [/api/get_article_list](#get_article_list)
@@ -55,15 +55,45 @@
     {
         "id": "zVQ85_ij3dM0U5k7PmfQi",
         "name": "유재석",
-        "description": "유재석 졸업생에 대한 설명입니다.",
         "thumbnail_path": "/imgs/profile_1.jpg"
     },
     {
         "id": "M7SD0HhvhaqJMBssI9xQX",
         "name": "노홍철",
-        "description": "노홍철 졸업생에 대한 설명입니다.",
         "thumbnail_path": "/imgs/profile_2.jpg"
     },
+    ...
+]
+```
+
+**Description**
+
+![get_profile_list_description](https://user-images.githubusercontent.com/50457791/95018881-4019d900-069d-11eb-8e24-b4faf14e93f1.png)
+
+
+### get_profile_detail
+
+**URL** : `/api/get_profile_detail`
+
+**Method** : `GET`
+
+**Required Attribute**
+
+|Attribute|Type|Description|Example|
+|---|---|---|---|
+|user_id|String|프로필 상세 정보 조회를 위한 해당 졸업자의 ID|HjWispfgiPOTYc8qEVe0G|
+
+**Result**
+
+```json
+[
+    {
+        "id": "zVQ85_ij3dM0U5k7PmfQi",
+        "name": "유재석",
+        "description": "유재석 졸업생에 대한 설명입니다.",
+        "thumbnail_path": "/imgs/profile_1.jpg"
+작성예저어어엊어정정,
+    }
     ...
 ]
 ```
@@ -101,7 +131,7 @@
 ]
 ```
 
-## 게시글 (profile)
+## 게시글 (article)
 ### get_article_list
 **URL** : `/api/get_article_list`
 
@@ -186,8 +216,6 @@
     }
 ]
 ```
-
-
 
 ## 방명록 (guest_book)
 ### get_guest_book
