@@ -16,8 +16,8 @@
 # API 명세
 **프로필 (profile) 관련**
 - [/api/get_profile_list](#get_profile_list)
-- [/api/search_profile](#search_profile)
 - [/api/get_profile_detail](#get_profile_detail)
+- [/api/search_profile](#search_profile)
 
 **게시글 (article) 관련**
 - [/api/get_article_list](#get_article_list)
@@ -70,7 +70,7 @@
 
 **Description**
 
-![get_profile_list_description](https://user-images.githubusercontent.com/50457791/95018881-4019d900-069d-11eb-8e24-b4faf14e93f1.png)
+![get_profile_list_description](https://user-images.githubusercontent.com/50457791/95019255-372a0700-069f-11eb-8329-c7ac472c7140.png)
 
 
 ### get_profile_detail
