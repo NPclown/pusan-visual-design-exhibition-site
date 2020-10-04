@@ -12,7 +12,6 @@ const Searchbar = () => {
             <div className='selector'>
                 <select className='selector' value={option} onChange={e => setOption(e.target.value)}>
                     <option value="이름">이름</option>
-                    <option value="작품명">작품명</option>
                 </select>
             </div>
             <div>
