@@ -4,15 +4,6 @@
     display: flex;
     align-items: center;
     float : right;
-    
-    opacity: 0.9;
-    font-family: KoPubDotum;
-    font-size: 26px;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
 }
 
 select {
@@ -22,15 +13,6 @@ select {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-
-    opacity: 0.9;
-    font-family: KoPubDotum;
-    font-size: 26px;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
 }
     
 input {
@@ -40,20 +22,11 @@ input {
     text-decoration: none; 
     border: #000000 solid; 
     border-width: 0 0 1.5px 0;
-
-    opacity: 0.9;
-    font-family: KoPubDotum;
-    font-size: 26px;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
 }
 
 i {
     opacity: 0.9;
     font-size: 27px;
     line-height: 40px !important;
-    color : #000000;
+    color: rgba(0, 0, 0, 0.9);
 }

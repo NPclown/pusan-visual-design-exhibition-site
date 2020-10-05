@@ -4,14 +4,6 @@
     display: flex;
     align-items: center;
     float : left;
-
-    font-family: KoPubDotum;
-    font-size: 26px;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
 }
 
 .nav-menu {
@@ -27,19 +19,19 @@
 }
 
 .nav-links {
-    color: #000000;
+    color: rgba(0, 0, 0, 0.9);
     text-decoration: none;
 }
 
 .nav-links:hover{
-    color: #000000;
+    color: rgba(0, 0, 0, 0.9);
     text-decoration: none; 
     border: #00964f solid; 
     border-width: 0 0 10px 0;
 }
 
 .nav-links.active{
-    color: #000000;
+    color: rgba(0, 0, 0, 0.9);  
     text-decoration: none; 
     border: #00964f solid; 
     border-width: 0 0 10px 0;
@@ -58,7 +50,7 @@
 }
 
 .nav-sub-links{
-    color: #000000;
+    color: rgba(0, 0, 0, 0.9);
     text-decoration: none; 
     margin-left : 10px;
 }

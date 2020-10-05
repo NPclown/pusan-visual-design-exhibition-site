@@ -10,12 +10,13 @@ const Searchbar = () => {
     return(
         <div className="SearchBarItems">
             <div className='selector'>
-                <select className='selector' value={option} onChange={e => setOption(e.target.value)}>
+                <select className='selector font-s26-w7-b9' value={option} onChange={e => setOption(e.target.value)}>
                     <option value="이름">이름</option>
                 </select>
             </div>
             <div>
-                <input id="test"
+                <input id="search"
+                    className="font-s26-w7-b5"
                     placeholder="검색어 입력"
                     value={search}
                     onChange={e => setSearch(e.target.value)}

@@ -6,6 +6,8 @@ import Loading from '../components/Etc/Loading';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import '../assets/ArtPage.css';
+import '../assets/main.css'
+import '../assets/font.css'
 import Title from '../components/Title/Title'
 
 const ArtPage = (props) => {

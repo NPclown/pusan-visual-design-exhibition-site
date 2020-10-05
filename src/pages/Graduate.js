@@ -5,6 +5,8 @@ import Header from '../components/Header/Header'
 import Footer from '../components/Footer/Footer'
 import Loading from '../components/Etc/Loading';
 import '../assets/Picture.css';
+import '../assets/main.css'
+import '../assets/font.css'
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Title from '../components/Title/Title'
