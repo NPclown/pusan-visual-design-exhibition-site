@@ -43,27 +43,33 @@ const Comment = (props) =>{
                 <div className="right" onClick={() => showModal(true)}>댓글쓰기</div>
                 <Modal show={isOpen}  onHide={hideModal} className = "modal-size" >
                 <ModalHeader bsPrefix = "modal-title">
-                <div className ="modal-title2">
-                    pnuvd
-                </div>
+                <Image src="/image/Modal/logo.png" className = "modal-title"/>
+                <div className = "modal-title2">
                 댓글쓰기
+                </div>
                 </ModalHeader>
                 <ModalBody bsPrefix ="modal-name">
-                <Form>
+
+                <Form className="middle-modal">
                 <Form.Group controlId="formGroupEmail">
                     <Form.Label>이름</Form.Label>
-                    <Form.Control type="name" placeholder="5자 이하" />
+                    <Form.Control type="name" className = "myfont-size" placeholder="5자 제한" />
                 </Form.Group>
+
                 <Form.Group controlId="formGroupPassword">
                     <Form.Label>비밀번호</Form.Label>
-                    <Form.Control type="password" placeholder="●●●●" />
+                    <Form.Control type="password" className = "myfont-size" placeholder="●●●●" />
                 </Form.Group>
+
                 <Form.Group controlId="formGroupPassword">
-                    <Form.Label>댓글</Form.Label>
-                    <Form.Control  type="comment" placeholder="작품 감상평 또는 응원의 댓글을 달아주세요.(80자 제한)" />
+                <Form.Label>댓글</Form.Label>
+                <Form.Control className = "comment-form" type="comment" placeholder="작품 감상평 또는 응원의 댓글을 달아주세요.(80자 제한)" />
                 </Form.Group>
+
                 </Form>
+
                 </ModalBody>
+
                 <Button onClick={hideModal} variant="success">등록</Button>
                 <div onClick={hideModal} variant="close">
                     <Image src="/imgs/x.png" className="x-close" alt="logo" />
@@ -84,13 +90,3 @@ const Comment = (props) =>{
 
 export default Comment;
 
-                // <Form>
-                // <Form.Group controlId="formGroupEmail">
-                //     <Form.Label>이름</Form.Label>
-                //     <Form.Control type="email" placeholder="Enter email" />
-                // </Form.Group>
-                // <Form.Group controlId="formGroupPassword">
-                //     <Form.Label>비밀번호</Form.Label>
-                //     <Form.Control type="password" placeholder="Password" />
-                // </Form.Group>
-                // </Form>
