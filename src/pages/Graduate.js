@@ -50,6 +50,4 @@ const Graduate = (props) => {
     </div>
   );
  }
-
-
   export default Graduate;
