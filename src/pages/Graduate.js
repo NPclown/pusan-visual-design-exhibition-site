@@ -40,7 +40,7 @@ const Graduate = (props) => {
           state.data.map((person) => {
             return(
               <Link to = {`profile/detail/${person.id}`}>
-              <Picture name={person.name} image={person.thumbnail_path}></Picture>
+              <Picture name={person.name} image={person.thumbnail_gray} image_color={person.thumbnail_color}></Picture>
               </Link>
               )
             }
