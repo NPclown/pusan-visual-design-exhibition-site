@@ -5,48 +5,17 @@
 
 .comment-title {
     height: 55px;
-    /* border: 1px solid black; */
 }
 
 .left {
     float: left;
-    opacity: 0.9;
-    font-family: KoPubDotum;
-    font-size: 26px;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    color: #000000;
 }
 
 .right {
     float: right;
-    opacity: 0.9;
-    font-family: KoPubDotum;
-    font-size: 26px;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    color: #000000;
     text-decoration: none; 
     border: #00964f solid; 
     border-width: 0 0 10px 0;
-}
-
-.small {
-    opacity: 0.9;
-    font-family: KoPubDotum;
-    font-size: 18px;
-    font-weight: 500;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    color: #000000;    
 }
 
 .right:hover {
@@ -60,8 +29,6 @@
 
 .group {
     display: flex;
-    /* grid-template-columns: repeat(3, auto);
-    grid-gap: 32px; */
     list-style: none;
     margin-bottom: 30px;
 }
@@ -69,41 +36,25 @@
 .write {
     min-width: 70px;
     margin-right: 32px;
-    opacity: 0.9;
-    font-family: KoPubDotum;
-    font-size: 16px;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    color: #000000;
 }
 
 .cont {
     width: 965px;
-    opacity: 0.9;
-    font-family: KoPubDotum;
-    font-size: 16px;
-    font-weight: 500;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    color: #000000;   
 }
 
 .date {
     min-width: 95px;
     margin-left : 32px;
-    opacity: 0.9;
-    font-family: KoPubDotum;
-    font-size: 16px;
-    font-weight: 500;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    text-align: center;
-    color: #000000;  
+}
+
+.cont:hover .trash-icon{
+    display : inline;
+    cursor : pointer;
+}
+
+.trash-icon {
+    display: none;
+    font-size : 16px;
+    line-height : 20px !important;
+    margin-left : 20px;
 }
