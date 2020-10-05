@@ -7,6 +7,7 @@ import Comment from '../components/Comment/Comment'
 import Title from '../components/Title/Title'
 import Loading from '../components/Etc/Loading';
 import '../assets/main.css'
+import '../assets/font.css'
 
 
 const ArtDetail = (props) =>{

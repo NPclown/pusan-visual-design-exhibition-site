@@ -5,7 +5,7 @@ import Searchbar from './Searchbar';
 const Header = (props) =>{
     return (
         <div className="header"> 
-            <Navbar state={props.state}></Navbar>
+            <Navbar state={props.state} sub={props.sub}></Navbar>
             <Searchbar></Searchbar>
         </div>
     );

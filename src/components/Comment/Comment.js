@@ -39,8 +39,8 @@ const Comment = (props) =>{
         ) : (
         <div className="comment">
             <div className="comment-title">
-                <div className="left">댓글 <span className="small">({state.comments.length})</span></div>
-                <div className="right" onClick={() => showModal(true)}>댓글쓰기</div>
+                <div className="left font-s26-w7-b9">댓글 <span className="font-s18-w5-b9">({state.comments.length})</span></div>
+                <div className="right font-s26-w7-b9" onClick={() => showModal(true)}>댓글쓰기</div>
                 <Modal show={isOpen}  onHide={hideModal} className = "modal-size" >
                 <ModalHeader bsPrefix = "modal-title">
                 <Image src="/image/Modal/logo.png" className = "modal-title"/>
@@ -79,7 +79,7 @@ const Comment = (props) =>{
             <div className="comment-cont">
                 {
                     state.comments.map((item, index) => (
-                        <CommentCont key={index} id={item.id} name={item.uploader_name} cont={item.comment} date={item.upload_date}></CommentCont>
+                        <CommentCont key={index} id={item.id} name={item.uploader_name} cont={item.comment} date={item.upload_date} onClick={() => alert(item.id)}></CommentCont>
                     ))
                 }
             </div>

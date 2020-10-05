@@ -5,6 +5,8 @@ import Footer from '../components/Footer/Footer'
 import Title from '../components/Title/Title'
 import Article from '../components/Search/Article'
 import Profile from '../components/Search/Profile'
+import '../assets/main.css'
+import '../assets/font.css'
 
 
 const Search = (props) =>{

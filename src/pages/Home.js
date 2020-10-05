@@ -1,9 +1,9 @@
 import React from 'react';
-import {Image} from 'react-bootstrap'
 
 import Header from '../components/Header/Header'
 import Footer from '../components/Footer/Footer'
 import '../assets/main.css'
+import '../assets/font.css'
 
 
 const Home = () =>{
@@ -12,7 +12,7 @@ const Home = () =>{
           <Header state="홈"></Header>
           <div className="content">
               <div> 
-                <Image src="/image/main/main.jpg" className="Main-logo" alt="logo" fluid />
+                <video src="/image/common/main.mp4" type="video/mp4" width="1200px" autoPlay muted loop playsInline></video>
               </div>
           </div>
           <Footer></Footer>
