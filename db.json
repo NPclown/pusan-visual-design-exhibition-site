@@ -3,7 +3,6 @@
     {
       "id": "kHZZ5panLF6LUNtBKisYB",
       "comment": "init_data_guest_book_1",
-      "uploader_name": "박지홍",
       "password": 1233,
       "upload_time": 1600683745447
     }
@@ -71,41 +70,41 @@
       "comment": "반갑습니다_테스트 올립니다_6",
       "uploader_name": "박지홍",
       "password": "1236",
-      "upload_time": 1600432047338
+      "upload_time": 1600432057338
     }
   ],
   "article": [
     {
       "id": "SOfcGSM6NXtpqszVhXMZ8",
-      "title": "init_data_article_visual_design_title_1",
-      "maker": "박지홍",
-      "thumbnail_path": "/imgs/article_1_thumbnail.jpg",
-      "img_path": "/imgs/article_1_original.jpg",
+      "title": "sample_article_1",
+      "maker_id": "HjWispfgiPOTYc8qEVe0G",
+      "thumbnail_path": "/image/article/article_1_thumbnail.jpg",
+      "img_path": "/image/article/article_1_original.jpg",
 	  "type": "visual_design"
     },
     {
       "id": "IUYkBnytp6GoVeTLswq9G",
-      "title": "init_data_article_visual_design_title_2",
-      "maker": "박지홍",
-      "thumbnail_path": "/imgs/article_2_thumbnail.jpg",
-      "img_path": "/imgs/article_2_original.jpg",
-	  "type": "visual_design"
+      "title": "sample_article_2",
+      "maker_id": "HjWispfgiPOTYc8qEVe0G",
+      "thumbnail_path": "/image/article/article_2_thumbnail.jpg",
+      "img_path": "/image/article/article_1_original.jpg",
+	  "type": "advertising_conti_design"
     },
     {
       "id": "OmCnmh1QNPdcqi4MmYQPQ",
-      "title": "init_data_article_visual_design_title_3",
-      "maker": "박지홍",
-      "thumbnail_path": "/imgs/article_3_thumbnail.jpg",
-      "img_path": "/imgs/article_3_original.jpg",
-	  "type": "visual_design"
+      "title": "sample_article_3",
+      "maker_id": "HjWispfgiPOTYc8qEVe0G",
+      "thumbnail_path": "/image/article/article_3_thumbnail.jpg",
+      "img_path": "/image/article/article_1_original.jpg",
+	  "type": "design_seminar"
     },
     {
       "id": "5v4bdO2qqYVfMBjrLz_wi",
-      "title": "init_data_article_visual_design_title_4",
-      "maker": "박지홍",
-      "thumbnail_path": "/imgs/article_4_thumbnail.jpg",
-      "img_path": "/imgs/article_4_original.jpg",
-	  "type": "visual_design"
+      "title": "sample_article_4",
+      "maker_id": "HjWispfgiPOTYc8qEVe0G",
+      "thumbnail_path": "/image/article/article_4_thumbnail.jpg",
+      "img_path": "/image/article/article_1_original.jpg",
+	  "type": "digital_media_design"
     },
     {
       "id": "iM7bGyJvO-6AoiY1cEOTl",
@@ -270,40 +269,166 @@
   ],
   "profile": [
     {
-      "id": "zVQ85_ij3dM0U5k7PmfQi",
-      "name": "유재석",
-      "description": "유재석 졸업생에 대한 설명입니다.",
-	  "thumbnail_path": "/imgs/profile_1.jpg"
+      "id": "HjWispfgiPOTYc8qEVe0G",
+      "name": "김남희",
+      "description": "010nh@naver.com\n010 6777 2408",
+      "vd_id":"SOfcGSM6NXtpqszVhXMZ8",
+      "acd_id":"IUYkBnytp6GoVeTLswq9G",
+      "ds_id":"OmCnmh1QNPdcqi4MmYQPQ",
+      "dmd_id":"5v4bdO2qqYVfMBjrLz_wi"
     },
-	    {
-      "id": "M7SD0HhvhaqJMBssI9xQX",
-      "name": "노홍철",
-      "description": "노홍철 졸업생에 대한 설명입니다.",
-	  "thumbnail_path": "/imgs/profile_2.jpg"
+    {
+      "id": "C5wY_m2Lj1GIc6Sl7n6Ry",
+      "name": "김수현",
+      "description": "lo2318@naver.com\n010 8557 1163",
+      "vd_id":"SOfcGSM6NXtpqszVhXMZ8",
+      "acd_id":"IUYkBnytp6GoVeTLswq9G",
+      "ds_id":"OmCnmh1QNPdcqi4MmYQPQ",
+      "dmd_id":"5v4bdO2qqYVfMBjrLz_wi"
     },
-	    {
-      "id": "vaNVQzOL2nTb1SW3pesIL",
-      "name": "박명수",
-      "description": "박명수 졸업생에 대한 설명입니다.",
-	  "thumbnail_path": "/imgs/profile_3.jpg"
+	{
+      "id": "RlVDaN0FIF7h-BjmlfbED",
+      "name": "김재원",
+      "description": "ryangreythorn@gmail.com",
+      "vd_id":"SOfcGSM6NXtpqszVhXMZ8",
+      "acd_id":"IUYkBnytp6GoVeTLswq9G",
+      "ds_id":"OmCnmh1QNPdcqi4MmYQPQ",
+      "dmd_id":"5v4bdO2qqYVfMBjrLz_wi"
     },
-	    {
+	{
       "id": "s6cyBm6On1nzn0JnEDNMV",
-      "name": "정준하",
-      "description": "정준하 졸업생에 대한 설명입니다.",
-	  "thumbnail_path": "/imgs/profile_4.jpg"
+      "name": "김정현",
+      "description": "sim_0829@naver.com\n010 7708 6210",
+      "vd_id":"SOfcGSM6NXtpqszVhXMZ8",
+      "acd_id":"IUYkBnytp6GoVeTLswq9G",
+      "ds_id":"OmCnmh1QNPdcqi4MmYQPQ",
+      "dmd_id":"5v4bdO2qqYVfMBjrLz_wi"
     },
-	    {
+	{
       "id": "ps13PokZwrIoQQgp2ZDgu",
-      "name": "하하",
-      "description": "하하 졸업생에 대한 설명입니다.",
-	  "thumbnail_path": "/imgs/profile_5.jpg"
+      "name": "박가현",
+      "description": "qkrrkgus13@naver.com\n010 5032 6810",
+      "vd_id":"SOfcGSM6NXtpqszVhXMZ8",
+      "acd_id":"IUYkBnytp6GoVeTLswq9G",
+      "ds_id":"OmCnmh1QNPdcqi4MmYQPQ",
+      "dmd_id":"5v4bdO2qqYVfMBjrLz_wi"
     },
-	    {
-      "id": "aVoTC6yIF_sysUs_kggP1",
-      "name": "길",
-      "description": "길 졸업생에 대한 설명입니다.",
-	  "thumbnail_path": "/imgs/profile_6.jpg"
+    {
+      "id": "j4j695vBae-ipmQAr7byn",
+      "name": "박민지",
+      "description": "eightfourone841@gmail.com\n010 6239 5557",
+      "vd_id":"SOfcGSM6NXtpqszVhXMZ8",
+      "acd_id":"IUYkBnytp6GoVeTLswq9G",
+      "ds_id":"OmCnmh1QNPdcqi4MmYQPQ",
+      "dmd_id":"5v4bdO2qqYVfMBjrLz_wi"
+    },
+    {
+      "id": "Bg_Id_fScoJ8wYULyHzbK",
+      "name": "손수진",
+      "description": "immmsoo997@gmail.com\n인스타그램 @immm.soo",
+      "vd_id":"SOfcGSM6NXtpqszVhXMZ8",
+      "acd_id":"IUYkBnytp6GoVeTLswq9G",
+      "ds_id":"OmCnmh1QNPdcqi4MmYQPQ",
+      "dmd_id":"5v4bdO2qqYVfMBjrLz_wi"
+    },
+    {
+      "id": "xYXx8hcVaFALTX0MInSjf",
+      "name": "신반석",
+      "description": "qhsldy123@naver.com",
+      "vd_id":"SOfcGSM6NXtpqszVhXMZ8",
+      "acd_id":"IUYkBnytp6GoVeTLswq9G",
+      "ds_id":"OmCnmh1QNPdcqi4MmYQPQ",
+      "dmd_id":"5v4bdO2qqYVfMBjrLz_wi"
+    },
+    {
+      "id": "1EW_CJ0GTmam6nKpdAwht",
+      "name": "쑹톈츠",
+      "description": "elimstc@gmail.com\n010 2788 8721",
+      "vd_id":"SOfcGSM6NXtpqszVhXMZ8",
+      "acd_id":"IUYkBnytp6GoVeTLswq9G",
+      "ds_id":"OmCnmh1QNPdcqi4MmYQPQ",
+      "dmd_id":"5v4bdO2qqYVfMBjrLz_wi"
+    },
+    {
+      "id": "tSC3pQjqtUFPhMkp1cdLF",
+      "name": "윤이랑",
+      "description": "yoonmiran9@naver.com",
+      "vd_id":"SOfcGSM6NXtpqszVhXMZ8",
+      "acd_id":"IUYkBnytp6GoVeTLswq9G",
+      "ds_id":"OmCnmh1QNPdcqi4MmYQPQ",
+      "dmd_id":"5v4bdO2qqYVfMBjrLz_wi"
+    },
+    {
+      "id": "59h1UGPseF7zshYQmWJHR",
+      "name": "윤현동",
+      "description": "hd0101kr@naver.com\n인스타그램 @y00nd0ng",
+      "vd_id":"SOfcGSM6NXtpqszVhXMZ8",
+      "acd_id":"IUYkBnytp6GoVeTLswq9G",
+      "ds_id":"OmCnmh1QNPdcqi4MmYQPQ",
+      "dmd_id":"5v4bdO2qqYVfMBjrLz_wi"
+    },
+    {
+      "id": "K-zbGHBQB6R17e_ZN5W_S",
+      "name": "이명철",
+      "description": "audcjf0803@naver.com\n010 9380 0731",
+      "vd_id":"SOfcGSM6NXtpqszVhXMZ8",
+      "acd_id":"IUYkBnytp6GoVeTLswq9G",
+      "ds_id":"OmCnmh1QNPdcqi4MmYQPQ",
+      "dmd_id":"5v4bdO2qqYVfMBjrLz_wi"
+    },
+    {
+      "id": "5msJ7_mt4CXki9dqhnxsk",
+      "name": "이유리",
+      "description": "pooh3280@naver.com\n010 2620 3280",
+      "vd_id":"SOfcGSM6NXtpqszVhXMZ8",
+      "acd_id":"IUYkBnytp6GoVeTLswq9G",
+      "ds_id":"OmCnmh1QNPdcqi4MmYQPQ",
+      "dmd_id":"5v4bdO2qqYVfMBjrLz_wi"
+    },
+    {
+      "id": "YqP7T_NwVTwp8lfAMvkN1",
+      "name": "저우쯔쥔",
+      "description": "544636895@qq.com\n010 5500 4412",
+      "vd_id":"SOfcGSM6NXtpqszVhXMZ8",
+      "acd_id":"IUYkBnytp6GoVeTLswq9G",
+      "ds_id":"OmCnmh1QNPdcqi4MmYQPQ",
+      "dmd_id":"5v4bdO2qqYVfMBjrLz_wi"
+    },
+    {
+      "id": "5KKYhVnNupo9q1sCasTkQ",
+      "name": "주현아",
+      "description": "a01039270264@gmail.com\n010 3927 0264",
+      "vd_id":"SOfcGSM6NXtpqszVhXMZ8",
+      "acd_id":"IUYkBnytp6GoVeTLswq9G",
+      "ds_id":"OmCnmh1QNPdcqi4MmYQPQ",
+      "dmd_id":"5v4bdO2qqYVfMBjrLz_wi"
+    },
+    {
+      "id": "ld-odGHFRAcxPv6BiAuA8",
+      "name": "차지윤",
+      "description": "chawitch@naver.com",
+      "vd_id":"SOfcGSM6NXtpqszVhXMZ8",
+      "acd_id":"IUYkBnytp6GoVeTLswq9G",
+      "ds_id":"OmCnmh1QNPdcqi4MmYQPQ",
+      "dmd_id":"5v4bdO2qqYVfMBjrLz_wi"
+    },
+    {
+      "id": "956RvUOd_88OPuYhqWdyu",
+      "name": "천융루",
+      "description": "chant39166480@gmail\n010 3916 6480",
+      "vd_id":"SOfcGSM6NXtpqszVhXMZ8",
+      "acd_id":"IUYkBnytp6GoVeTLswq9G",
+      "ds_id":"OmCnmh1QNPdcqi4MmYQPQ",
+      "dmd_id":"5v4bdO2qqYVfMBjrLz_wi"
+    },
+    {
+      "id": "MSi9Qxu4bN7sJGNTvQOGG",
+      "name": "최예진",
+      "description": "zmflaqnddj302@naver.com\n010 9307 5302",
+      "vd_id":"SOfcGSM6NXtpqszVhXMZ8",
+      "acd_id":"IUYkBnytp6GoVeTLswq9G",
+      "ds_id":"OmCnmh1QNPdcqi4MmYQPQ",
+      "dmd_id":"5v4bdO2qqYVfMBjrLz_wi"
     }
   ]
 }

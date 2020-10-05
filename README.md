@@ -16,8 +16,8 @@
 # API 명세
 **프로필 (profile) 관련**
 - [/api/get_profile_list](#get_profile_list)
+- [/api/get_profile_detail](#get_profile_detail)
 - [/api/search_profile](#search_profile)
-- [/api/get_profile_detail](#get_profile_detail) (구현 예정)
 
 **게시글 (article) 관련**
 - [/api/get_article_list](#get_article_list)
@@ -53,20 +53,68 @@
 ```json
 [
     {
-        "id": "zVQ85_ij3dM0U5k7PmfQi",
-        "name": "유재석",
-        "description": "유재석 졸업생에 대한 설명입니다.",
-        "thumbnail_path": "/imgs/profile_1.jpg"
+        "id": "HjWispfgiPOTYc8qEVe0G",
+        "name": "김남희",
+        "thumbnail_color": "/image/profile/HjWispfgiPOTYc8qEVe0G_color.jpg",
+        "thumbnail_gray": "/image/profile/HjWispfgiPOTYc8qEVe0G_gray.jpg"
     },
     {
-        "id": "M7SD0HhvhaqJMBssI9xQX",
-        "name": "노홍철",
-        "description": "노홍철 졸업생에 대한 설명입니다.",
-        "thumbnail_path": "/imgs/profile_2.jpg"
+        "id": "C5wY_m2Lj1GIc6Sl7n6Ry",
+        "name": "김수현",
+        "thumbnail_color": "/image/profile/C5wY_m2Lj1GIc6Sl7n6Ry_color.jpg",
+        "thumbnail_gray": "/image/profile/C5wY_m2Lj1GIc6Sl7n6Ry_gray.jpg"
     },
     ...
 ]
 ```
+
+**Description**
+
+![get_profile_list_description](https://user-images.githubusercontent.com/50457791/95019255-372a0700-069f-11eb-8329-c7ac472c7140.png)
+
+
+### get_profile_detail
+
+**Progress**: 입력한 user_id에 대해 id, name, description을 제외한 컬럼은 같은 값이 출력됩니다.
+
+
+**URL** : `/api/get_profile_detail`
+
+**Method** : `GET`
+
+**Required Attribute**
+
+|Attribute|Type|Description|Example|
+|---|---|---|---|
+|user_id|String|프로필 상세 정보 조회를 위한 해당 졸업자의 ID|HjWispfgiPOTYc8qEVe0G|
+
+**Result**
+
+```json
+[
+    {
+        "id": "HjWispfgiPOTYc8qEVe0G",
+        "name": "김남희",
+        "description": "010nh@naver.com\n010 6777 2408",
+        "vd_id": "SOfcGSM6NXtpqszVhXMZ8",
+        "vd_name": "sample_article_1",
+        "vd_thumbnail": "/image/article/article_1_thumbnail.jpg",
+        "acd_id": "IUYkBnytp6GoVeTLswq9G",
+        "acd_name": "sample_article_2",
+        "acd_thumbnail": "/image/article/article_2_thumbnail.jpg",
+        "ds_id": "OmCnmh1QNPdcqi4MmYQPQ",
+        "ds_name": "sample_article_3",
+        "ds_thumbnail": "/image/article/article_3_thumbnail.jpg",
+        "dmd_id": "5v4bdO2qqYVfMBjrLz_wi",
+        "dmd_name": "sample_article_4",
+        "dmd_thumbnail": "/image/article/article_4_thumbnail.jpg"
+    }
+    ...
+]
+```
+
+**Description**
+![get_profile_detail_description](https://user-images.githubusercontent.com/50457791/95059074-5d00eb80-0733-11eb-8c91-bee3524e7cc7.png)
 
 ### search_profile
 ##### 입력된 이름이 포함된 졸업자의 정보를 반환합니다.
@@ -79,29 +127,29 @@
 
 |Attribute|Type|Description|Example|
 |---|---|---|---|
-|name|String|졸업자 성명|하|
+|name|String|졸업자 성명|김|
 
 **Result**
 
 ```json
 [
     {
-        "id": "s6cyBm6On1nzn0JnEDNMV",
-        "name": "정준하",
-        "description": "정준하 졸업생에 대한 설명입니다.",
-        "thumbnail_path": "/imgs/profile_4.jpg"
+        "id": "HjWispfgiPOTYc8qEVe0G",
+        "name": "김남희",
+        "thumbnail_color": "/image/profile/HjWispfgiPOTYc8qEVe0G_color.jpg",
+        "thumbnail_gray": "/image/profile/HjWispfgiPOTYc8qEVe0G_gray.jpg"
     },
     {
-        "id": "ps13PokZwrIoQQgp2ZDgu",
-        "name": "하하",
-        "description": "하하 졸업생에 대한 설명입니다.",
-        "thumbnail_path": "/imgs/profile_5.jpg"
+        "id": "C5wY_m2Lj1GIc6Sl7n6Ry",
+        "name": "김수현",
+        "thumbnail_color": "/image/profile/C5wY_m2Lj1GIc6Sl7n6Ry_color.jpg",
+        "thumbnail_gray": "/image/profile/C5wY_m2Lj1GIc6Sl7n6Ry_gray.jpg"
     },
     ...
 ]
 ```
 
-## 게시글 (profile)
+## 게시글 (article)
 ### get_article_list
 **URL** : `/api/get_article_list`
 
@@ -125,15 +173,13 @@
 [
     {
         "id": "SOfcGSM6NXtpqszVhXMZ8",
-        "title": "init_data_article_visual_design_title_1",
-        "maker": "박지홍",
-        "thumbnail_path": "/imgs/profile_1.jpg"
+        "title": "sample_article_1",
+        "thumbnail_path": "/image/article/article_1_thumbnail.jpg"
     },
     {
-        "id": "M7SD0HhvhaqJMBssI9xQX",
-        "title": "노홍철",
-        "maker": "노홍철 졸업생에 대한 설명입니다.",
-        "thumbnail_path": "/imgs/profile_2.jpg"
+        "id": "IUYkBnytp6GoVeTLswq9G",
+        "title": "sample_article_2",
+        "thumbnail_path": "/image/article/article_2_thumbnail.jpg"
     },
     ...
 ]
@@ -187,8 +233,6 @@
 ]
 ```
 
-
-
 ## 방명록 (guest_book)
 ### get_guest_book
 
@@ -208,13 +252,11 @@
 [
     {
         "id": "cS56QPF_wHG1WigDrBIo3",
-        "comment": "안녕하세요~",
-        "uploader_name": "박지홍"
+        "comment": "안녕하세요~"
     },
     {
         "id": "cS56QPF_wHG1WigDrBIo3",
-        "comment": "안녕안녕~~",
-        "uploader_name": "박지홍"
+        "comment": "안녕안녕~~"
     },
     ...
 ]
@@ -231,7 +273,6 @@
 |Attribute|Type|Description|Example|
 |---|---|---|---|
 |comment|String|댓글 내용|"안녕하세요"|
-|uploader_name|String|댓글 작성자 이름|"박지홍"|
 |password|Int|댓글 삭제시 요구될 4자리 비밀번호|1234|
 
 **Result**
