@@ -2988,6 +2988,11 @@ cipher-base@^1.0.0, cipher-base@^1.0.1, cipher-base@^1.0.3:
     inherits "^2.0.1"
     safe-buffer "^5.0.1"
 
+clamp@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/clamp/-/clamp-1.0.1.tgz#66a0e64011816e37196828fdc8c8c147312c8634"
+  integrity sha1-ZqDmQBGBbjcZaCj9yMjBRzEshjQ=
+
 class-utils@^0.3.5:
   version "0.3.6"
   resolved "https://registry.yarnpkg.com/class-utils/-/class-utils-0.3.6.tgz#f93369ae8b9a7ce02fd41faad0ca83033190c463"
@@ -3176,6 +3181,17 @@ compression@^1.7.4:
     on-headers "~1.0.2"
     safe-buffer "5.1.2"
     vary "~1.1.2"
+
+computed-style@TooTallNate/computed-style:
+  version "0.1.0"
+  resolved "https://codeload.github.com/TooTallNate/computed-style/tar.gz/02f27f3bfd9a32a50332a250d86a7e1c44d67782"
+
+concat-color-matrices@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/concat-color-matrices/-/concat-color-matrices-1.0.0.tgz#7d77baa4148264806d4318d9a2378e7dec4bc413"
+  integrity sha512-K0IMtl4m9LcHg4vVFb40Txmie/GwCJBkquGSn6wtA9yIcszzFZgGc6co4sSnjFdqeJAv+q2LrCHMUSb2GHAChA==
+  dependencies:
+    invariant "^2.2.4"
 
 concat-map@0.0.1:
   version "0.0.1"
@@ -4354,6 +4370,10 @@ etag@~1.8.1:
   resolved "https://registry.yarnpkg.com/etag/-/etag-1.8.1.tgz#41ae2eeb65efa62268aebfea83ac7d79299b0887"
   integrity sha1-Qa4u62XvpiJorr/qg6x9eSmbCIc=
 
+event-component@component/event:
+  version "0.2.0"
+  resolved "https://codeload.github.com/component/event/tar.gz/4d398f80ae1c0033c49b237feb7804e13595ab5e"
+
 eventemitter3@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/eventemitter3/-/eventemitter3-4.0.0.tgz#d65176163887ee59f386d64c82610b696a4a74eb"
@@ -5038,6 +5058,14 @@ graceful-fs@^4.1.3:
   version "4.2.4"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.4.tgz#2256bde14d3632958c465ebc96dc467ca07a29fb"
   integrity sha512-WjKPNJF79dtJAVniUlGGWHYGz2jWxT6VhN/4m1NdkbZ2nOsEF+cI1Edgql5zCRhs/VsQYRvrXctxktVXZUkixw==
+
+grayscale@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/grayscale/-/grayscale-0.0.2.tgz#02c7425f1c8481a134492e196ee921d858a636a9"
+  integrity sha1-AsdCXxyEgaE0SS4Zbukh2FimNqk=
+  dependencies:
+    computed-style TooTallNate/computed-style
+    event-component component/event
 
 growly@^1.3.0:
   version "1.3.0"
@@ -8904,6 +8932,19 @@ react-lifecycles-compat@^3.0.4:
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
 
+react-native-color-matrix-image-filters@^5.2.5:
+  version "5.2.5"
+  resolved "https://registry.yarnpkg.com/react-native-color-matrix-image-filters/-/react-native-color-matrix-image-filters-5.2.5.tgz#de5322e4b02ee2e25c558d4e28c24aca03caeba2"
+  integrity sha512-lymcu1d126BigFYR4NoRTkl2xTX1ybjg8jM9f2gjtRVUmWKEadB3/ULgJcPH8cMPO/7MsBJEcrXdjqDRWAssBw==
+  dependencies:
+    concat-color-matrices "^1.0.0"
+    rn-color-matrices "^4.0.0"
+
+react-native-grayscale@^1.0.11:
+  version "1.0.11"
+  resolved "https://registry.yarnpkg.com/react-native-grayscale/-/react-native-grayscale-1.0.11.tgz#36a67c6efd5d5b33715937c039aaff804ca3c4dc"
+  integrity sha512-518+hnEHwZTaW40L3iGQvEtHsPzgLvfFuNAlde3whYer5VDZ02j4krOSIiQ8SczESjyUYAfywhBc2BEalgJ3Wg==
+
 react-overlays@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/react-overlays/-/react-overlays-4.1.0.tgz#755a890519b02e3904845172d5223ff2dfb1bb29"
@@ -9436,6 +9477,13 @@ ripemd160@^2.0.0, ripemd160@^2.0.1:
   dependencies:
     hash-base "^3.0.0"
     inherits "^2.0.1"
+
+rn-color-matrices@^4.0.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/rn-color-matrices/-/rn-color-matrices-4.1.0.tgz#9ac5ce3d7daaf33d336b877508649469cb39f8a5"
+  integrity sha512-a8++z3Zi4GhA0oWwKS3etdrVuVQ2q/ByTMh6lMxo+vaSv3SRSSg5SzpZk65GS0NCAqMhFT8WSvgSgNhO/F+xag==
+  dependencies:
+    clamp "^1.0.1"
 
 rsvp@^4.8.4:
   version "4.8.5"
