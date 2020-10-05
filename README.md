@@ -90,15 +90,28 @@
 ```json
 [
     {
-        "id": "zVQ85_ij3dM0U5k7PmfQi",
-        "name": "유재석",
-        "description": "유재석 졸업생에 대한 설명입니다.",
-        "thumbnail_path": "/imgs/profile_1.jpg"
-작성예저어어엊어정정,
+        "id": "HjWispfgiPOTYc8qEVe0G",
+        "name": "김남희",
+        "description": "010nh@naver.com\n010 6777 2408",
+        "vd_id": "sample_article_1_ID",
+        "vd_name": "sample_article_1",
+        "vd_thumbnail": "/image/article/article_1_thumbnail.jpg",
+        "acd_id": "sample_article_2_ID",
+        "acd_name": "sample_article_2",
+        "acd_thumbnail": "/image/article/article_2_thumbnail.jpg",
+        "ds_id": "sample_article_3_ID",
+        "ds_name": "sample_article_3",
+        "ds_thumbnail": "/image/article/article_3_thumbnail.jpg",
+        "dmd_id": "sample_article_4_ID",
+        "dmd_name": "sample_article_4",
+        "dmd_thumbnail": "/image/article/article_4_thumbnail.jpg"
     }
     ...
 ]
 ```
+
+**Description**
+![get_profile_detail_description](https://user-images.githubusercontent.com/50457791/95059074-5d00eb80-0733-11eb-8c91-bee3524e7cc7.png)
 
 ### search_profile
 ##### 입력된 이름이 포함된 졸업자의 정보를 반환합니다.
@@ -111,23 +124,23 @@
 
 |Attribute|Type|Description|Example|
 |---|---|---|---|
-|name|String|졸업자 성명|하|
+|name|String|졸업자 성명|김|
 
 **Result**
 
 ```json
 [
     {
-        "id": "s6cyBm6On1nzn0JnEDNMV",
-        "name": "정준하",
-        "description": "정준하 졸업생에 대한 설명입니다.",
-        "thumbnail_path": "/imgs/profile_4.jpg"
+        "id": "HjWispfgiPOTYc8qEVe0G",
+        "name": "김남희",
+        "thumbnail_color": "/image/profile/HjWispfgiPOTYc8qEVe0G_color.jpg",
+        "thumbnail_gray": "/image/profile/HjWispfgiPOTYc8qEVe0G_gray.jpg"
     },
     {
-        "id": "ps13PokZwrIoQQgp2ZDgu",
-        "name": "하하",
-        "description": "하하 졸업생에 대한 설명입니다.",
-        "thumbnail_path": "/imgs/profile_5.jpg"
+        "id": "C5wY_m2Lj1GIc6Sl7n6Ry",
+        "name": "김수현",
+        "thumbnail_color": "/image/profile/C5wY_m2Lj1GIc6Sl7n6Ry_color.jpg",
+        "thumbnail_gray": "/image/profile/C5wY_m2Lj1GIc6Sl7n6Ry_gray.jpg"
     },
     ...
 ]
@@ -157,15 +170,13 @@
 [
     {
         "id": "SOfcGSM6NXtpqszVhXMZ8",
-        "title": "init_data_article_visual_design_title_1",
-        "maker": "박지홍",
-        "thumbnail_path": "/imgs/profile_1.jpg"
+        "title": "sample_article_1",
+        "thumbnail_path": "/image/article/article_1_thumbnail.jpg"
     },
     {
-        "id": "M7SD0HhvhaqJMBssI9xQX",
-        "title": "노홍철",
-        "maker": "노홍철 졸업생에 대한 설명입니다.",
-        "thumbnail_path": "/imgs/profile_2.jpg"
+        "id": "IUYkBnytp6GoVeTLswq9G",
+        "title": "sample_article_2",
+        "thumbnail_path": "/image/article/article_2_thumbnail.jpg"
     },
     ...
 ]
@@ -238,13 +249,11 @@
 [
     {
         "id": "cS56QPF_wHG1WigDrBIo3",
-        "comment": "안녕하세요~",
-        "uploader_name": "박지홍"
+        "comment": "안녕하세요~"
     },
     {
         "id": "cS56QPF_wHG1WigDrBIo3",
-        "comment": "안녕안녕~~",
-        "uploader_name": "박지홍"
+        "comment": "안녕안녕~~"
     },
     ...
 ]
@@ -261,7 +270,6 @@
 |Attribute|Type|Description|Example|
 |---|---|---|---|
 |comment|String|댓글 내용|"안녕하세요"|
-|uploader_name|String|댓글 작성자 이름|"박지홍"|
 |password|Int|댓글 삭제시 요구될 4자리 비밀번호|1234|
 
 **Result**
