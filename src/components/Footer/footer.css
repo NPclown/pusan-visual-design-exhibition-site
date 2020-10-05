@@ -18,5 +18,9 @@
 
 .logo{
     float: right;
-    line-height: 60px;
 }
+
+.logo-img {
+    height: 60px !important;
+}
+
