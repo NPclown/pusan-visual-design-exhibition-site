@@ -22,7 +22,7 @@ const Comment = (props) =>{
     useEffect(() => {
         const getData = async() => {
             try{
-                var result = await Axios.get(`/api/get_article_comment?article_id=${props.idx}`);
+                var result = await Axios.get(`/api/get_article_comment?article_id=${props.id}`);
                 setState({isLoading : false, comments : result.data})
             } catch(error) {
                 alert(error)
@@ -30,7 +30,7 @@ const Comment = (props) =>{
             }
         }
         getData();
-    },[props.idx])
+    },[props.id])
 
     return state.isLoading ? (
         <div className="loading">
