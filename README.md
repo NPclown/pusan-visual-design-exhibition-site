@@ -75,6 +75,9 @@
 
 ### get_profile_detail
 
+**Progress**: 입력한 user_id에 대해 id, name, description을 제외한 컬럼은 같은 값이 출력됩니다.
+
+
 **URL** : `/api/get_profile_detail`
 
 **Method** : `GET`
@@ -93,16 +96,16 @@
         "id": "HjWispfgiPOTYc8qEVe0G",
         "name": "김남희",
         "description": "010nh@naver.com\n010 6777 2408",
-        "vd_id": "sample_article_1_ID",
+        "vd_id": "SOfcGSM6NXtpqszVhXMZ8",
         "vd_name": "sample_article_1",
         "vd_thumbnail": "/image/article/article_1_thumbnail.jpg",
-        "acd_id": "sample_article_2_ID",
+        "acd_id": "IUYkBnytp6GoVeTLswq9G",
         "acd_name": "sample_article_2",
         "acd_thumbnail": "/image/article/article_2_thumbnail.jpg",
-        "ds_id": "sample_article_3_ID",
+        "ds_id": "OmCnmh1QNPdcqi4MmYQPQ",
         "ds_name": "sample_article_3",
         "ds_thumbnail": "/image/article/article_3_thumbnail.jpg",
-        "dmd_id": "sample_article_4_ID",
+        "dmd_id": "5v4bdO2qqYVfMBjrLz_wi",
         "dmd_name": "sample_article_4",
         "dmd_thumbnail": "/image/article/article_4_thumbnail.jpg"
     }
