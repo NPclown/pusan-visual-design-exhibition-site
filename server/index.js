@@ -286,7 +286,7 @@ index.post('/api/add_article_comment', (req, res) => {
 index.post('/api/del_article_comment', (req, res) => {
     try {
         db.get('article_comment')
-            .remove({id: req.body.id, article_id: req.body.id, password: req.body.password})
+            .remove({id: req.body.id, article_id: req.body.article_id, password: req.body.password})
             .write();
         res.send(true)
     } catch (e) {
