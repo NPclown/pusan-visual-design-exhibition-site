@@ -13,6 +13,10 @@
 
 **4000번 포트로 서비스를 테스트해주세요!!**
 
+### Caution
+모든 POST 요청은 다음의 헤더로 보내주셔야합니다!!  
+> Content-Type: application/json
+
 # API 명세
 **프로필 (profile) 관련**
 - [/api/get_profile_list](#get_profile_list)
@@ -303,6 +307,8 @@ True | False
 ## 게시글 (article_comment)
 ### get_article_comment
 
+**Progress**: SOfcGSM6NXtpqszVhXMZ8 의 article에만 21개 이상의 sample이 들어있습니다.
+
 **URL** : `/api/get_article_comment`
 
 **Method** : `GET`
@@ -312,25 +318,35 @@ True | False
 |Attribute|Type|Description|Example|
 |---|---|---|---|
 |article_id|String|게시글 ID|SOfcGSM6NXtpqszVhXMZ8|
+|page|String|[option]   존재하지 않을시 0으로 계산합니다|0|
 
 **Result**
 
 ```json
-[
-    {
-        "id": "Ihi4vLLfPRC6PwrbcDkuh",
-        "comment": "작품이 엄청나시네요!",
-        "uploader_name": "박지홍",
-        "upload_date": "2020-09-05"
-    },
-    {
-        "id": "CC8c550I3EQ5nS12dGT5P",
-        "comment": "영혼과 정성이 느껴집니다",
-        "uploader_name": "박지홍",
-        "upload_date": "2020-09-05"
-    }, 
-    ...
-]
+{
+    "next": true,   // 댓글이 다음페이지에도 존재할경우 true 없으면 false 
+    "comments": [
+        {
+            "id": "4zcmP_gAkru-pHbsX-IM7",
+            "comment": "sample_20",
+            "uploader_name": "박지홍_20",
+            "upload_date": "2020-10-05"
+        },
+        {
+            "id": "_cW3oYhkd4Tc1eSDF-LB-",
+            "comment": "sample_19",
+            "uploader_name": "박지홍_19",
+            "upload_date": "2020-10-05"
+        },
+        ...
+        {
+            "id": "K8rpcgm1UVspE5oGpQAl-",
+            "comment": "sample_11",
+            "uploader_name": "박지홍_11",
+            "upload_date": "2020-10-05"
+        }
+    ]
+}
 ```
 
 ### add_article_comment

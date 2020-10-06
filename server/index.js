@@ -15,18 +15,21 @@ index.use(express.json());
 function date_format(time) {
     let date = new Date();
     date.setTime(time);
+    date_string = date.toJSON();
 
-    let month = date.getMonth() + 1;
-    month = month.toString()
-    if (month.length == 1) {
-        month = "0" + month;
-    }
+    // let month = date.getMonth() + 1;
+    // month = month.toString()
+    month = date_string.split('-')[1];
+    // if (month.length == 1) {
+    //     month = "0" + month;
+    // }
 
-    let day = date.getDay();
-    day = day.toString()
-    if (day.length == 1) {
-        day = "0" + day;
-    }
+    // let day = date.getDay();
+    // day = day.toString()
+    day = date_string.split('-')[2].split('T')[0];
+    // if (day.length == 1) {
+    //     day = "0" + day;
+    // }
 
     return `${date.getFullYear()}-${month}-${day}`
 }
@@ -220,6 +223,7 @@ index.get('/api/get_article_comment', (req, res) => {
     try {
         let data = db.get('article_comment').value();
         data = data.filter(u => u.article_id === req.query.article_id);
+        data.reverse();
 
         let result;
 
@@ -234,13 +238,35 @@ index.get('/api/get_article_comment', (req, res) => {
             }));
         }
 
-        res.json(result);
+        let next = false;
+        let start;
+        let end;
+
+        if (typeof req.query.page == 'undefined'){
+            start = 0;
+            end = start + 10;
+        } else{
+            start = Number(req.query.page) * 10;
+            end = start + 10;
+        }
+
+        sliced_result = result.slice(start, end);
+
+        if (result.length > end){
+            next = true;
+        }
+
+        res.json({
+            "next": next,
+            "comments": sliced_result
+        });
     } catch (e) {
         console.log(e);
         res.send(false);
     }
 });
 index.post('/api/add_article_comment', (req, res) => {
+    console.log(req.body)
     try {
         db.get('article_comment')
             .push({

@@ -6,6 +6,7 @@ import ArtDetail from './pages/ArtDetail';
 import GraduateDetail from './pages/GraduateDetail'
 import ArtPage from './pages/ArtPage';
 import Search from './pages/Search';
+import Guest from './pages/Guest';
 import NoMatch from './pages/NoMatch';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -20,6 +21,7 @@ function App() {
         <Route exact path="/art/:type" render={(props) => <ArtPage {...props} />} />
         <Route exact path="/search/title/:search" render={(props) => <Search {...props} />} />
         <Route exact path="/search/name/:name" render={(props) => <Search {...props} />} />
+        <Route exact path="/guest" render={(props) => <Guest {...props} />} />
         <Route exact path="*" render={(props) => <NoMatch {...props} />} />
       </Switch>
     </Router>
