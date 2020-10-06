@@ -277,7 +277,6 @@
 |Attribute|Type|Description|Example|
 |---|---|---|---|
 |comment|String|댓글 내용|"안녕하세요"|
-|password|Int|댓글 삭제시 요구될 4자리 비밀번호|1234|
 
 **Result**
 

@@ -200,7 +200,6 @@ index.post('/api/add_guest_book', (req, res) => {
             .push({
                 id: nanoid(),
                 comment: req.body.comment,
-                password: req.body.password,
                 upload_time: Date.now()
             })
             .write()
