@@ -30,8 +30,8 @@
 
 }
 .modal-open .modal {
-    overflow-x: hidden;
-    overflow-y: hidden;
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
 }
 
 .btn{

@@ -9,17 +9,61 @@ import '../../assets/DelModal.css'
 import ModalHeader from 'react-bootstrap/esm/ModalHeader';
 import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form'
+import {Link} from 'react-router-dom';
 
 const Comment = (props) =>{
+    //
+    //모달 등록 axios
+    const [addOpen, setaddOpen] = React.useState(false);
+    const [addedComment, setComment] = React.useState(false)
+    const [addName, setAddName] = useState("");
+    const [addPwd, setAddPwd] = useState("");
+    const [addComm, setAddComm] = useState("");
+    const [findPwd, setFindPwd] = useState("");
+
     const [isOpen, setIsOpen] = React.useState(false);
+
+    //
+
     const [state, setState] = useState({isLoading : true, comments : []})
+    const [isOpen2, setIsOpen2] = React.useState(false);
+
     const showModal = () => {
         setIsOpen(true);
       };
     
-      const hideModal = () => {
+    const hideModal = () => {
         setIsOpen(false);
+    };
+    const showModal2 = () => {
+        setIsOpen2(true);
       };
+      const hideModal2 = () => {
+        setIsOpen2(false);
+      };
+
+      function refreshPage() {
+        window.location.reload(false);
+      }
+    const registerComment = async() => {
+        var result;
+        try{
+            result = await Axios.post(`/api/add_article_comment`,{article_id : props.id, comment : addComm , uploader_name:  addName, password : addPwd});
+            setComment(true)
+        } catch(error) {
+            alert(error)
+            setComment(false)
+        }
+
+        if (result.data) {
+            alert(`성공`);
+        }else{
+            alert(`실패`);
+        }
+        hideModal();
+        refreshPage();
+        
+    }  
     useEffect(() => {
         const getData = async() => {
             try{
@@ -34,13 +78,7 @@ const Comment = (props) =>{
     },[props.id])
 
     //deleteModal
-    const [isOpen2, setIsOpen2] = React.useState(false);
-    const showModal2 = () => {
-        setIsOpen2(true);
-      };
-      const hideModal2 = () => {
-        setIsOpen2(false);
-      };
+   
     return state.isLoading ? (
         <div className="loading">
             <span>Loading...</span>
@@ -61,24 +99,24 @@ const Comment = (props) =>{
                 <Form className="middle-modal">
                 <Form.Group controlId="formGroupEmail">
                     <Form.Label>이름</Form.Label>
-                    <Form.Control type="name" className = "myfont-size" placeholder="5자 제한" />
+                    <Form.Control  value={addName} onChange={e => setAddName(e.target.value)} className = "myfont-size" placeholder="5자 제한" maxLength="5" />
                 </Form.Group>
 
                 <Form.Group controlId="formGroupPassword">
                     <Form.Label>비밀번호</Form.Label>
-                    <Form.Control type="password" className = "myfont-size" placeholder="●●●●" />
+                    <Form.Control  value={addPwd} onChange={e => setAddPwd(e.target.value)} className = "myfont-size" placeholder="●●●●" maxLength="4"/>
                 </Form.Group>
 
                 <Form.Group controlId="formGroupPassword">
                 <Form.Label>댓글</Form.Label>
-                <Form.Control className = "comment-form" type="comment" placeholder="작품 감상평 또는 응원의 댓글을 달아주세요.(80자 제한)" />
+                <Form.Control  className = "comment-form" value={addComm} onChange={e => setAddComm(e.target.value)}  placeholder="작품 감상평 또는 응원의 댓글을 달아주세요.(80자 제한)" maxLength="80" />
                 </Form.Group>
 
                 </Form>
 
                 </ModalBody>
 
-                <Button onClick={hideModal} variant="success">등록</Button>
+                <Button onClick={registerComment} variant="success">등록</Button>
                 <div onClick={hideModal} variant="close">
                     <Image src="/imgs/x.png" className="x-close" alt="logo" />
                 </div>
@@ -104,7 +142,7 @@ const Comment = (props) =>{
                 <Form className="middle-modal">
                 <Form.Group controlId="formGroupPassword">
                     <Form.Label>비밀번호</Form.Label>
-                    <Form.Control type="password" className = "myfont-size" placeholder="댓글 작성시 입력했던 비밀번호를 입력해 주세요." />
+                    <Form.Control value={findPwd} className = "myfont-size" placeholder="댓글 작성시 입력했던 비밀번호를 입력해 주세요." />
                 </Form.Group>
                 </Form>
 
@@ -115,9 +153,6 @@ const Comment = (props) =>{
                     <Image src="/imgs/x.png" className="x-close2" alt="logo" />
                 </div>
                 </Modal>     
-
-
-
         </div>
     );
     
@@ -125,4 +160,3 @@ const Comment = (props) =>{
 
 export default Comment;
 
-// onClick={() => showModal(true)}
