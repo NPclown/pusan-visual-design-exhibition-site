@@ -44,7 +44,7 @@
 
 .row1 {
     display: grid;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(4, 277px);
     grid-gap: 70px 31px;
 }
 .container1:hover .color-picture {

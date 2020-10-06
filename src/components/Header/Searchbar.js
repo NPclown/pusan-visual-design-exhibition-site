@@ -21,7 +21,7 @@ const Searchbar = () => {
                     onChange={e => setSearch(e.target.value)}
                 ></input>
             </div>
-            <Link to = {`/search/${option==="이름" ? "name" : "title"}/${search}`}><i className='fas fa-search'></i></Link> 
+            <Link to = {`/search/name/${search}`}><i className='fas fa-search'></i></Link> 
         </div>
     )
 }
