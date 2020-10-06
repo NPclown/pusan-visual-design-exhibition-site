@@ -1,6 +1,5 @@
 .modal{
     width: 790px !important;
-    height: 635px !important;
     right: 0 !important;
     margin-left: auto !important;
     margin-right: auto !important;
@@ -25,12 +24,14 @@
     margin-bottom: 31px !important;
 }
 .modal-content{
-    position: none !important;
     border: none !important;
-    height: 625px !important;
-    width: 790px !important;
     overflow: hidden;
-    height: 100%;
+    height: 625px !important;
+
+}
+.modal-open .modal {
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .btn{

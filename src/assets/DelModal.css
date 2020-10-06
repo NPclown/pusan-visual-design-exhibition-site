@@ -1,0 +1,20 @@
+.x-close2 {
+    object-fit: contain;
+    opacity: 0.9;
+    position: relative;
+    left: 683px;
+    cursor: pointer;
+    bottom: 367px;
+}
+.modal-size2{
+    height: 393px !important;
+}
+
+.modal-content2{
+    position: none !important;
+    border: none !important;
+    height: 400px !important;
+    width: 790px !important;
+    overflow: hidden;
+    height: 100%;
+}
