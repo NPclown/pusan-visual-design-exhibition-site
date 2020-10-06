@@ -1,13 +1,29 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
+import Axios from 'axios';
 import {Image} from 'react-bootstrap';
 import Header from '../components/Header/Header'
 import Footer from '../components/Footer/Footer'
 import GuestRegister from '../components/Guest/GuestRegister'
+import GuestCont from '../components/Guest/GuestCont'
 import '../assets/main.css'
 import '../assets/font.css'
 import '../components/Guest/Guest.css'
 
 const Guest = () =>{
+    const [state, setState] = useState({isLoading : false, data : []})
+    useEffect(() => {
+      const getData = async() => {
+          try{
+              var result = await Axios.get(`/api/get_guest_book`);
+              setState({isLoading : false, data : result.data})
+          } catch(error) {
+              alert(error)
+              setState({isLoading : false, data : []})
+          }
+      }
+      getData();
+    },[])
+
     return (
         <div className="App">
           <Header state="방명록"></Header>
@@ -20,6 +36,13 @@ const Guest = () =>{
                 열여덟 개의 지향점을 응원하며
             </div>
             <GuestRegister></GuestRegister>
+            <div className="guest-list">
+              {
+                state.data.map((item, index) => (
+                    <GuestCont key={index} id={item.id} cont={item.comment} date="2020-09-21" onClick={() => alert(item.id)}></GuestCont>
+                ))
+              }
+            </div>
           </div>
           <Footer></Footer>
       </div>

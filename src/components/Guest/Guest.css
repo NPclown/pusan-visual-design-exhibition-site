@@ -32,3 +32,24 @@
     width: 279px;
 
 }
+
+.guest-list {
+    margin-left : 51px;
+    margin-top : 61px;
+    margin-bottom: 58px;
+    width : 1112px;
+}
+.guest-group {
+    display: flex;
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.guest-cont {
+    width: 965px;
+}
+
+.guest-date {
+    min-width: 95px;
+    margin-left : 32px;
+}
