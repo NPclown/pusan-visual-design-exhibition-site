@@ -4,6 +4,21 @@
       "id": "kHZZ5panLF6LUNtBKisYB",
       "comment": "init_data_guest_book_1",
       "upload_time": 1600683745447
+    },
+    {
+      "id": "h3M2z9uP9jmzlULZBW1Jm",
+      "comment": "guest book sample 1",
+      "upload_time": 1602021641463
+    },
+    {
+      "id": "Z2F7Re317CtAjeFNlgatK",
+      "comment": "guest book sample 2",
+      "upload_time": 1602021652351
+    },
+    {
+      "id": "UdJgThjbPMn-sImzMsjOL",
+      "comment": "guest book sample 3",
+      "upload_time": 1602021655981
     }
   ],
   "article_comment": [
@@ -272,7 +287,7 @@
     {
       "id": "iM7bGyJvO-6AoiY1cEOTl",
       "title": "init_data_article_visual_design_title_5",
-      "maker": "박지홍",
+      "maker_id": "C5wY_m2Lj1GIc6Sl7n6Ry",
       "thumbnail_path": "/imgs/article_5_thumbnail.jpg",
       "img_path": "/imgs/article_5_original.jpg",
       "type": "visual_design"
@@ -280,7 +295,7 @@
     {
       "id": "oLA9ji6mWnqIyc1XLOHm5",
       "title": "init_data_article_visual_design_title_6",
-      "maker": "박지홍",
+      "maker_id": "C5wY_m2Lj1GIc6Sl7n6Ry",
       "thumbnail_path": "/imgs/article_6_thumbnail.jpg",
       "img_path": "/imgs/article_6_original.jpg",
       "type": "visual_design"
@@ -288,7 +303,7 @@
     {
       "id": "4AxHDoAjkq_Hh-jQguuwk",
       "title": "init_data_article_advertising_conti_design_title_1",
-      "maker": "박지홍",
+      "maker_id": "C5wY_m2Lj1GIc6Sl7n6Ry",
       "thumbnail_path": "/imgs/article_1_thumbnail.jpg",
       "img_path": "/imgs/article_1_original.jpg",
       "type": "advertising_conti_design"
@@ -296,7 +311,7 @@
     {
       "id": "LUe-zHdp1sBZ6tUz1QxVS",
       "title": "init_data_article_advertising_conti_design_title_2",
-      "maker": "박지홍",
+      "maker_id": "C5wY_m2Lj1GIc6Sl7n6Ry",
       "thumbnail_path": "/imgs/article_2_thumbnail.jpg",
       "img_path": "/imgs/article_2_original.jpg",
       "type": "advertising_conti_design"
@@ -304,7 +319,7 @@
     {
       "id": "vx3F5g_rNNFnZYmQ3e3oc",
       "title": "init_data_article_advertising_conti_design_title_3",
-      "maker": "박지홍",
+      "maker_id": "RlVDaN0FIF7h-BjmlfbED",
       "thumbnail_path": "/imgs/article_3_thumbnail.jpg",
       "img_path": "/imgs/article_3_original.jpg",
       "type": "advertising_conti_design"
@@ -312,7 +327,7 @@
     {
       "id": "j9OmCiZmzBupXtqu7ja8Q",
       "title": "init_data_article_advertising_conti_design_title_4",
-      "maker": "박지홍",
+      "maker_id": "RlVDaN0FIF7h-BjmlfbED",
       "thumbnail_path": "/imgs/article_4_thumbnail.jpg",
       "img_path": "/imgs/article_4_original.jpg",
       "type": "advertising_conti_design"
@@ -320,7 +335,7 @@
     {
       "id": "oKV3RrjfNd-90Dx-7F6d8",
       "title": "init_data_article_advertising_conti_design_title_5",
-      "maker": "박지홍",
+      "maker_id": "RlVDaN0FIF7h-BjmlfbED",
       "thumbnail_path": "/imgs/article_5_thumbnail.jpg",
       "img_path": "/imgs/article_5_original.jpg",
       "type": "advertising_conti_design"
@@ -328,7 +343,7 @@
     {
       "id": "4wNnMD8UgzAs-oUjFAs1f",
       "title": "init_data_article_advertising_conti_design_title_6",
-      "maker": "박지홍",
+      "maker_id": "RlVDaN0FIF7h-BjmlfbED",
       "thumbnail_path": "/imgs/article_6_thumbnail.jpg",
       "img_path": "/imgs/article_6_original.jpg",
       "type": "advertising_conti_design"
@@ -336,7 +351,7 @@
     {
       "id": "MkASudkoiwo_IlLFU6sLA",
       "title": "init_data_article_design_seminar_title_1",
-      "maker": "박지홍",
+      "maker_id": "s6cyBm6On1nzn0JnEDNMV",
       "thumbnail_path": "/imgs/article_1_thumbnail.jpg",
       "img_path": "/imgs/article_1_original.jpg",
       "type": "design_seminar"
@@ -344,7 +359,7 @@
     {
       "id": "McX4XkbYzOW75SFAptC1P",
       "title": "init_data_article_design_seminar_title_2",
-      "maker": "박지홍",
+      "maker_id": "s6cyBm6On1nzn0JnEDNMV",
       "thumbnail_path": "/imgs/article_2_thumbnail.jpg",
       "img_path": "/imgs/article_2_original.jpg",
       "type": "design_seminar"
@@ -352,7 +367,7 @@
     {
       "id": "ihA7Tc4SpNK3alJoY6S9n",
       "title": "init_data_article_design_seminar_title_3",
-      "maker": "박지홍",
+      "maker_id": "s6cyBm6On1nzn0JnEDNMV",
       "thumbnail_path": "/imgs/article_3_thumbnail.jpg",
       "img_path": "/imgs/article_3_original.jpg",
       "type": "design_seminar"
@@ -360,7 +375,7 @@
     {
       "id": "T0cdf9SSGOQiFpLtPgj8-",
       "title": "init_data_article_design_seminar_title_4",
-      "maker": "박지홍",
+      "maker_id": "s6cyBm6On1nzn0JnEDNMV",
       "thumbnail_path": "/imgs/article_4_thumbnail.jpg",
       "img_path": "/imgs/article_4_original.jpg",
       "type": "design_seminar"
@@ -368,7 +383,7 @@
     {
       "id": "lNn-XzB54D1EeBBSh9RyC",
       "title": "init_data_article_design_seminar_title_5",
-      "maker": "박지홍",
+      "maker_id": "ps13PokZwrIoQQgp2ZDgu",
       "thumbnail_path": "/imgs/article_5_thumbnail.jpg",
       "img_path": "/imgs/article_5_original.jpg",
       "type": "design_seminar"
@@ -376,7 +391,7 @@
     {
       "id": "kBtobHK3ZeUYsEj49s1YE",
       "title": "init_data_article_design_seminar_title_6",
-      "maker": "박지홍",
+      "maker_id": "ps13PokZwrIoQQgp2ZDgu",
       "thumbnail_path": "/imgs/article_6_thumbnail.jpg",
       "img_path": "/imgs/article_6_original.jpg",
       "type": "design_seminar"
@@ -384,7 +399,7 @@
     {
       "id": "-KKrwZZWhKe6AA2mIDhs5",
       "title": "init_data_article_digital_media_design_title_1",
-      "maker": "박지홍",
+      "maker_id": "ps13PokZwrIoQQgp2ZDgu",
       "thumbnail_path": "/imgs/article_1_thumbnail.jpg",
       "img_path": "/imgs/article_1_original.jpg",
       "type": "digital_media_design"
@@ -392,7 +407,7 @@
     {
       "id": "f85nALx3QHlMj8cb7y9VA",
       "title": "init_data_article_digital_media_design_title_2",
-      "maker": "박지홍",
+      "maker_id": "ps13PokZwrIoQQgp2ZDgu",
       "thumbnail_path": "/imgs/article_2_thumbnail.jpg",
       "img_path": "/imgs/article_2_original.jpg",
       "type": "digital_media_design"
@@ -400,7 +415,7 @@
     {
       "id": "oXazF_nH7C_2e9lFnD-U5",
       "title": "init_data_article_digital_media_design_title_3",
-      "maker": "박지홍",
+      "maker_id": "j4j695vBae-ipmQAr7byn",
       "thumbnail_path": "/imgs/article_3_thumbnail.jpg",
       "img_path": "/imgs/article_3_original.jpg",
       "type": "digital_media_design"
@@ -408,7 +423,7 @@
     {
       "id": "IiAdgTXG_sFLaJnvXNYlZ",
       "title": "init_data_article_digital_media_design_title_4",
-      "maker": "박지홍",
+      "maker_id": "j4j695vBae-ipmQAr7byn",
       "thumbnail_path": "/imgs/article_4_thumbnail.jpg",
       "img_path": "/imgs/article_4_original.jpg",
       "type": "digital_media_design"
@@ -416,7 +431,7 @@
     {
       "id": "tYrdETV9TRFUbH59nC6cw",
       "title": "init_data_article_digital_media_design_title_5",
-      "maker": "박지홍",
+      "maker_id": "j4j695vBae-ipmQAr7byn",
       "thumbnail_path": "/imgs/article_5_thumbnail.jpg",
       "img_path": "/imgs/article_5_original.jpg",
       "type": "digital_media_design"
@@ -424,7 +439,7 @@
     {
       "id": "pWnEDinIDTzHjABDFUnDL",
       "title": "init_data_article_digital_media_design_title_6",
-      "maker": "박지홍",
+      "maker_id": "j4j695vBae-ipmQAr7byn",
       "thumbnail_path": "/imgs/article_6_thumbnail.jpg",
       "img_path": "/imgs/article_6_original.jpg",
       "type": "digital_media_design"

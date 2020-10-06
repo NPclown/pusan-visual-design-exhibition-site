@@ -255,12 +255,14 @@
 ```json
 [
     {
-        "id": "cS56QPF_wHG1WigDrBIo3",
-        "comment": "안녕하세요~"
+        "id": "UdJgThjbPMn-sImzMsjOL",
+        "comment": "guest book sample 3",
+        "upload_date": "2020-10-07"
     },
     {
-        "id": "cS56QPF_wHG1WigDrBIo3",
-        "comment": "안녕안녕~~"
+        "id": "Z2F7Re317CtAjeFNlgatK",
+        "comment": "guest book sample 2",
+        "upload_date": "2020-10-07"
     },
     ...
 ]
@@ -317,12 +319,13 @@ True | False
 |Attribute|Type|Description|Example|
 |---|---|---|---|
 |article_id|String|게시글 ID|SOfcGSM6NXtpqszVhXMZ8|
-|page|String|[option]   존재하지 않을시 0으로 계산합니다|0|
+|page|String|[option]   존재하지 않을시 1로 계산합니다|1|
 
 **Result**
 
 ```json
 {
+    "count": 23,    // 전체 댓글 개수
     "next": true,   // 댓글이 다음페이지에도 존재할경우 true 없으면 false 
     "comments": [
         {
