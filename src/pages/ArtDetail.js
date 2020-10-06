@@ -17,7 +17,7 @@ const ArtDetail = (props) =>{
     useEffect(() => {
         const getData = async() => {
             try{
-                var result = await Axios.get(`/api/get_article_detail?article_id=${props.match.params.idx}`);
+                var result = await Axios.get(`/api/get_article_detail?article_id=${props.match.params.id}`);
                 setState({isLoading : false, art : result.data})
             } catch(error) {
                 alert(error)
@@ -25,7 +25,7 @@ const ArtDetail = (props) =>{
             }
         }
         getData();
-    },[props.match.params.idx])
+    },[props.match.params.id])
 
     return (
         <div className="App">
@@ -34,9 +34,9 @@ const ArtDetail = (props) =>{
               <Loading></Loading>
             ) : (
             <div className="content">
-              <Title main={state.art.title} sub={state.art.maker}></Title>
-              <ArtContent image={state.art.img_path} video=""></ArtContent>
-              <Comment idx={state.art.id}></Comment>
+              <Title main={state.art[0].title} sub={state.art[0].maker}></Title>
+              <ArtContent image={state.art[0].img_path} video=""></ArtContent>
+              <Comment id={state.art[0].id}></Comment>
             </div>
             )}
           <Footer></Footer>

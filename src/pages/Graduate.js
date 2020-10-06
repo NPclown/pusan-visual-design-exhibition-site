@@ -20,6 +20,7 @@ const Graduate = (props) => {
         try{
             var result = await axios.get(`/api/get_profile_list`);
             setState({isLoading : false, data : result.data})
+
         } catch(error) {
             alert(error)
             setState({isLoading : false, data : []})
@@ -36,7 +37,8 @@ const Graduate = (props) => {
       ):(
         <div className = "content">
           <Title sub="프로필을 클릭하거나 이름을 검색하여 원하는 분의 작품을 볼 수 있습니다."></Title>
-          <div className = "row1">{
+          <div className = "row1">
+          {
           state.data.map((person) => {
             return(
               <Link to = {`profile/detail/${person.id}`}>
@@ -44,7 +46,8 @@ const Graduate = (props) => {
               </Link>
               )
             }
-          )}
+          )
+          }
           </div>
         </div>
       )}
