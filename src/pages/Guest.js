@@ -11,16 +11,16 @@ import '../components/Guest/Guest.css'
 
 const Guest = () =>{
     const [state, setState] = useState({isLoading : false, data : []})
-    useEffect(() => {
-      const getData = async() => {
-          try{
-              var result = await Axios.get(`/api/get_guest_book`);
-              setState({isLoading : false, data : result.data})
-          } catch(error) {
-              alert(error)
-              setState({isLoading : false, data : []})
-          }
+    const getData = async() => {
+      try{
+          var result = await Axios.get(`/api/get_guest_book`);
+          setState({isLoading : false, data : result.data})
+      } catch(error) {
+          alert(error)
+          setState({isLoading : false, data : []})
       }
+    }
+    useEffect(() => {
       getData();
     },[])
 
@@ -35,7 +35,7 @@ const Guest = () =>{
                 2020 부산대학교 디자인학과 시각디자인전공 졸업전시<br/>
                 열여덟 개의 지향점을 응원하며
             </div>
-            <GuestRegister></GuestRegister>
+            <GuestRegister getDate={() => getData()}></GuestRegister>
             <div className="guest-list">
               {
                 state.data.map((item, index) => (

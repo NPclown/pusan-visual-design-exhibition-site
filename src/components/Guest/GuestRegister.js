@@ -5,25 +5,26 @@ import "./Guest.css";
 
 const GuestRegister = (props) =>{
     const [guestbook, setGuestBook] = useState("");
-    const [state, setState] = useState(false)
-    
+
     const registerGuestBook = async() =>{
+        var state = false;
         if (guestbook === ""){
             alert('방명록을 입력해주세요!')
         }else{
             try{
                 var result = await Axios.post(`/api/add_guest_book`, {comment : guestbook, password : 1111});
-                setState(result.data)
+                state = result.data
             } catch(error) {
                 alert(error)
-                setState(false)
+                state = false
             }
-    
             if (state) {
                 alert('방명록 등록에 성공하였습니다!')
+                props.getDate();
             }else{
                 alert('방명록 등록에 실패하였습니다!')
             }
+            setGuestBook("")
         }
     }
     return (
