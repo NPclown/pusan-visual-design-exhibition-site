@@ -12,10 +12,10 @@ import Form from 'react-bootstrap/Form'
 import {Link} from 'react-router-dom';
 
 const Comment = (props) =>{
-    //
-    //모달 등록 axios
-    const [addOpen, setaddOpen] = React.useState(false);
+
     const [addedComment, setComment] = React.useState(false)
+    const [deletedComment, setdelComment] = React.useState(false)
+
     const [addName, setAddName] = useState("");
     const [addPwd, setAddPwd] = useState("");
     const [addComm, setAddComm] = useState("");
@@ -23,10 +23,10 @@ const Comment = (props) =>{
 
     const [isOpen, setIsOpen] = React.useState(false);
 
-    //
-
     const [state, setState] = useState({isLoading : true, comments : []})
     const [isOpen2, setIsOpen2] = React.useState(false);
+
+    const [deleteId, setDeleteId] = useState("");
 
     const showModal = () => {
         setIsOpen(true);
@@ -45,16 +45,16 @@ const Comment = (props) =>{
       function refreshPage() {
         window.location.reload(false);
       }
+
     const registerComment = async() => {
         var result;
         try{
-            result = await Axios.post(`/api/add_article_comment`,{article_id : props.id, comment : addComm , uploader_name:  addName, password : addPwd});
+            result = await Axios.post(`/api/add_article_comment`,{article_id : props.id, comment : addComm , uploader_name: addName, password : addPwd});
             setComment(true)
         } catch(error) {
             alert(error)
             setComment(false)
         }
-
         if (result.data) {
             alert(`성공`);
         }else{
@@ -62,7 +62,26 @@ const Comment = (props) =>{
         }
         hideModal();
         refreshPage();
-        
+    }  
+
+    const deleteComment = async(e, id) => {
+        e.preventDefault()
+        var result;
+
+        try{
+            result = await Axios.post(`/api/del_article_comment`,{article_id : props.id, id : id , password : findPwd}); // api헷갈
+            setdelComment(true)
+        } catch(error) {
+            alert(error)
+            setdelComment(false)
+        }
+        if (result.data) {
+            alert(`성공`);
+        }else{
+            alert(`실패`);
+        }
+        hideModal();
+        refreshPage();
     }  
     useEffect(() => {
         const getData = async() => {
@@ -77,8 +96,6 @@ const Comment = (props) =>{
         getData();
     },[props.id])
 
-    //deleteModal
-   
     return state.isLoading ? (
         <div className="loading">
             <span>Loading...</span>
@@ -104,7 +121,7 @@ const Comment = (props) =>{
 
                 <Form.Group controlId="formGroupPassword">
                     <Form.Label>비밀번호</Form.Label>
-                    <Form.Control  value={addPwd} onChange={e => setAddPwd(e.target.value)} className = "myfont-size" placeholder="●●●●" maxLength="4"/>
+                    <Form.Control value={addPwd} onChange={e => setAddPwd(e.target.value)} className = "myfont-size" placeholder="●●●●" maxLength="4"/>
                 </Form.Group>
 
                 <Form.Group controlId="formGroupPassword">
@@ -125,11 +142,10 @@ const Comment = (props) =>{
             <div className="comment-cont">
                 {
                     state.comments.map((item, index) => (
-                        <CommentCont key={index} id={item.id} name={item.uploader_name} cont={item.comment} date={item.upload_date} onClick={() => showModal2(true)}></CommentCont>
+                        <CommentCont key={index} id={item.id} name={item.uploader_name} cont={item.comment} date={item.upload_date} onClick={() => {setDeleteId(item.id);showModal2(true)}}></CommentCont>
                     ))
                 }
             </div>
-
             <Modal backdrop="static" show={isOpen2}  onHide={hideModal2} className= "modal-size2" >
                 <ModalHeader bsPrefix = "modal-title">
                 <Image src="/image/Modal/logo.png" className = "modal-title"/>
@@ -142,21 +158,21 @@ const Comment = (props) =>{
                 <Form className="middle-modal">
                 <Form.Group controlId="formGroupPassword">
                     <Form.Label>비밀번호</Form.Label>
-                    <Form.Control value={findPwd} className = "myfont-size" placeholder="댓글 작성시 입력했던 비밀번호를 입력해 주세요." />
+                    <Form.Control value={findPwd} onChange={e => setFindPwd(e.target.value)} className = "myfont-size" placeholder="댓글 작성시 입력했던 비밀번호를 입력해 주세요." maxLength="4" />
                 </Form.Group>
                 </Form>
 
                 </ModalBody>
 
-                <Button onClick={hideModal2} variant="success">삭제</Button>
+                <Button onClick={e => deleteComment(e, deleteId)} variant="success">삭제</Button>
                 <div onClick={hideModal2} variant="close">
                     <Image src="/imgs/x.png" className="x-close2" alt="logo" />
                 </div>
                 </Modal>     
         </div>
+        
     );
     
 }
-
 export default Comment;
 
