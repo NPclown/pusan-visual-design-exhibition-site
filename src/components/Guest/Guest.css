@@ -1,0 +1,34 @@
+.register {
+    width : 1200px;
+    height: 110px;
+    border: #00964f solid;
+    border-width: 28px;
+}
+
+.register-input {
+    width : 1060px;
+    height : 54px;
+    border-bottom: none;
+}
+
+.register-button {
+    margin-right : 15px;
+    float : right;
+    line-height: 57px;
+}
+
+.register-button:hover{
+    cursor: pointer;
+}
+
+.arrows {
+    margin-right: auto;
+    margin-left: auto;
+    width: 313px;
+}
+
+.guest-logo {
+    margin-left : -55px;
+    width: 279px;
+
+}
