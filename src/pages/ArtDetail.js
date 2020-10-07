@@ -36,7 +36,7 @@ const ArtDetail = (props) =>{
             <div className="content">
               <Title main={state.art[0].title} sub={state.art[0].maker}></Title>
               <ArtContent image={state.art[0].img_path} video=""></ArtContent>
-              <Comment id={state.art[0].id}></Comment>
+              <Comment id={state.art[0].id} page={props.match.params.page}></Comment>
             </div>
             )}
           <Footer></Footer>
