@@ -34,29 +34,25 @@ const GraduateDetail = (props)=>{
     </div>
     ) : (      
           <div className ="GraduateDetail">
-          <Header state="프로필"></Header>
-          <div className ="content">
-            <Title sub="작품을 클릭하면 해당 작품으로 이동됩니다."></Title>
-            <div className="profileViewName">
-              {state.data.name}
-            </div>
-            <div className="profileViewContact">
-              {state.data.description}
+            <Header state="프로필"></Header>
+            <div className ="content">
+              <Title sub="작품을 클릭하면 해당 작품으로 이동됩니다."></Title>
+              <div className="profileViewName">
+                {state.data.name}
               </div>
-          </div>
-          <div className="profileViewBar"></div>
-          <div className="profileViewArt">
-          <ArtPictureDetail 
-          vd_img = {state.data.vd_thumbnail} acd_img={state.data.acd_thumbnail} ds_img={state.data.ds_thumbnail} dmd_img={state.data.dmd_thumbnail} 
-          vd_id={state.data.vd_thumbnail} acd_id={state.data.acd_id} ds_id={state.data.ds_id} dmd_id={state.data.dmd_id}
-          ></ArtPictureDetail>
-          </div>
-
-                    
-
-
+              <div className="profileViewContact">
+                {state.data.description}
+              </div>
+              <div className="profileViewBar"></div>
+              <div className="profileViewArt">
+              <ArtPictureDetail 
+                vd_img = {state.data.vd_thumbnail} acd_img={state.data.acd_thumbnail} ds_img={state.data.ds_thumbnail} dmd_img={state.data.dmd_thumbnail} 
+                vd_id={state.data.vd_id} acd_id={state.data.acd_id} ds_id={state.data.ds_id} dmd_id={state.data.dmd_id}>     
+              </ArtPictureDetail>
+              </div>
+            </div>
           <Footer></Footer>
-  </div>
+        </div>
   )
   
     };
