@@ -39,7 +39,7 @@ const Guest = () =>{
             <div className="guest-list">
               {
                 state.data.map((item, index) => (
-                    <GuestCont key={index} id={item.id} cont={item.comment} date="2020-09-21" onClick={() => alert(item.id)}></GuestCont>
+                    <GuestCont key={index} id={item.id} cont={item.comment} date={item.upload_date} onClick={() => alert(item.id)}></GuestCont>
                 ))
               }
             </div>
