@@ -16,8 +16,8 @@ function App() {
       <Switch>
         <Route exact path="/" render={(props) => <Home {...props} />} />
         <Route exact path="/profile" render={(props) => <Graduate {...props} />} />
-        <Route exact path="/profile/detail/:id" component={GraduateDetail } />
-        <Route exact path="/art/detail/:id/:page" render={(props) => <ArtDetail {...props} />} />
+        <Route exact path="/profile/detail/:id" render={(props) => <GraduateDetail {...props} />} />
+        <Route exact path="/art/detail/:id" render={(props) => <ArtDetail {...props} />} />
         <Route exact path="/art/:type" render={(props) => <ArtPage {...props} />} />
         <Route exact path="/search/title/:search" render={(props) => <Search {...props} />} />
         <Route exact path="/search/name/:name" render={(props) => <Search {...props} />} />
