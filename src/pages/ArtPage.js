@@ -12,6 +12,7 @@ import Title from '../components/Title/Title'
 
 const ArtPage = (props) => {
   const [state, setState] = useState({isLoading : true, data : []})
+  const [sub, setSub] = useState("");
 
   useEffect(() => {
     const getData = async() => {
@@ -24,16 +25,34 @@ const ArtPage = (props) => {
         }
     }
     getData();
+
+    switch(props.match.params.type){
+      case "advertising_conti_design":
+        setSub("광고콘텐츠디자인");
+        break;
+      case "design_seminar":
+        setSub("디지인세미나");
+        break;
+      case "digital_media_design":
+        setSub("디지털미디어디자인");
+        break;
+      case "visual_design":
+        setSub("시각디자인");
+        break;
+      default :
+        setSub("")
+    }
+
 },[props.match.params.type])
   
   return (
       <div className="ArtPage">
-        <Header state="작품"></Header>
+        <Header state="작품" sub={sub}></Header>
           {state.isLoading ? (
             <Loading></Loading>
           ) : (
             <div className = "content">
-            <Title main={props.match.params.type} sub="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore."></Title>
+            <Title main={sub} sub="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore."></Title>
               <div className = "art-row1">{
                 state.data.map((art) => {
                     return(
