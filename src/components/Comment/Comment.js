@@ -33,6 +33,10 @@ const Comment = (props) =>{
 
     const registerComment = async() => {
         var result;
+        if(Name === "" || Pwd === "" || Comm ==="" ){
+            alert('빈칸을 채워주세요!')
+        }else{
+        
         try{
             result = await Axios.post(`/api/add_article_comment`,{article_id : props.id, comment : Comm , uploader_name: Name, password : Pwd});
         } catch(error) {
@@ -45,12 +49,15 @@ const Comment = (props) =>{
         }
         setIsRegisterOpen(false);
         getData();
+    }
     }  
 
     const deleteComment = async(e, id) => {
         e.preventDefault()
         var result;
-
+        if(findPwd === ""){
+            alert('비밀번호를 입력해주세요.')
+        }else{
         try{
             result = await Axios.post(`/api/del_article_comment`,{article_id : props.id, id : id , password : findPwd}); // api헷갈
         } catch(error) {
@@ -63,6 +70,7 @@ const Comment = (props) =>{
         }
         setIsDeleteOpen(false);
         getData();
+    }
     }  
 
 
