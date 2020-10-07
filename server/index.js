@@ -15,21 +15,21 @@ index.use(express.json());
 function date_format(time) {
     let date = new Date();
     date.setTime(time);
-    date_string = date.toJSON();
+    date_string = date.toLocaleDateString();
 
     // let month = date.getMonth() + 1;
     // month = month.toString()
     month = date_string.split('-')[1];
-    // if (month.length == 1) {
-    //     month = "0" + month;
-    // }
+    if (month.length == 1) {
+        month = "0" + month;
+    }
 
     // let day = date.getDay();
     // day = day.toString()
-    day = date_string.split('-')[2].split('T')[0];
-    // if (day.length == 1) {
-    //     day = "0" + day;
-    // }
+    day = date_string.split('-')[2];
+    if (day.length == 1) {
+        day = "0" + day;
+    }
 
     return `${date.getFullYear()}-${month}-${day}`
 }
@@ -182,10 +182,12 @@ index.get('/api/get_guest_book', (req, res) => {
         let data = db.get('guest_book').value();
         let result;
 
+        data.reverse();
+
         if (data.length == 0) {
             result = [];
         } else {
-            result = data.map(u => ({id: u.id, comment: u.comment}));
+            result = data.map(u => ({id: u.id, comment: u.comment, upload_date: date_format(u.upload_time)}));
         }
 
         res.json(result);
@@ -200,7 +202,6 @@ index.post('/api/add_guest_book', (req, res) => {
             .push({
                 id: nanoid(),
                 comment: req.body.comment,
-                password: req.body.password,
                 upload_time: Date.now()
             })
             .write()
@@ -242,21 +243,22 @@ index.get('/api/get_article_comment', (req, res) => {
         let start;
         let end;
 
-        if (typeof req.query.page == 'undefined'){
+        if (typeof req.query.page == 'undefined') {
             start = 0;
             end = start + 10;
-        } else{
-            start = Number(req.query.page) * 10;
+        } else {
+            start = (Number(req.query.page) - 1) * 10;
             end = start + 10;
         }
 
         sliced_result = result.slice(start, end);
 
-        if (result.length > end){
+        if (result.length > end) {
             next = true;
         }
 
         res.json({
+            "count": data.length,
             "next": next,
             "comments": sliced_result
         });
@@ -287,7 +289,7 @@ index.post('/api/add_article_comment', (req, res) => {
 index.post('/api/del_article_comment', (req, res) => {
     try {
         db.get('article_comment')
-            .remove({id: req.body.id, article_id: req.body.id, password: req.body.password})
+            .remove({id: req.body.id, article_id: req.body.article_id, password: req.body.password})
             .write();
         res.send(true)
     } catch (e) {
