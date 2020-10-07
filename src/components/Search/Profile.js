@@ -5,7 +5,7 @@ import Axios from 'axios';
 
 import Picture from '../Profile/Picture'
 
-const Article = (props) =>{
+const Profile = (props) =>{
     const [state, setState] = useState({isLoading : true, data : []})
 
     useEffect(() => {
@@ -39,4 +39,4 @@ const Article = (props) =>{
     ));
 }
 
-export default Article;
+export default Profile;

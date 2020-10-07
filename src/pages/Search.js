@@ -11,7 +11,7 @@ import '../components/Search/Search.css';
 const Search = (props) =>{
     return (
         <div className="App">
-          <Header></Header>
+          <Header name={props.match.params.name}></Header>
           <div className="content">
             <div className="search-title font-s26-w7-b9">
                 <i className='fas fa-search search-icon'></i>

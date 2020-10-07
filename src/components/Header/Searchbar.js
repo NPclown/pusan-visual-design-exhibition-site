@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import {Link} from 'react-router-dom';
 import './Searchbar.css'
 
-const Searchbar = () => {
-    const [search, setSearch] = useState("");
+const Searchbar = (props) => {
+    const [search, setSearch] = useState(props.name ? props.name : "");
     const [option, setOption] = useState("이름");
 
     return(
@@ -27,5 +27,3 @@ const Searchbar = () => {
 }
 
 export default Searchbar
-
-//option이 이름이면 name 아니면 title을 보낸다. 검색어를 보낸다.
