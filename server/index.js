@@ -14,21 +14,31 @@ index.use(express.json());
 
 function date_format(time) {
     let date = new Date();
+    let month;
+    let day;
     date.setTime(time);
     date_string = date.toLocaleDateString();
 
-    // let month = date.getMonth() + 1;
-    // month = month.toString()
-    month = date_string.split('-')[1];
-    if (month.length == 1) {
-        month = "0" + month;
-    }
+    if (date_string.includes(".")) {
+        month = date_string.split('.')[1].trim();
+        if (month.length == 1) {
+            month = "0" + month;
+        }
 
-    // let day = date.getDay();
-    // day = day.toString()
-    day = date_string.split('-')[2];
-    if (day.length == 1) {
-        day = "0" + day;
+        day = date_string.split('.')[2].trim();
+        if (day.length == 1) {
+            day = "0" + day;
+        }
+    } else if (date_string.includes("-")) {
+        month = date_string.split('-')[1];
+        if (month.length == 1) {
+            month = "0" + month;
+        }
+
+        day = date_string.split('-')[2];
+        if (day.length == 1) {
+            day = "0" + day;
+        }
     }
 
     return `${date.getFullYear()}-${month}-${day}`
@@ -180,9 +190,12 @@ index.get('/api/get_article_detail', (req, res) => {
 index.get('/api/get_guest_book', (req, res) => {
     try {
         let data = db.get('guest_book').value();
+        console.log(data);
         let result;
 
-        data.reverse();
+        data.sort(function (a, b) {
+            return b.upload_time - a.upload_time;
+        });
 
         if (data.length == 0) {
             result = [];
@@ -224,7 +237,9 @@ index.get('/api/get_article_comment', (req, res) => {
     try {
         let data = db.get('article_comment').value();
         data = data.filter(u => u.article_id === req.query.article_id);
-        data.reverse();
+        data.sort(function (a, b) {
+            return b.upload_time - a.upload_time;
+        });
 
         let result;
 
