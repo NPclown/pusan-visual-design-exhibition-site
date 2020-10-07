@@ -37,8 +37,8 @@ const ArtPage = (props) => {
               <div className = "art-row1">{
                 state.data.map((art) => {
                     return(
-                      <Link to = {`detail/${art.id}`}>
-                      <ArtPicture title = {art.title} maker={art.maker} image={art.thumbnail_path}></ArtPicture>
+                      <Link to = {`detail/${art.id}/1`}>
+                        <ArtPicture title = {art.title} maker={art.maker} image={art.thumbnail_path}></ArtPicture>
                       </Link>
                     )
                   }

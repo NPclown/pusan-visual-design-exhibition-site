@@ -58,3 +58,28 @@
     line-height : 20px !important;
     margin-left : 20px;
 }
+
+.paginate {
+    width : 245px;
+    height: auto;
+    margin-left : auto;
+    margin-right : 0px;
+    text-align: end;
+}
+
+.paginate-link {
+    display: inline-block;
+    width : 30px;
+    margin-left : 10px;
+    margin-bottom: 10px;
+}
+
+.paginate-link:hover{
+    color : rgba(0, 150, 74, 0.9);
+    text-decoration: none;
+}
+
+.paginate-link.active{
+    color : rgba(0, 150, 74, 0.9);
+    text-decoration: none;
+}
