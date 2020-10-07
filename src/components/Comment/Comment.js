@@ -87,7 +87,7 @@ const Comment = (props) =>{
         const getData = async() => {
             try{
                 var result = await Axios.get(`/api/get_article_comment?article_id=${props.id}`);
-                setState({isLoading : false, comments : result.data})
+                setState({isLoading : false, comments : result.data.comments})
             } catch(error) {
                 alert(error)
                 setState({isLoading : false, comments : []})
