@@ -303,6 +303,17 @@ index.post('/api/add_article_comment', (req, res) => {
 });
 index.post('/api/del_article_comment', (req, res) => {
     try {
+        let data = db.get('article_comment').find({
+            id: req.body.id,
+            article_id: req.body.article_id,
+            password: req.body.password
+        }).value();
+
+        if (typeof data == 'undefined') {
+            res.send(false);
+            return;
+        }
+
         db.get('article_comment')
             .remove({id: req.body.id, article_id: req.body.article_id, password: req.body.password})
             .write();
