@@ -6,7 +6,7 @@ const Header = (props) =>{
     return (
         <div className="header"> 
             <Navbar state={props.state} sub={props.sub}></Navbar>
-            <Searchbar></Searchbar>
+            <Searchbar name={props.name}></Searchbar>
         </div>
     );
 }
