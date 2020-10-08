@@ -73,7 +73,6 @@ const Comment = (props) =>{
     }
     }  
 
-
     useEffect(() => {
         getData();
     },[props.id, props.page])
@@ -127,7 +126,7 @@ const Comment = (props) =>{
             </div>
 
             <Pagination article_id={props.id} current={props.page} count={state.data.count}></Pagination>
-            <BackArrow></BackArrow>
+            <BackArrow {...props}></BackArrow>
 
             <Modal backdrop="static" show={isDeleteOpen}  onHide={() => setIsDeleteOpen(false)} className= "modal-size2" >
                 <Modal.Header bsPrefix = "modal-title">

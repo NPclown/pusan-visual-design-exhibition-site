@@ -72,3 +72,11 @@
     width: 200px !important;
     animation: spinner-border 1s linear infinite !important;
 }
+
+.backarrow{
+    margin-left : -50px;
+}
+
+.backarrow-logo {
+    cursor: pointer;
+}

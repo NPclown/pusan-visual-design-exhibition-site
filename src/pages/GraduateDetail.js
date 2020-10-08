@@ -9,7 +9,7 @@ import Axios from 'axios';
 import Title from '../components/Title/Title'
 import ArtPictureDetail from '../components/Art/ArtPictureDetail'
 import '../assets/ProfileDetail.css'
-import {Image} from 'react-bootstrap';
+import BackArrow from '../components/Etc/BackArrow'
 
 const GraduateDetail = (props)=>{
   const [state, setState] = useState({isLoading : true, data : []})
@@ -27,7 +27,7 @@ const GraduateDetail = (props)=>{
     }
     getData();
   },[props.match.params.id])
-  console.log(props.id)
+
   return state.isLoading ? (
     <div className="loading">
         <Loading></Loading>
@@ -45,11 +45,12 @@ const GraduateDetail = (props)=>{
               </div>
               <div className="profileViewBar"></div>
               <div className="profileViewArt">
-              <ArtPictureDetail 
-                vd_img = {state.data.vd_thumbnail} acd_img={state.data.acd_thumbnail} ds_img={state.data.ds_thumbnail} dmd_img={state.data.dmd_thumbnail} 
-                vd_id={state.data.vd_id} acd_id={state.data.acd_id} ds_id={state.data.ds_id} dmd_id={state.data.dmd_id}>     
-              </ArtPictureDetail>
+                <ArtPictureDetail 
+                  vd_img = {state.data.vd_thumbnail} acd_img={state.data.acd_thumbnail} ds_img={state.data.ds_thumbnail} dmd_img={state.data.dmd_thumbnail} 
+                  vd_id={state.data.vd_id} acd_id={state.data.acd_id} ds_id={state.data.ds_id} dmd_id={state.data.dmd_id}>     
+                </ArtPictureDetail>
               </div>
+              <BackArrow {...props}></BackArrow>
             </div>
           <Footer></Footer>
         </div>

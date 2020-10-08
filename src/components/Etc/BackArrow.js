@@ -1,11 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import {Image} from 'react-bootstrap';
 
 const BackArrow = (props) =>{
+    console.log(props)
     return (
         <div className="backarrow">
-            <Image className="logo-img" src="/image/common/logo.png" alt="logo" fluid />
+            <Image className="backarrow-logo" src="/image/common/backArrows.png" onClick={() => props.history.goBack()} alt="logo" height="70px" fluid />
         </div>
     );
 }

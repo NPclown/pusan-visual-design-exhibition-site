@@ -25,6 +25,7 @@ input {
 }
 
 i {
+    cursor: pointer;
     opacity: 0.9;
     font-size: 27px;
     line-height: 40px !important;

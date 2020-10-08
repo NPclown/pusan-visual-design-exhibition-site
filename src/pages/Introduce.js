@@ -3,9 +3,8 @@ import '../assets/font.css'
 import '../assets/introduce.css'
 import Header from '../components/Header/Header'
 import Footer from '../components/Footer/Footer'
-import Loading from '../components/Etc/Loading';
 import Title from '../components/Title/Title'
-import Image from 'react-bootstrap/Image'
+import {Image} from 'react-bootstrap'
 
 const Introduce = () =>{
     return(
