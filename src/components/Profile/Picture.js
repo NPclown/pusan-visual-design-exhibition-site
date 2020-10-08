@@ -6,7 +6,7 @@ function Picture ({name,image,image_color}) {
             <img src={image} alt="Avatar" className="pic" />
             <div className = "color-picture">
             <img src={image_color} alt="Avatar" className="pic" /> 
-            <div className = "overlay">{name}</div>
+            <div className = "overlay font-s26-w7-w0">{name}</div>
             </div>
             
         </div>

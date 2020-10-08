@@ -43,13 +43,6 @@
     margin-left: auto;
     margin-right: auto;
     border-radius: 0rem !important;
-    font-family: KoPubDotum;
-    font-size: 18px;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
     text-align: center;
 }
 .modal-dialog{
@@ -65,18 +58,12 @@
     position: relative;
 }
 .modal-title2{
-    font-family: KoPubDotum;
-    font-size: 18px;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
+
     text-align: center;
-    color: #000000;
     position: relative;
     bottom: 84px;
 }
+
 .form-group{
     margin-bottom: none !important;
 }
@@ -84,15 +71,7 @@
     /* margin: 61px; */
     margin-left:auto;
     margin-right:auto;
-    opacity: 0.9;
-    font-family: KoPubDotum;
-    font-size: 18px;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    color: #000000;
+
 }
 .modal-comment{
         width: 330px;
