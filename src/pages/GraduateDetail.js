@@ -8,7 +8,7 @@ import '../assets/font.css'
 import Axios from 'axios';
 import Title from '../components/Title/Title'
 import ArtPictureDetail from '../components/Art/ArtPictureDetail'
-import '../assets/ArtPictureDetail.css'
+import '../assets/ProfileDetail.css'
 import {Image} from 'react-bootstrap';
 
 const GraduateDetail = (props)=>{
@@ -37,10 +37,10 @@ const GraduateDetail = (props)=>{
             <Header state="프로필"></Header>
             <div className ="content">
               <Title sub="작품을 클릭하면 해당 작품으로 이동됩니다."></Title>
-              <div className="profileViewName">
+              <div className="profileViewName font-s26-w7-g9">
                 {state.data.name}
               </div>
-              <div className="profileViewContact">
+              <div className="profileViewContact font-s18-w7-b9">
                 {state.data.description}
               </div>
               <div className="profileViewBar"></div>

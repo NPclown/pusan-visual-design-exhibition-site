@@ -90,11 +90,11 @@ const Comment = (props) =>{
                 <Modal className="modal-size" backdrop="static" show={isRegisterOpen}  onHide={() => setIsRegisterOpen(false)}>
                     <Modal.Header bsPrefix = "modal-title">
                         <Image src="/image/Modal/logo.png" className = "modal-title"/>
-                        <div className = "modal-title2">
+                        <div className = "modal-title2 font-s18-w7-b9">
                             댓글쓰기
                         </div>
                     </Modal.Header>
-                    <Modal.Body bsPrefix ="modal-name">
+                    <Modal.Body bsPrefix ="modal-name font-s18-w7-b9">
                         <Form className="middle-modal">
                         <Form.Group controlId="formGroupEmail">
                             <Form.Label>이름</Form.Label>
@@ -112,7 +112,7 @@ const Comment = (props) =>{
                         </Form.Group>
                         </Form>
                     </Modal.Body>
-                    <Button onClick={registerComment} variant="success">등록</Button>
+                    <Button onClick={registerComment} variant="success" className="font-s18-w7-b9">등록</Button>
                     <div onClick={() => setIsRegisterOpen(false)} variant="close">
                         <Image src="/imgs/x.png" className="x-close" alt="logo" />
                     </div>
@@ -144,7 +144,7 @@ const Comment = (props) =>{
                         </Form.Group>
                     </Form>
                 </Modal.Body>
-                <Button onClick={e => deleteComment(e, deleteId)} variant="success">삭제</Button>
+                <Button onClick={e => deleteComment(e, deleteId)} variant="success" className="font-s18-w7-b9">삭제</Button>
                 <div onClick={() => setIsDeleteOpen(false)} variant="close">
                     <Image src="/imgs/x.png" className="x-close2" alt="logo" />
                 </div>

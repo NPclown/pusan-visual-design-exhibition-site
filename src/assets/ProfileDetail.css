@@ -1,29 +1,12 @@
 .profileViewName{
     width: 69px;
     height: 35px;
-    opacity: 0.9;
-    font-family: KoPubDotum;
-    font-size: 26px;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    color: #00964f
 }
 
 .profileViewContact{
     width: 123px;
     height: 20px;
-    opacity: 0.9;
-    font-family: KoPubDotum;
-    font-size: 18px;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    color: #000000;
+
   }
 .profileViewBar{
     width: 10px;
