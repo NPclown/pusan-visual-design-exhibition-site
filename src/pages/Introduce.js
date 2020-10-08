@@ -136,9 +136,6 @@ const Introduce = () =>{
                     </div>
                 </div>
             </div>
-
-
-
             </div>
             <Footer></Footer>
 
