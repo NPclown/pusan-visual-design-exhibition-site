@@ -74,9 +74,14 @@
 }
 
 .backarrow{
+    display: block;
     margin-left : -50px;
 }
 
 .backarrow-logo {
     cursor: pointer;
+}
+
+a a:hover{
+    text-decoration: none;
 }

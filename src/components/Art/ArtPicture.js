@@ -8,7 +8,7 @@ function ArtPicture ({title,maker,image}) {
                 {title}
             </div>
             <div className = "art-maker font-s18-w7-b9">
-                {maker}
+                주현아
             </div>
         </div>
     )

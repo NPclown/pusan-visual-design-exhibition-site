@@ -1,74 +1,53 @@
-.introPic{
-    position: relative;
-    margin-left:800px;
-    width: 381px;
-    height: 343px;
-    transform: rotate(-270deg);
-    bottom:165px;
+.intro-graduate {
+    height: 550px;
+    margin-bottom: 185px;
 }
 
-.introComment{
-    position: relative;
-    bottom: 220px;
+.intro-course {
+    margin-bottom: 185px;
 }
 
-.introBar{
-    width: 270px;
+.intro-professor {
+    margin-bottom: 185px;
+}
+
+.intro-commission{
+    margin-bottom: 144px;
+}
+
+.intro-title {
+    margin-bottom : 80px;
+}
+
+.intro-graduate-left{
+    float: left;
+}
+
+.intro-graduate-right{
+    float: right;
+}
+
+.intro-graduate-comment {
+    margin-top : 177px;
+}
+
+.intro-course-content{
+    display: grid;
+    grid-template-columns: repeat(4, 278px);
+    grid-gap: 29.3px;
+}
+
+.intro-commision-content{
+    display: grid;
+    grid-template-columns: repeat(4, 278px);
+    grid-gap: 29.3px;
+}
+
+.intro-course-bar{
+    width: 278px;
     height: 10px;
     border: #00964f solid;
     border-width: 0 0 10px 0;
-    position: relative;
-    bottom: -7px;
-}
-.introRow{
-    display: grid;
-    grid-template-columns: repeat(4, 277px);
-    grid-gap: 70px 31px;
-}
-
-
-.introAd{
-    position: relative;
-    margin-left: 315px;
-    bottom: 188px;
-}
-.introDs{
-    position: relative;
-    margin-left: 630px;
-    bottom: 348px;
-}
-
-.introSd{
-    position: relative;
-    margin-left: 922px;
-    bottom: 536px;
-}
-.introCommission{
-    position: relative;
-    bottom:350px;
-}
-
-
-.introDisplay{
-    position: relative;
-    left: 323px;
-    bottom: 135px;
-}
-
-.introPromote{
-    position: relative;
-    left: 634px;
-    bottom: 270px;
-}
-
-.introPrint{
-    position: relative;
-    left: 930px;
-    bottom: 405px;
-
-}
-
-.introSub{
-    position: relative;
-
+    margin-top : 20px;
+    margin-bottom : 20px;
 }
