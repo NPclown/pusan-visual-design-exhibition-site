@@ -118,6 +118,16 @@
     letter-spacing: normal;
     color: rgba(0, 0, 0, 0.9);
 }
+.font-s18-w5-g9{
+    font-family: 'KoPubDotum';
+    font-size: 18px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: rgba(0,150,79, 0.9);
+}
 
 .font-s18-w5-b5{
     font-family: 'KoPubDotum';

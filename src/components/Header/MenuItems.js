@@ -24,7 +24,7 @@ export const MenuItems = [
         cActive: 'nav-links active'
     },
     {
-        title: '졸업주간',
+        title: '소개',
         url: '/about',
         cName: 'nav-links',
         cActive: 'nav-links active'
