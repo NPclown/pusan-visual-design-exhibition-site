@@ -7,7 +7,7 @@
 .art-container1 {
   position: relative;
   width: 100%;
-  max-width: 300px;
+  max-width: 380px;
 }
 
 /* Make the image to responsive */
@@ -18,8 +18,6 @@
 }
 .art-maker {
     margin-top:15px;
-    height: 20px;
-
 }
 
 /* The overlay effect - lays on top of the container and over the image */
@@ -39,6 +37,6 @@
 
 .art-row1 {
     display: grid;
-    grid-template-columns: repeat(4, auto);
-    grid-gap: 90px 30px;
+    grid-template-columns: repeat(3, 380px);
+    grid-gap: 55px 30px;
 }

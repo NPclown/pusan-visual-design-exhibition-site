@@ -5,6 +5,7 @@ import Header from '../components/Header/Header'
 import Footer from '../components/Footer/Footer'
 import GuestRegister from '../components/Guest/GuestRegister'
 import GuestCont from '../components/Guest/GuestCont'
+import Title from '../components/Title/Title'
 import '../assets/main.css'
 import '../assets/font.css'
 import '../components/Guest/Guest.css'
@@ -28,6 +29,7 @@ const Guest = () =>{
         <div className="App">
           <Header state="방명록"></Header>
           <div className="content">
+            <Title></Title>
             <div className="guest-logo">  
                 <Image src="/image/common/logo.png" alt="logo" fluid />
             </div>

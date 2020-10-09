@@ -41,3 +41,47 @@
     margin-left: auto;
     max-width: 1200px;
 }
+
+.error {
+    margin-top : 350px;
+    text-align: center;
+}
+
+.error-button {
+    width: 200px;
+    margin-top : 150px;
+    margin-bottom: 250px;
+    margin-left : auto;
+    margin-right : auto;
+    text-align: center;
+    border : 1px solid black;
+    cursor: pointer;
+}
+
+.loading { 
+    width: 100px;
+    height: 900px;
+    margin-left : auto;
+    margin-right : auto;
+    vertical-align: middle;
+}
+
+.spinner-border {
+    margin-top : 350px;
+    height: 200px !important;
+    width: 200px !important;
+    animation: spinner-border 1s linear infinite !important;
+}
+
+.backarrow{
+    display: block;
+    margin-left : -50px;
+}
+
+.backarrow-logo {
+    cursor: pointer;
+}
+
+a a:hover{
+    text-decoration: none;
+}
