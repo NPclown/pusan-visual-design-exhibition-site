@@ -55,21 +55,30 @@
 **Result**
 
 ```json
-[
-    {
-        "id": "HjWispfgiPOTYc8qEVe0G",
-        "name": "김남희",
-        "thumbnail_color": "/image/profile/HjWispfgiPOTYc8qEVe0G_color.jpg",
-        "thumbnail_gray": "/image/profile/HjWispfgiPOTYc8qEVe0G_gray.jpg"
-    },
-    {
-        "id": "C5wY_m2Lj1GIc6Sl7n6Ry",
-        "name": "김수현",
-        "thumbnail_color": "/image/profile/C5wY_m2Lj1GIc6Sl7n6Ry_color.jpg",
-        "thumbnail_gray": "/image/profile/C5wY_m2Lj1GIc6Sl7n6Ry_gray.jpg"
-    },
-    ...
-]
+{
+    "state": true,
+    "data": [
+        {
+            "id": "HjWispfgiPOTYc8qEVe0G",
+            "name": "김남희",
+            "thumbnail_color": "/image/profile/HjWispfgiPOTYc8qEVe0G_color.jpg",
+            "thumbnail_gray": "/image/profile/HjWispfgiPOTYc8qEVe0G_gray.jpg"
+        },
+        {
+            "id": "C5wY_m2Lj1GIc6Sl7n6Ry",
+            "name": "김수현",
+            "thumbnail_color": "/image/profile/C5wY_m2Lj1GIc6Sl7n6Ry_color.jpg",
+            "thumbnail_gray": "/image/profile/C5wY_m2Lj1GIc6Sl7n6Ry_gray.jpg"
+        },
+        ...
+        {
+            "id": "MSi9Qxu4bN7sJGNTvQOGG",
+            "name": "최예진",
+            "thumbnail_color": "/image/profile/MSi9Qxu4bN7sJGNTvQOGG_color.jpg",
+            "thumbnail_gray": "/image/profile/MSi9Qxu4bN7sJGNTvQOGG_gray.jpg"
+        }
+    ]
+}
 ```
 
 **Description**
@@ -95,8 +104,9 @@
 **Result**
 
 ```json
-[
-    {
+{
+    "state": true,
+    "data": {
         "id": "HjWispfgiPOTYc8qEVe0G",
         "name": "김남희",
         "description": "010nh@naver.com\n010 6777 2408",
@@ -113,8 +123,7 @@
         "dmd_name": "sample_article_4",
         "dmd_thumbnail": "/image/article/article_4_thumbnail.jpg"
     }
-    ...
-]
+}
 ```
 
 **Description**
@@ -136,20 +145,30 @@
 **Result**
 
 ```json
-[
-    {
-        "id": "HjWispfgiPOTYc8qEVe0G",
-        "name": "김남희",
-        "thumbnail_color": "/image/profile/HjWispfgiPOTYc8qEVe0G_color.jpg",
-        "thumbnail_gray": "/image/profile/HjWispfgiPOTYc8qEVe0G_gray.jpg"
-    },
-    {
-        "id": "C5wY_m2Lj1GIc6Sl7n6Ry",
-        "name": "김수현",
-        "thumbnail_color": "/image/profile/C5wY_m2Lj1GIc6Sl7n6Ry_color.jpg",
-        "thumbnail_gray": "/image/profile/C5wY_m2Lj1GIc6Sl7n6Ry_gray.jpg"
-    },
-    ...
+{
+    "state": true,
+    "data": [
+        {
+            "id": "HjWispfgiPOTYc8qEVe0G",
+            "name": "김남희",
+            "thumbnail_color": "/image/profile/HjWispfgiPOTYc8qEVe0G_color.jpg",
+            "thumbnail_gray": "/image/profile/HjWispfgiPOTYc8qEVe0G_gray.jpg"
+        },
+        {
+            "id": "C5wY_m2Lj1GIc6Sl7n6Ry",
+            "name": "김수현",
+            "thumbnail_color": "/image/profile/C5wY_m2Lj1GIc6Sl7n6Ry_color.jpg",
+            "thumbnail_gray": "/image/profile/C5wY_m2Lj1GIc6Sl7n6Ry_gray.jpg"
+        },
+        ...
+        {
+            "id": "s6cyBm6On1nzn0JnEDNMV",
+            "name": "김정현",
+            "thumbnail_color": "/image/profile/s6cyBm6On1nzn0JnEDNMV_color.jpg",
+            "thumbnail_gray": "/image/profile/s6cyBm6On1nzn0JnEDNMV_gray.jpg"
+        }
+    ]
+}
 ]
 ```
 
@@ -174,19 +193,26 @@
 **Result**
 
 ```json
-[
-    {
-        "id": "SOfcGSM6NXtpqszVhXMZ8",
-        "title": "sample_article_1",
-        "thumbnail_path": "/image/article/article_1_thumbnail.jpg"
-    },
-    {
-        "id": "IUYkBnytp6GoVeTLswq9G",
-        "title": "sample_article_2",
-        "thumbnail_path": "/image/article/article_2_thumbnail.jpg"
-    },
-    ...
-]
+{
+    "state": true,
+    "data": [
+        {
+            "id": "SOfcGSM6NXtpqszVhXMZ8",
+            "title": "sample_article_1",
+            "thumbnail_path": "/image/article/article_1_thumbnail.jpg"
+        },
+        {
+            "id": "iM7bGyJvO-6AoiY1cEOTl",
+            "title": "init_data_article_visual_design_title_5",
+            "thumbnail_path": "/imgs/article_5_thumbnail.jpg"
+        },
+        {
+            "id": "oLA9ji6mWnqIyc1XLOHm5",
+            "title": "init_data_article_visual_design_title_6",
+            "thumbnail_path": "/imgs/article_6_thumbnail.jpg"
+        }
+    ]
+}
 ```
 ### get_article_detail
 **URL** : `/api/get_article_detail`
@@ -202,14 +228,17 @@
 **Result**
 
 ```json
-[
-    {
-        "id": "SOfcGSM6NXtpqszVhXMZ8",
-        "title": "init_data_article_visual_design_title_1",
-        "maker": "박지홍",
-        "img_path": "/imgs/article_1_original.jpg"
-    }
-]
+{
+    "state": true,
+    "data": [
+        {
+            "id": "SOfcGSM6NXtpqszVhXMZ8",
+            "title": "sample_article_1",
+            "maker": "김남희",
+            "img_path": "/image/article/article_1_original.jpg"
+        }
+    ]
+}
 ```
 
 ### search_article
@@ -222,19 +251,36 @@
 
 |Attribute|Type|Description|Example|
 |---|---|---|---|
-|title|String|작품 제목|init_data_article_visual_design_title_5|
+|title|String|작품 제목|sample|
 
 **Result**
 
 ```json
-[
-    {
-        "id": "iM7bGyJvO-6AoiY1cEOTl",
-        "title": "init_data_article_visual_design_title_1",
-        "maker": "박지홍",
-        "thumbnail_path": "/imgs/article_5_thumbnail.jpg"
-    }
-]
+{
+    "state": true,
+    "data": [
+        {
+            "id": "SOfcGSM6NXtpqszVhXMZ8",
+            "title": "sample_article_1",
+            "thumbnail_path": "/image/article/article_1_thumbnail.jpg"
+        },
+        {
+            "id": "IUYkBnytp6GoVeTLswq9G",
+            "title": "sample_article_2",
+            "thumbnail_path": "/image/article/article_2_thumbnail.jpg"
+        },
+        {
+            "id": "OmCnmh1QNPdcqi4MmYQPQ",
+            "title": "sample_article_3",
+            "thumbnail_path": "/image/article/article_3_thumbnail.jpg"
+        },
+        {
+            "id": "5v4bdO2qqYVfMBjrLz_wi",
+            "title": "sample_article_4",
+            "thumbnail_path": "/image/article/article_4_thumbnail.jpg"
+        }
+    ]
+}
 ```
 
 ## 방명록 (guest_book)
@@ -253,19 +299,31 @@
 **Result**
 
 ```json
-[
-    {
-        "id": "UdJgThjbPMn-sImzMsjOL",
-        "comment": "guest book sample 3",
-        "upload_date": "2020-10-07"
-    },
-    {
-        "id": "Z2F7Re317CtAjeFNlgatK",
-        "comment": "guest book sample 2",
-        "upload_date": "2020-10-07"
-    },
-    ...
-]
+{
+    "state": true,
+    "data": [
+        {
+            "id": "UdJgThjbPMn-sImzMsjOL",
+            "comment": "guest book sample 3",
+            "upload_date": "2020-10-07"
+        },
+        {
+            "id": "Z2F7Re317CtAjeFNlgatK",
+            "comment": "guest book sample 2",
+            "upload_date": "2020-10-07"
+        },
+        {
+            "id": "h3M2z9uP9jmzlULZBW1Jm",
+            "comment": "guest book sample 1",
+            "upload_date": "2020-10-07"
+        },
+        {
+            "id": "kHZZ5panLF6LUNtBKisYB",
+            "comment": "init_data_guest_book_1",
+            "upload_date": "2020-09-21"
+        }
+    ]
+}
 ```
 
 ### add_guest_book
@@ -283,7 +341,9 @@
 **Result**
 
 ```json
-True | False
+{
+    "state": true   // true | false
+}
 ```
 
 ### del_guest_book
@@ -302,7 +362,9 @@ True | False
 **Result**
 
 ```json
-True | False
+{
+    "state": true   // true | false
+}
 ```
 
 ## 게시글 (article_comment)
@@ -325,29 +387,32 @@ True | False
 
 ```json
 {
-    "count": 23,    // 전체 댓글 개수
-    "next": true,   // 댓글이 다음페이지에도 존재할경우 true 없으면 false 
-    "comments": [
-        {
-            "id": "4zcmP_gAkru-pHbsX-IM7",
-            "comment": "sample_20",
-            "uploader_name": "박지홍_20",
-            "upload_date": "2020-10-05"
-        },
-        {
-            "id": "_cW3oYhkd4Tc1eSDF-LB-",
-            "comment": "sample_19",
-            "uploader_name": "박지홍_19",
-            "upload_date": "2020-10-05"
-        },
-        ...
-        {
-            "id": "K8rpcgm1UVspE5oGpQAl-",
-            "comment": "sample_11",
-            "uploader_name": "박지홍_11",
-            "upload_date": "2020-10-05"
-        }
-    ]
+    "state": true,
+    "data": {
+        "count": 21,    // 전체 댓글 개수
+        "next": true,   // 다음 페이지가 존재하는지 여부
+        "comments": [
+            {
+                "id": "4zcmP_gAkru-pHbsX-IM7",
+                "comment": "sample_20",
+                "uploader_name": "박지홍_20",
+                "upload_date": "2020-10-05"
+            },
+            {
+                "id": "_cW3oYhkd4Tc1eSDF-LB-",
+                "comment": "sample_19",
+                "uploader_name": "박지홍_19",
+                "upload_date": "2020-10-05"
+            },
+            ...
+            {
+                "id": "K8rpcgm1UVspE5oGpQAl-",
+                "comment": "sample_11",
+                "uploader_name": "박지홍_11",
+                "upload_date": "2020-10-05"
+            }
+        ]
+    }
 }
 ```
 
@@ -369,7 +434,9 @@ True | False
 **Result**
 
 ```json
-True | False
+{
+    "state": true   // true | false
+}
 ```
 
 ### del_article_comment
@@ -389,5 +456,7 @@ True | False
 **Result**
 
 ```json
-True | False
+{
+    "state": true   // true | false
+}
 ```

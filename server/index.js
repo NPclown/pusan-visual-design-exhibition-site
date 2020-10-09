@@ -69,10 +69,16 @@ index.get('/api/search_profile', (req, res) => {
             }];
         }
 
-        res.json(result);
+        res.json({
+            "state": true,
+            "data": result
+        });
     } catch (error) {
         console.log(error);
-        res.send(false);
+        res.send({
+            "state": false,
+            "data": []
+        });
     }
 });
 index.get('/api/search_article', (req, res) => {
@@ -95,10 +101,16 @@ index.get('/api/search_article', (req, res) => {
             }];
         }
 
-        res.json(result);
+        res.json({
+            "state": true,
+            "data": result
+        });
     } catch (error) {
         console.log(error);
-        res.send(false);
+        res.send({
+            "state": false,
+            "data": []
+        });
     }
 });
 index.get('/api/get_profile_list', (req, res) => {
@@ -110,10 +122,16 @@ index.get('/api/get_profile_list', (req, res) => {
             thumbnail_color: "/image/profile/" + u.id + "_color.jpg",
             thumbnail_gray: "/image/profile/" + u.id + "_gray.jpg"
         }));
-        res.json(data);
+        res.json({
+            "state": true,
+            "data": data
+        });
     } catch (error) {
         console.log(error);
-        res.send(false);
+        res.send({
+            "state": false,
+            "data": []
+        });
     }
 });
 index.get('/api/get_profile_detail', (req, res) => {
@@ -155,10 +173,16 @@ index.get('/api/get_profile_detail', (req, res) => {
             dmd_name: "sample_article_4",
             dmd_thumbnail: "/image/article/article_4_thumbnail.jpg",
         }
-        res.json(result);
+        res.json({
+            "state": true,
+            "data": result
+        });
     } catch (error) {
         console.log(error);
-        res.send(false);
+        res.send({
+            "state": false,
+            "data": {}
+        });
     }
 });
 index.get('/api/get_article_list', (req, res) => {
@@ -167,13 +191,22 @@ index.get('/api/get_article_list', (req, res) => {
             let data = db.get('article').value();
             data = data.filter(u => u.type === req.query.type);
             data = data.map(u => ({id: u.id, title: u.title, thumbnail_path: u.thumbnail_path}));
-            res.json(data);
+            res.json({
+                "state": true,
+                "data": data
+            });
         } else {
-            res.send(false);
+            res.send({
+                "state": false,
+                "data": []
+            });
         }
     } catch (error) {
         console.log(error);
-        res.send(false);
+        res.send({
+            "state": false,
+            "data": []
+        });
     }
 });
 index.get('/api/get_article_detail', (req, res) => {
@@ -181,16 +214,21 @@ index.get('/api/get_article_detail', (req, res) => {
         let data = db.get('article').find({id: req.query.article_id}).value();
         let profile_data = db.get('profile').find({id: data.maker_id}).value();
         result = [{id: data.id, title: data.title, maker: profile_data.name, img_path: data.img_path}];
-        res.json(result);
+        res.json({
+            "state": true,
+            "data": result
+        });
     } catch (error) {
         console.log(error);
-        res.send(false);
+        res.send({
+            "state": false,
+            "data": []
+        });
     }
 });
 index.get('/api/get_guest_book', (req, res) => {
     try {
         let data = db.get('guest_book').value();
-        console.log(data);
         let result;
 
         data.sort(function (a, b) {
@@ -203,10 +241,16 @@ index.get('/api/get_guest_book', (req, res) => {
             result = data.map(u => ({id: u.id, comment: u.comment, upload_date: date_format(u.upload_time)}));
         }
 
-        res.json(result);
+        res.json({
+            "state": true,
+            "data": result
+        });
     } catch (error) {
         console.log(error);
-        res.send(false);
+        res.send({
+            "state": false,
+            "data": []
+        });
     }
 });
 index.post('/api/add_guest_book', (req, res) => {
@@ -218,10 +262,14 @@ index.post('/api/add_guest_book', (req, res) => {
                 upload_time: Date.now()
             })
             .write()
-        res.send(true);
+        res.send({
+            "state": true
+        });
     } catch (e) {
         console.log(e);
-        res.send(false);
+        res.send({
+            "state": false
+        });
     }
 });
 // index.post('/api/del_guest_book', (req, res) => {
@@ -273,13 +321,19 @@ index.get('/api/get_article_comment', (req, res) => {
         }
 
         res.json({
-            "count": data.length,
-            "next": next,
-            "comments": sliced_result
+            "state": true,
+            "data": {
+                "count": data.length,
+                "next": next,
+                "comments": sliced_result
+            }
         });
     } catch (e) {
         console.log(e);
-        res.send(false);
+        res.send({
+            "state": false,
+            "data": {}
+        });
     }
 });
 index.post('/api/add_article_comment', (req, res) => {
@@ -295,10 +349,14 @@ index.post('/api/add_article_comment', (req, res) => {
                 upload_time: Date.now()
             })
             .write();
-        res.send(true);
+        res.send({
+            "state": true
+        });
     } catch (e) {
         console.log(e);
-        res.send(false);
+        res.send({
+            "state": false
+        });
     }
 });
 index.post('/api/del_article_comment', (req, res) => {
@@ -310,7 +368,9 @@ index.post('/api/del_article_comment', (req, res) => {
         }).value();
 
         if (typeof data == 'undefined') {
-            res.send(false);
+            res.send({
+                "state": false,
+            });
             return;
         }
 
@@ -320,7 +380,9 @@ index.post('/api/del_article_comment', (req, res) => {
         res.send(true)
     } catch (e) {
         console.log(e);
-        res.send(false);
+        res.send({
+            "state": false
+        });
     }
 });
 
