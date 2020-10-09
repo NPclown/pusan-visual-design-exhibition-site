@@ -3,7 +3,6 @@
     right: 0 !important;
     margin-left: auto !important;
     margin-right: auto !important;
-    position: relative;
     display: flex;
     flex-direction: column;
     pointer-events: auto;
@@ -35,7 +34,6 @@
 }
 
 .btn{
-    position: relative;
     bottom:70px;
     width: 160px !important;
     height: 40px;
@@ -53,24 +51,24 @@
 .modal-title{
     margin-left: auto;
     margin-right: auto;
-    bottom: 15px;
+    margin-top:-15px;
     width:374px;
-    position: relative;
 }
 .modal-title2{
 
     text-align: center;
     position: relative;
-    bottom: 84px;
+    bottom: 72px;
 }
 
 .form-group{
     margin-bottom: none !important;
 }
-.modal-name{
+.modal-form{
     /* margin: 61px; */
     margin-left:auto;
     margin-right:auto;
+    margin-top:60px;
 
 }
 .modal-comment{
@@ -83,8 +81,8 @@
     object-fit: contain;
     opacity: 0.9;
     position: relative;
-    left: 683px;
-    bottom: 600px;
+    left: 486px;
+    bottom: 177px;
     cursor: pointer;
 
 }
@@ -98,6 +96,5 @@
    height:40px !important;
 }
 .middle-modal{
-    position: relative;
-    bottom:66px;
+    margin-top: -141px;
 }
