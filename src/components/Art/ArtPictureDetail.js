@@ -1,20 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function ArtPictureDetail ({ vd_img , acd_img, ds_img, dmd_img, vd_id,acd_id,ds_id,dmd_id}) {
+function ArtPictureDetail (props) {
     return(
         <div className = "profile-right" >
-            <Link to = {`/art/detail/${vd_id}/1`}>
-                <img src={vd_img} alt="Avatar" className="profile-pic" />  
+            <Link to = {`/art/detail/${props.vd_id}/1`}>
+                <img src={props.vd_img} alt="Avatar" className="profile-pic" />  
             </Link>
-            <Link to = {`/art/detail/${acd_id}/1`}>
-                <img src={acd_img} alt="Avatar" className="profile-pic" />  
+            <Link to = {`/art/detail/${props.acd_id}/1`}>
+                <img src={props.acd_img} alt="Avatar" className="profile-pic" />  
             </Link>
-            <Link to = {`/art/detail/${ds_id}/1`}>
-                <img src={ds_img} alt="Avatar" className="profile-pic" />  
+            <Link to = {`/art/detail/${props.ds_id}/1`}>
+                <img src={props.ds_img} alt="Avatar" className="profile-pic" />  
             </Link>
-            <Link to = {`/art/detail/${dmd_id}/1`}>
-                <img src={dmd_img} alt="Avatar" className="profile-pic" />  
+            <Link to = {`/art/detail/${props.dmd_id}/1`}>
+                <img src={props.dmd_img} alt="Avatar" className="profile-pic" />  
             </Link>
         </div>
     )

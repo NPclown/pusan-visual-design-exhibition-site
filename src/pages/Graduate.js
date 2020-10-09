@@ -8,7 +8,7 @@ import '../assets/Picture.css';
 import '../assets/main.css'
 import '../assets/font.css'
 import { Link } from 'react-router-dom';
-import axios from 'axios';
+import Axios from 'axios';
 import Title from '../components/Title/Title'
 
 const Graduate = (props) => {
@@ -18,7 +18,7 @@ const Graduate = (props) => {
   useEffect(() => {
     const getData = async() => {
         try{
-            var result = await axios.get(`/api/get_profile_list`);
+            var result = await Axios.get(`/api/get_profile_list`);
             setState({isLoading : false, data : result.data})
 
         } catch(error) {
@@ -39,14 +39,14 @@ const Graduate = (props) => {
           <Title sub="프로필을 클릭하거나 이름을 검색하여 원하는 분의 작품을 볼 수 있습니다."></Title>
           <div className = "row1">
           {
-          state.data.map((person) => {
-            return(
-              <Link to = {`profile/detail/${person.id}`}>
-              <Picture name={person.name} image={person.thumbnail_gray} image_color={person.thumbnail_color}></Picture>
-              </Link>
-              )
-            }
-          )
+            state.data.map((person, index) => {
+              return(
+                <Link to = {`profile/detail/${person.id}`} key={index}>
+                <Picture name={person.name} image={person.thumbnail_gray} image_color={person.thumbnail_color}></Picture>
+                </Link>
+                )
+              }
+            )
           }
           </div>
         </div>

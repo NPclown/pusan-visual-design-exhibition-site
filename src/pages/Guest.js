@@ -37,11 +37,11 @@ const Guest = () =>{
                 2020 부산대학교 디자인학과 시각디자인전공 졸업전시<br/>
                 열여덟 개의 지향점을 응원하며
             </div>
-            <GuestRegister getDate={() => getData()}></GuestRegister>
+            <GuestRegister getData={() => getData()}></GuestRegister>
             <div className="guest-list">
               {
                 state.data.map((item, index) => (
-                    <GuestCont key={index} id={item.id} cont={item.comment} date={item.upload_date} onClick={() => alert(item.id)}></GuestCont>
+                    <GuestCont key={index} id={item.id} cont={item.comment} date={item.upload_date}></GuestCont>
                 ))
               }
             </div>

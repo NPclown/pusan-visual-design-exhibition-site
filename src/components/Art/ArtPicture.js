@@ -1,14 +1,14 @@
 import React from 'react';
 
-function ArtPicture ({title,maker,image}) {
+function ArtPicture (props) {
     return(
         <div className = "art-container1" >
-            <img src={image} alt="Avatar" className="art-pic" />  
+            <img src={props.image} alt="Avatar" className="art-pic" />  
             <div className = "art-overlay font-s26-w7-w0">
-                {title}
+                {props.title}
             </div>
             <div className = "art-maker font-s18-w7-b9">
-                주현아
+                {props.maker}
             </div>
         </div>
     )

@@ -9,9 +9,9 @@ import Pagination from './Pagination';
 import BackArrow from '../Etc/BackArrow';
 
 const Comment = (props) =>{
-    const [Name, setName] = useState("");
-    const [Pwd, setPwd] = useState("");
-    const [Comm, setComm] = useState("");
+    const [name, setName] = useState("");
+    const [pwd, setPwd] = useState("");
+    const [comm, setComm] = useState("");
     const [findPwd, setFindPwd] = useState("");
 
     const [isRegisterOpen, setIsRegisterOpen] = useState(false);
@@ -23,7 +23,7 @@ const Comment = (props) =>{
 
     const getData = async() => {
         try{
-            var result = await Axios.get(`/api/get_article_comment?article_id=${props.id}&page=${props.page}`);
+            var result = await Axios.get(`/api/get_article_comment?article_id=${props.id}&page=${props.match.params.page}`);
             setState({isLoading : false, data : result.data})
         } catch(error) {
             alert(error)
@@ -33,53 +33,54 @@ const Comment = (props) =>{
 
     const registerComment = async() => {
         var result;
-        if(Name === "" || Pwd === "" || Comm ==="" ){
+        if(name === "" || pwd === "" || comm ==="" ){
             alert('빈칸을 채워주세요!')
         }else{
-        
-        try{
-            result = await Axios.post(`/api/add_article_comment`,{article_id : props.id, comment : Comm , uploader_name: Name, password : Pwd});
-        } catch(error) {
-            alert(error)
+            try{
+                result = await Axios.post(`/api/add_article_comment`,{article_id : props.id, comment : comm , uploader_name: name, password : pwd});
+            } catch(error) {
+                alert(error)
+            }
+            if (result.data) {
+                alert(`성공`);
+                getData();
+
+            }else{
+                alert(`실패`);
+            }
+            setIsRegisterOpen(false);
+            setName("")
+            setPwd("")
+            setComm("")
         }
-        if (result.data) {
-            alert(`성공`);
-        }else{
-            alert(`실패`);
-        }
-        setIsRegisterOpen(false);
-        getData();
-        setName("")
-        setPwd("")
-        setComm("")
-    }
     }  
 
     const deleteComment = async(e, id) => {
         e.preventDefault()
+
         var result;
         if(findPwd === ""){
             alert('비밀번호를 입력해주세요.')
         }else{
-        try{
-            result = await Axios.post(`/api/del_article_comment`,{article_id : props.id, id : id , password : findPwd}); // api헷갈
-        } catch(error) {
-            alert(error)
+            try{
+                result = await Axios.post(`/api/del_article_comment`,{article_id : props.id, id : id , password : findPwd}); // api헷갈
+            } catch(error) {
+                alert(error)
+            }
+            if (result.data) {
+                alert(`성공`);
+                getData();
+            }else{
+                alert(`실패`);
+            }
+            setIsDeleteOpen(false);
+            setFindPwd("")
         }
-        if (result.data) {
-            alert(`성공`);
-        }else{
-            alert(`실패`);
-        }
-        setIsDeleteOpen(false);
-        getData();
-        setFindPwd("")
-    }
     }  
 
     useEffect(() => {
         getData();
-    },[props.id, props.page])
+    },[props.id, props.match.params.page])
 
     return state.isLoading ? (
         <div className="loading">
@@ -102,20 +103,20 @@ const Comment = (props) =>{
                     </Modal.Header>
                     <Modal.Body bsPrefix ="modal-form font-s18-w7-b9">
                         <Form className="middle-modal">
-                        <Form.Group controlId="formGroupEmail">
-                            <Form.Label>이름</Form.Label>
-                            <Form.Control  value={Name} onChange={e => setName(e.target.value)} className = "font-s14-w5-b5" autoComplete="off" placeholder="5자 제한" maxLength="5" />
-                        </Form.Group>
+                            <Form.Group controlId="formGroupEmail">
+                                <Form.Label>이름</Form.Label>
+                                <Form.Control  value={name} onChange={e => setName(e.target.value)} className = "font-s14-w5-b5" autoComplete="off" placeholder="5자 제한" maxLength="5" />
+                            </Form.Group>
 
-                        <Form.Group controlId="formGroupPassword">
-                            <Form.Label>비밀번호</Form.Label>
-                            <Form.Control value={Pwd} onChange={e => setPwd(e.target.value)} className = "font-s14-w5-b5" autoComplete="off" placeholder="●●●●" maxLength="4"/>
-                        </Form.Group>
+                            <Form.Group controlId="formGroupPassword">
+                                <Form.Label>비밀번호</Form.Label>
+                                <Form.Control value={pwd} onChange={e => setPwd(e.target.value)} className = "font-s14-w5-b5" autoComplete="off" placeholder="●●●●" maxLength="4"/>
+                            </Form.Group>
 
-                        <Form.Group controlId="formGroupPassword">
-                            <Form.Label>댓글</Form.Label>
-                            <Form.Control  className = "comment-form font-s14-w5-b5" value={Comm} onChange={e => setComm(e.target.value)} autoComplete="off" placeholder="작품 감상평 또는 응원의 댓글을 달아주세요.(80자 제한)" maxLength="80" />
-                        </Form.Group>
+                            <Form.Group controlId="formGroupPassword">
+                                <Form.Label>댓글</Form.Label>
+                                <Form.Control value={comm} onChange={e => setComm(e.target.value)} className = "comment-form font-s14-w5-b5" autoComplete="off" placeholder="작품 감상평 또는 응원의 댓글을 달아주세요.(80자 제한)" maxLength="80" />
+                            </Form.Group>
                         </Form>
                     </Modal.Body>
                     <Button onClick={registerComment} variant="success" className="font-s18-w7-b9">등록</Button>
@@ -130,21 +131,21 @@ const Comment = (props) =>{
                 }
             </div>
 
-            <Pagination article_id={props.id} current={props.page} count={state.data.count}></Pagination>
+            <Pagination article_id={props.id} current={props.match.params.page} count={state.data.count}></Pagination>
             <BackArrow {...props}></BackArrow>
 
             <Modal backdrop="static" show={isDeleteOpen}  onHide={() => setIsDeleteOpen(false)} className= "modal-size2" >
                 <Modal.Header bsPrefix = "modal-title">
                     <Image src="/image/Modal/logo.png" className = "modal-title"/>
                     <div className = "modal-title2 font-s18-w7-b9">
-                    댓글삭제
+                        댓글삭제
                     </div>
                     <div onClick={() => setIsDeleteOpen(false)} variant="close">
-                    <Image src="/imgs/x.png" className="x-close" alt="logo" />
+                        <Image src="/imgs/x.png" className="x-close" alt="logo" />
                     </div>
                 </Modal.Header>
                 <Modal.Body bsPrefix ="modal-form">
-                    <Form className="middle-modal">
+                    <Form className="middle-modal" onSubmit={e => e.preventDefault()}>
                         <Form.Group controlId="formGroupPassword">
                             <Form.Label className="font-s18-w7-b9">비밀번호</Form.Label>
                             <Form.Control value={findPwd} onChange={e => setFindPwd(e.target.value)} autoComplete="off" className = "font-s14-w5-b5" placeholder="댓글 작성시 입력했던 비밀번호를 입력해 주세요." maxLength="4" />

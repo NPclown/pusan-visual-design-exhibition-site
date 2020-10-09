@@ -168,7 +168,7 @@ const Introduce = () =>{
                 </div>
             </div>
             <Footer></Footer>
-        </div>//intro
+        </div>
     )
 }
 export default Introduce;

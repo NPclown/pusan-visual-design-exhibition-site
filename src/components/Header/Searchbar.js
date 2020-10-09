@@ -7,8 +7,6 @@ const Searchbar = (props) => {
     const [option, setOption] = useState("이름");
     const [check, setCheck] = useState(false);
 
-
-
     const checkSearch = () =>{
         if (search === ""){
             alert("검색어를 입력해주세요");

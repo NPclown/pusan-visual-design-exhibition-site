@@ -12,7 +12,7 @@ const GuestRegister = (props) =>{
             alert('방명록을 입력해주세요!')
         }else{
             try{
-                var result = await Axios.post(`/api/add_guest_book`, {comment : guestbook, password : 1111});
+                var result = await Axios.post(`/api/add_guest_book`, {comment : guestbook});
                 state = result.data
             } catch(error) {
                 alert(error)
@@ -20,7 +20,7 @@ const GuestRegister = (props) =>{
             }
             if (state) {
                 alert('방명록 등록에 성공하였습니다!')
-                props.getDate();
+                props.getData();
             }else{
                 alert('방명록 등록에 실패하였습니다!')
             }
