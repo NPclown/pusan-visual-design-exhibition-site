@@ -75,17 +75,17 @@
     color: rgba(0,0,0, 0.9);
 }
 .font-s26-w7-w0{
-      font-size: 26px;
-  padding: 8px;
-  text-align: left;
-  opacity: 0;
-  font-family: KoPubDotum;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: #ffffff;
+    font-size: 26px;
+    padding: 8px;
+    text-align: left;
+    opacity: 0;
+    font-family: KoPubDotum;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
 }
 
 .font-s18-w7-w10{

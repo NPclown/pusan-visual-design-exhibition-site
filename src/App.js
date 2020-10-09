@@ -1,5 +1,5 @@
 import React from 'react';
-import {  Route, Switch, BrowserRouter as Router } from 'react-router-dom';
+import {Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 import Home from './pages/Home';
 import Graduate from './pages/Graduate';
 import ArtDetail from './pages/ArtDetail';
@@ -10,6 +10,8 @@ import Guest from './pages/Guest';
 import NoMatch from './pages/NoMatch';
 import Introduce from './pages/Introduce';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './assets/main.css';
+import './assets/font.css';
 
 
 function App() {
@@ -26,7 +28,6 @@ function App() {
         <Route exact path="/guest" render={(props) => <Guest {...props} />} />
         <Route exact path="/about" render={(props) => <Introduce {...props} />} />
         <Route exact path="*" render={(props) => <NoMatch {...props} />} />
-
       </Switch>
     </Router>
   );

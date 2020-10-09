@@ -3,9 +3,8 @@ import React from 'react';
 import Header from '../components/Header/Header'
 import Footer from '../components/Footer/Footer'
 import Profile from '../components/Search/Profile'
-import '../assets/main.css'
-import '../assets/font.css'
-import '../components/Search/Search.css';
+
+import '../assets/searchpage.css';
 
 
 const Search = (props) =>{

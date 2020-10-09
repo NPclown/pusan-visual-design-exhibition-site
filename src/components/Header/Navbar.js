@@ -1,10 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Navbar.css'
 
 const Navbar = (props) => {
     return(
-        <nav className="NavbarItems">
+        <nav className="navbar">
             <ul className='nav-menu'>
                 <li>
                     <Link className={'홈'===props.state?'nav-links active font-s26-w7-b9':'nav-links font-s26-w7-b9'} to="/">홈</Link>

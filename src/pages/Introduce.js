@@ -1,10 +1,12 @@
 import React from 'react';
-import '../assets/font.css'
-import '../assets/introduce.css'
+import {Image} from 'react-bootstrap'
+
 import Header from '../components/Header/Header'
 import Footer from '../components/Footer/Footer'
 import Title from '../components/Title/Title'
-import {Image} from 'react-bootstrap'
+
+import '../assets/introducepage.css'
+
 
 const Introduce = () =>{
     return(
@@ -168,7 +170,7 @@ const Introduce = () =>{
                 </div>
             </div>
             <Footer></Footer>
-        </div>//intro
+        </div>
     )
 }
 export default Introduce;

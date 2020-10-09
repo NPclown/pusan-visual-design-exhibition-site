@@ -1,14 +1,14 @@
 import React,{useState,useEffect} from 'react';
+import { Link } from 'react-router-dom';
+import Axios from 'axios';
+
 import Header from '../components/Header/Header'
 import Footer from '../components/Footer/Footer'
 import ArtPicture from '../components/Art/ArtPicture'
 import Loading from '../components/Etc/Loading';
-import { Link } from 'react-router-dom';
-import axios from 'axios';
-import '../assets/ArtPage.css';
-import '../assets/main.css'
-import '../assets/font.css'
 import Title from '../components/Title/Title'
+
+import '../assets/artpage.css';
 
 const ArtPage = (props) => {
   const [state, setState] = useState({isLoading : true, data : []})
@@ -17,7 +17,7 @@ const ArtPage = (props) => {
   useEffect(() => {
     const getData = async() => {
         try{
-            var result = await axios.get(`/api/get_article_list?type=${props.match.params.type}`);
+            var result = await Axios.get(`/api/get_article_list?type=${props.match.params.type}`);
             setState({isLoading : false, data : result.data})
         } catch(error) {
             alert(error)
@@ -53,10 +53,10 @@ const ArtPage = (props) => {
           ) : (
             <div className = "content">
             <Title main={sub} sub="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore."></Title>
-              <div className = "art-row1">{
-                state.data.map((art) => {
+              <div className = "art">{
+                state.data.map((art, index) => {
                     return(
-                      <Link to = {`detail/${art.id}/1`}>
+                      <Link to = {`detail/${art.id}/1`} key={index}>
                         <ArtPicture title = {art.title} maker={art.maker} image={art.thumbnail_path}></ArtPicture>
                       </Link>
                     )
