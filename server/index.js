@@ -7,7 +7,7 @@ const adapter = new FileSync('db.json');
 const db = low(adapter);
 const {nanoid} = require("nanoid");
 
-const types = ["visual_design", "advertising_conti_design", "design_seminar", "digital_media_design"]
+const types = ["vd", "acd", "ds", "dmd"]
 
 index.use('/', express.static(path.resolve(__dirname, '../build')));
 index.use(express.json());
@@ -75,12 +75,13 @@ index.get('/api/search_profile', (req, res) => {
         });
     } catch (error) {
         console.log(error);
-        res.send({
+        res.json({
             "state": false,
             "data": []
         });
     }
 });
+//temp
 index.get('/api/search_article', (req, res) => {
     try {
         let data = db.get('article').value();
@@ -107,7 +108,7 @@ index.get('/api/search_article', (req, res) => {
         });
     } catch (error) {
         console.log(error);
-        res.send({
+        res.json({
             "state": false,
             "data": []
         });
@@ -128,7 +129,7 @@ index.get('/api/get_profile_list', (req, res) => {
         });
     } catch (error) {
         console.log(error);
-        res.send({
+        res.json({
             "state": false,
             "data": []
         });
@@ -137,41 +138,38 @@ index.get('/api/get_profile_list', (req, res) => {
 index.get('/api/get_profile_detail', (req, res) => {
     try {
         let data = db.get('profile').find({id: req.query.user_id}).value();
-        console.log(data)
-        // 프로필에서 가져오는 데이터와 아티클에서 가져오는 걸 합쳐야해요, 지금은 붙여놨어요, 아티클 보내줘야 작업해요 ㅠㅠ
-        // data = data.map(u => ({
-        //     id: u.id,
-        //     name: u.name,
-        //     description: u.description,
-        //     vd_id: "sample_article_1_ID",
-        //     vd_name: "sample_article_1",
-        //     vd_thumbnail: "/image/article/article_1_thumbnail.jpg",
-        //     acd_id: "sample_article_2_ID",
-        //     acd_name: "sample_article_2",
-        //     acd_thumbnail: "/image/article/article_2_thumbnail.jpg",
-        //     ds_id: "sample_article_3_ID",
-        //     ds_name: "sample_article_3",
-        //     ds_thumbnail: "/image/article/article_3_thumbnail.jpg",
-        //     dmd_id: "sample_article_4_ID",
-        //     dmd_name: "sample_article_4",
-        //     dmd_thumbnail: "/image/article/article_4_thumbnail.jpg"
-        // }));
+        let article_data = db.get('article').value();
+
+        let vd_data = article_data.filter(function (t) {
+            return t.type === "vd" && t.maker_id.includes(req.query.user_id)
+        })[0]
+        let acd_data = article_data.filter(function (t) {
+            return t.type === "acd" && t.maker_id.includes(req.query.user_id)
+        })[0]
+        let ds_data = article_data.filter(function (t) {
+            return t.type === "ds" && t.maker_id.includes(req.query.user_id)
+        })[0]
+        let dmd_data = article_data.filter(function (t) {
+            return t.type === "dmd" && t.maker_id.includes(req.query.user_id)
+        })[0]
+
+
         let result = {
             id: data.id,
             name: data.name,
             description: data.description,
-            vd_id: "SOfcGSM6NXtpqszVhXMZ8",
-            vd_name: "sample_article_1",
-            vd_thumbnail: "/image/article/article_1_thumbnail.jpg",
-            acd_id: "IUYkBnytp6GoVeTLswq9G",
-            acd_name: "sample_article_2",
-            acd_thumbnail: "/image/article/article_2_thumbnail.jpg",
-            ds_id: "OmCnmh1QNPdcqi4MmYQPQ",
-            ds_name: "sample_article_3",
-            ds_thumbnail: "/image/article/article_3_thumbnail.jpg",
-            dmd_id: "5v4bdO2qqYVfMBjrLz_wi",
-            dmd_name: "sample_article_4",
-            dmd_thumbnail: "/image/article/article_4_thumbnail.jpg",
+            vd_id: vd_data.id,
+            vd_name: vd_data.title,
+            vd_thumbnail: "/image/thumbnail/vd/" + vd_data.id + ".jpg",
+            acd_id: acd_data.id,
+            acd_name: acd_data.title,
+            acd_thumbnail: "/image/thumbnail/acd/" + acd_data.id + ".jpg",
+            ds_id: ds_data.id,
+            ds_name: ds_data.title,
+            ds_thumbnail: "/image/thumbnail/ds/" + ds_data.id + ".jpg",
+            dmd_id: dmd_data.id,
+            dmd_name: dmd_data.title,
+            dmd_thumbnail: "/image/thumbnail/dmd/" + dmd_data.id + ".jpg",
         }
         res.json({
             "state": true,
@@ -179,7 +177,7 @@ index.get('/api/get_profile_detail', (req, res) => {
         });
     } catch (error) {
         console.log(error);
-        res.send({
+        res.json({
             "state": false,
             "data": {}
         });
@@ -187,21 +185,30 @@ index.get('/api/get_profile_detail', (req, res) => {
 });
 index.get('/api/get_article_list', (req, res) => {
     try {
-        function get_name_by_id(id) {
-            let profile_data = db.get('profile').find({id: id}).value();
-            // console.log(profile_data)
-            return profile_data.name;
+        function get_name_by_id(ids) {
+            let names = [];
+
+            ids.forEach(function (id) {
+                names.push(db.get('profile').find({id: id}).value().name);
+            })
+
+            return names;
         }
 
         if (types.includes(req.query.type)) {
             let data = db.get('article').value();
 
             data = data.filter(u => u.type === req.query.type);
+            data = data.filter(u => u.id !== "null");
+            data.sort(function (a, b) {
+                return a.order - b.order;
+            });
+
             data = data.map(u => ({
                 id: u.id,
                 title: u.title,
                 maker: get_name_by_id(u.maker_id),
-                thumbnail_path: u.thumbnail_path
+                thumbnail_path: "/image/thumbnail/" + u.type + "/" + u.id + ".jpg",
             }));
 
             res.json({
@@ -209,14 +216,14 @@ index.get('/api/get_article_list', (req, res) => {
                 "data": data
             });
         } else {
-            res.send({
+            res.json({
                 "state": false,
                 "data": []
             });
         }
     } catch (error) {
         console.log(error);
-        res.send({
+        res.json({
             "state": false,
             "data": []
         });
@@ -224,16 +231,33 @@ index.get('/api/get_article_list', (req, res) => {
 });
 index.get('/api/get_article_detail', (req, res) => {
     try {
+        function get_name_by_id(ids) {
+            let names = [];
+
+            ids.forEach(function (id) {
+                names.push(db.get('profile').find({id: id}).value().name);
+            })
+
+            return names;
+        }
+
         let data = db.get('article').find({id: req.query.article_id}).value();
-        let profile_data = db.get('profile').find({id: data.maker_id}).value();
-        result = [{id: data.id, title: data.title, maker: profile_data.name, img_path: data.img_path}];
+        let result = [{
+            id: data.id,
+            title: data.title,
+            maker: get_name_by_id(data.maker_id),
+            img_path: "/image/webboard/" + data.type + "/" + data.id + ".jpg",
+            has_video: data.has_video,
+            video_path: data.has_video ? "/image/video/" + data.type + "/" + data.id + ".mp4" : "null"
+        }];
+
         res.json({
             "state": true,
             "data": result
         });
     } catch (error) {
         console.log(error);
-        res.send({
+        res.json({
             "state": false,
             "data": []
         });
@@ -260,7 +284,7 @@ index.get('/api/get_guest_book', (req, res) => {
         });
     } catch (error) {
         console.log(error);
-        res.send({
+        res.json({
             "state": false,
             "data": []
         });
@@ -275,12 +299,12 @@ index.post('/api/add_guest_book', (req, res) => {
                 upload_time: Date.now()
             })
             .write()
-        res.send({
+        res.json({
             "state": true
         });
     } catch (e) {
         console.log(e);
-        res.send({
+        res.json({
             "state": false
         });
     }
@@ -288,10 +312,10 @@ index.post('/api/add_guest_book', (req, res) => {
 // index.post('/api/del_guest_book', (req, res) => {
 //     try {
 //         db.get('guest_book').remove({id: req.body.id, password: req.body.password}).write();
-//         res.send(true);
+//         res.json(true);
 //     } catch (e) {
 //         console.log(e);
-//         res.send(false);
+//         res.json(false);
 //     }
 // });
 index.get('/api/get_article_comment', (req, res) => {
@@ -343,7 +367,7 @@ index.get('/api/get_article_comment', (req, res) => {
         });
     } catch (e) {
         console.log(e);
-        res.send({
+        res.json({
             "state": false,
             "data": {}
         });
@@ -362,12 +386,12 @@ index.post('/api/add_article_comment', (req, res) => {
                 upload_time: Date.now()
             })
             .write();
-        res.send({
+        res.json({
             "state": true
         });
     } catch (e) {
         console.log(e);
-        res.send({
+        res.json({
             "state": false
         });
     }
@@ -381,7 +405,7 @@ index.post('/api/del_article_comment', (req, res) => {
         }).value();
 
         if (typeof data == 'undefined') {
-            res.send({
+            res.json({
                 "state": false,
             });
             return;
@@ -390,12 +414,12 @@ index.post('/api/del_article_comment', (req, res) => {
         db.get('article_comment')
             .remove({id: req.body.id, article_id: req.body.article_id, password: req.body.password})
             .write();
-        res.send({
+        res.json({
             "state": true,
         })
     } catch (e) {
         console.log(e);
-        res.send({
+        res.json({
             "state": false
         });
     }
