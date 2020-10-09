@@ -17,26 +17,26 @@ function date_format(time) {
     let month;
     let day;
     date.setTime(time);
-    date_string = date.toLocaleDateString();
+    let date_string = date.toLocaleDateString();
 
     if (date_string.includes(".")) {
         month = date_string.split('.')[1].trim();
-        if (month.length == 1) {
+        if (month.length === 1) {
             month = "0" + month;
         }
 
         day = date_string.split('.')[2].trim();
-        if (day.length == 1) {
+        if (day.length === 1) {
             day = "0" + day;
         }
     } else if (date_string.includes("-")) {
         month = date_string.split('-')[1];
-        if (month.length == 1) {
+        if (month.length === 1) {
             month = "0" + month;
         }
 
         day = date_string.split('-')[2];
-        if (day.length == 1) {
+        if (day.length === 1) {
             day = "0" + day;
         }
     }
@@ -51,7 +51,7 @@ index.get('/api/search_profile', (req, res) => {
 
         let result;
 
-        if (data.length == 0) {
+        if (data.length === 0) {
             result = []
         } else if (data.length >= 2) {
             result = data.map(u => ({
@@ -88,7 +88,7 @@ index.get('/api/search_article', (req, res) => {
 
         let result;
 
-        if (data.length == 0) {
+        if (data.length === 0) {
             result = []
         } else if (data.length >= 2) {
             result = data.map(u => ({id: u.id, title: u.title, maker: u.maker, thumbnail_path: u.thumbnail_path}));
@@ -156,7 +156,7 @@ index.get('/api/get_profile_detail', (req, res) => {
         //     dmd_name: "sample_article_4",
         //     dmd_thumbnail: "/image/article/article_4_thumbnail.jpg"
         // }));
-        result = {
+        let result = {
             id: data.id,
             name: data.name,
             description: data.description,
@@ -187,10 +187,23 @@ index.get('/api/get_profile_detail', (req, res) => {
 });
 index.get('/api/get_article_list', (req, res) => {
     try {
+        function get_name_by_id(id) {
+            let profile_data = db.get('profile').find({id: id}).value();
+            // console.log(profile_data)
+            return profile_data.name;
+        }
+
         if (types.includes(req.query.type)) {
             let data = db.get('article').value();
+
             data = data.filter(u => u.type === req.query.type);
-            data = data.map(u => ({id: u.id, title: u.title, thumbnail_path: u.thumbnail_path}));
+            data = data.map(u => ({
+                id: u.id,
+                title: u.title,
+                maker: get_name_by_id(u.maker_id),
+                thumbnail_path: u.thumbnail_path
+            }));
+
             res.json({
                 "state": true,
                 "data": data
@@ -235,11 +248,11 @@ index.get('/api/get_guest_book', (req, res) => {
             return b.upload_time - a.upload_time;
         });
 
-        if (data.length == 0) {
-            result = [];
-        } else {
-            result = data.map(u => ({id: u.id, comment: u.comment, upload_date: date_format(u.upload_time)}));
-        }
+        result = data.length === 0 ? [] : data.map(u => ({
+            id: u.id,
+            comment: u.comment,
+            upload_date: date_format(u.upload_time)
+        }));
 
         res.json({
             "state": true,
@@ -291,7 +304,7 @@ index.get('/api/get_article_comment', (req, res) => {
 
         let result;
 
-        if (data.length == 0) {
+        if (data.length === 0) {
             result = [];
         } else {
             result = data.map(u => ({
@@ -314,7 +327,7 @@ index.get('/api/get_article_comment', (req, res) => {
             end = start + 10;
         }
 
-        sliced_result = result.slice(start, end);
+        let sliced_result = result.slice(start, end);
 
         if (result.length > end) {
             next = true;

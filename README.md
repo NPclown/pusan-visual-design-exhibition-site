@@ -199,16 +199,19 @@
         {
             "id": "SOfcGSM6NXtpqszVhXMZ8",
             "title": "sample_article_1",
+            "maker": "김남희",
             "thumbnail_path": "/image/article/article_1_thumbnail.jpg"
         },
         {
             "id": "iM7bGyJvO-6AoiY1cEOTl",
             "title": "init_data_article_visual_design_title_5",
+            "maker": "김수현",
             "thumbnail_path": "/imgs/article_5_thumbnail.jpg"
         },
         {
             "id": "oLA9ji6mWnqIyc1XLOHm5",
             "title": "init_data_article_visual_design_title_6",
+            "maker": "김수현",
             "thumbnail_path": "/imgs/article_6_thumbnail.jpg"
         }
     ]
