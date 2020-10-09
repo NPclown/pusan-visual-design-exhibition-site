@@ -49,6 +49,9 @@ const Comment = (props) =>{
         }
         setIsRegisterOpen(false);
         getData();
+        setName("")
+        setPwd("")
+        setComm("")
     }
     }  
 
@@ -70,6 +73,7 @@ const Comment = (props) =>{
         }
         setIsDeleteOpen(false);
         getData();
+        setFindPwd("")
     }
     }  
 
@@ -92,29 +96,30 @@ const Comment = (props) =>{
                         <div className = "modal-title2 font-s18-w7-b9">
                             댓글쓰기
                         </div>
+                        <div onClick={() => setIsRegisterOpen(false)} variant="close">
+                        <Image src="/imgs/x.png" className="x-close" alt="logo" />
+                        </div>
                     </Modal.Header>
-                    <Modal.Body bsPrefix ="modal-name font-s18-w7-b9">
+                    <Modal.Body bsPrefix ="modal-form font-s18-w7-b9">
                         <Form className="middle-modal">
                         <Form.Group controlId="formGroupEmail">
                             <Form.Label>이름</Form.Label>
-                            <Form.Control  value={Name} onChange={e => setName(e.target.value)} className = "myfont-size" placeholder="5자 제한" maxLength="5" />
+                            <Form.Control  value={Name} onChange={e => setName(e.target.value)} className = "font-s14-w5-b5" autoComplete="off" placeholder="5자 제한" maxLength="5" />
                         </Form.Group>
 
                         <Form.Group controlId="formGroupPassword">
                             <Form.Label>비밀번호</Form.Label>
-                            <Form.Control value={Pwd} onChange={e => setPwd(e.target.value)} className = "myfont-size" placeholder="●●●●" maxLength="4"/>
+                            <Form.Control value={Pwd} onChange={e => setPwd(e.target.value)} className = "font-s14-w5-b5" autoComplete="off" placeholder="●●●●" maxLength="4"/>
                         </Form.Group>
 
                         <Form.Group controlId="formGroupPassword">
                             <Form.Label>댓글</Form.Label>
-                            <Form.Control  className = "comment-form" value={Comm} onChange={e => setComm(e.target.value)}  placeholder="작품 감상평 또는 응원의 댓글을 달아주세요.(80자 제한)" maxLength="80" />
+                            <Form.Control  className = "comment-form font-s14-w5-b5" value={Comm} onChange={e => setComm(e.target.value)} autoComplete="off" placeholder="작품 감상평 또는 응원의 댓글을 달아주세요.(80자 제한)" maxLength="80" />
                         </Form.Group>
                         </Form>
                     </Modal.Body>
                     <Button onClick={registerComment} variant="success" className="font-s18-w7-b9">등록</Button>
-                    <div onClick={() => setIsRegisterOpen(false)} variant="close">
-                        <Image src="/imgs/x.png" className="x-close" alt="logo" />
-                    </div>
+
                 </Modal>                
             </div>
             <div className="comment-cont">
@@ -131,22 +136,23 @@ const Comment = (props) =>{
             <Modal backdrop="static" show={isDeleteOpen}  onHide={() => setIsDeleteOpen(false)} className= "modal-size2" >
                 <Modal.Header bsPrefix = "modal-title">
                     <Image src="/image/Modal/logo.png" className = "modal-title"/>
-                    <div className = "modal-title2">
+                    <div className = "modal-title2 font-s18-w7-b9">
                     댓글삭제
                     </div>
+                    <div onClick={() => setIsDeleteOpen(false)} variant="close">
+                    <Image src="/imgs/x.png" className="x-close" alt="logo" />
+                    </div>
                 </Modal.Header>
-                <Modal.Body bsPrefix ="modal-name">
+                <Modal.Body bsPrefix ="modal-form">
                     <Form className="middle-modal">
                         <Form.Group controlId="formGroupPassword">
-                            <Form.Label>비밀번호</Form.Label>
-                            <Form.Control value={findPwd} onChange={e => setFindPwd(e.target.value)} className = "myfont-size" placeholder="댓글 작성시 입력했던 비밀번호를 입력해 주세요." maxLength="4" />
+                            <Form.Label className="font-s18-w7-b9">비밀번호</Form.Label>
+                            <Form.Control value={findPwd} onChange={e => setFindPwd(e.target.value)} autoComplete="off" className = "font-s14-w5-b5" placeholder="댓글 작성시 입력했던 비밀번호를 입력해 주세요." maxLength="4" />
                         </Form.Group>
                     </Form>
                 </Modal.Body>
                 <Button onClick={e => deleteComment(e, deleteId)} variant="success" className="font-s18-w7-b9">삭제</Button>
-                <div onClick={() => setIsDeleteOpen(false)} variant="close">
-                    <Image src="/imgs/x.png" className="x-close2" alt="logo" />
-                </div>
+
             </Modal>     
         </div>
         
