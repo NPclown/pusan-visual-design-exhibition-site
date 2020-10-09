@@ -1,11 +1,12 @@
 import React, {useState, useEffect} from 'react';
-import CommentCont from './CommentCont';
-import Axios from 'axios';
 import {Image, Modal, Button, Form} from 'react-bootstrap';
-import '../../assets/ModalPage.css'
-import '../../assets/DelModal.css'
+import Axios from 'axios';
+
+import CommentCont from './CommentCont';
 import Pagination from './Pagination';
 import BackArrow from '../Etc/BackArrow';
+
+import '../../assets/modal.css'
 
 const Comment = (props) =>{
     const [name, setName] = useState("");
@@ -118,7 +119,7 @@ const Comment = (props) =>{
                             </Form.Group>
                         </Form>
                     </Modal.Body>
-                    <Button onClick={registerComment} variant="success" className="font-s18-w7-b9">등록</Button>
+                    <Button onClick={registerComment} variant="success" className="font-s18-w7-w9">등록</Button>
 
                 </Modal>                
             </div>
@@ -133,7 +134,7 @@ const Comment = (props) =>{
             <Pagination article_id={props.id} current={props.match.params.page} count={state.data.count}></Pagination>
             <BackArrow {...props}></BackArrow>
 
-            <Modal backdrop="static" show={isDeleteOpen}  onHide={() => setIsDeleteOpen(false)} className= "modal-size2" >
+            <Modal backdrop="static" show={isDeleteOpen}  onHide={() => setIsDeleteOpen(false)} className= "modal-del-size" >
                 <Modal.Header bsPrefix = "modal-title">
                     <Image src="/image/Modal/logo.png" className = "modal-title"/>
                     <div className = "modal-title2 font-s18-w7-b9">
@@ -151,7 +152,7 @@ const Comment = (props) =>{
                         </Form.Group>
                     </Form>
                 </Modal.Body>
-                <Button onClick={e => deleteComment(e, deleteId)} variant="success" className="font-s18-w7-b9">삭제</Button>
+                <Button onClick={e => deleteComment(e, deleteId)} variant="success" className="font-s18-w7-w9">삭제</Button>
 
             </Modal>     
         </div>

@@ -55,7 +55,6 @@
     width:374px;
 }
 .modal-title2{
-
     text-align: center;
     position: relative;
     bottom: 72px;
@@ -65,17 +64,15 @@
     margin-bottom: none !important;
 }
 .modal-form{
-    /* margin: 61px; */
     margin-left:auto;
     margin-right:auto;
     margin-top:60px;
-
 }
 .modal-comment{
-        width: 330px;
-        height: 72px;
-        border: solid 1px #ededed;
-        background-color: #ffffff;
+    width: 330px;
+    height: 72px;
+    border: solid 1px #ededed;
+    background-color: #ffffff;
 }
 .x-close{
     object-fit: contain;
@@ -91,10 +88,10 @@
     font-size: 14px !important;
 }
 
-.myfont-size{
-   font-size: 14px !important; 
-   height:40px !important;
-}
 .middle-modal{
     margin-top: -141px;
+}
+
+.modal-del-size{
+    height: 393px !important;
 }
