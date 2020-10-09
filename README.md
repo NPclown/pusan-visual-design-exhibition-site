@@ -88,8 +88,7 @@
 
 ### get_profile_detail
 
-**Progress**: 입력한 user_id에 대해 id, name, description을 제외한 컬럼은 같은 값이 출력됩니다.
-
+**Caution**: 김수현(C5wY_m2Lj1GIc6Sl7n6Ry)은 ds 컬럼이 모두 "null"로 반환됩니다.
 
 **URL** : `/api/get_profile_detail`
 
@@ -110,18 +109,18 @@
         "id": "HjWispfgiPOTYc8qEVe0G",
         "name": "김남희",
         "description": "010nh@naver.com\n010 6777 2408",
-        "vd_id": "SOfcGSM6NXtpqszVhXMZ8",
-        "vd_name": "sample_article_1",
-        "vd_thumbnail": "/image/article/article_1_thumbnail.jpg",
-        "acd_id": "IUYkBnytp6GoVeTLswq9G",
-        "acd_name": "sample_article_2",
-        "acd_thumbnail": "/image/article/article_2_thumbnail.jpg",
-        "ds_id": "OmCnmh1QNPdcqi4MmYQPQ",
-        "ds_name": "sample_article_3",
-        "ds_thumbnail": "/image/article/article_3_thumbnail.jpg",
-        "dmd_id": "5v4bdO2qqYVfMBjrLz_wi",
-        "dmd_name": "sample_article_4",
-        "dmd_thumbnail": "/image/article/article_4_thumbnail.jpg"
+        "vd_id": "8Jdx5wlODTPBFywayxwaY",
+        "vd_name": "Unimal project",
+        "vd_thumbnail": "/image/thumbnail/vd/8Jdx5wlODTPBFywayxwaY.jpg",
+        "acd_id": "SOfcGSM6NXtpqszVhXMZ8",
+        "acd_name": "기업광고 / 이노베이션",
+        "acd_thumbnail": "/image/thumbnail/acd/SOfcGSM6NXtpqszVhXMZ8.jpg",
+        "ds_id": "HfiixYV2Sc7qG87vIDUPI",
+        "ds_name": "디지털 타임 캡슐, EGG",
+        "ds_thumbnail": "/image/thumbnail/ds/HfiixYV2Sc7qG87vIDUPI.jpg",
+        "dmd_id": "8CMbfs_KVuUMKd9frg9ac",
+        "dmd_name": "memory circulation",
+        "dmd_thumbnail": "/image/thumbnail/dmd/8CMbfs_KVuUMKd9frg9ac.jpg"
     }
 }
 ```
@@ -182,13 +181,13 @@
 
 |Attribute|Type|Description|Example|
 |---|---|---|---|
-|type|String|게시판 타입|visual_design  advertising_conti_design  design_seminar  digital_media_design|
+|type|String|게시판 타입|vd  acd  ds  dmd|
 
 *type 항목은 다음 4가지 중 하나의 값이 전달되어야합니다.*
-- visual_design
-- advertising_conti_design
-- design_seminar
-- digital_media_design
+- vd (visual_design)
+- acd (advertising_conti_design)
+- ds (design_seminar)
+- dmd (digital_media_design)
 
 **Result**
 
@@ -197,23 +196,32 @@
     "state": true,
     "data": [
         {
-            "id": "SOfcGSM6NXtpqszVhXMZ8",
-            "title": "sample_article_1",
-            "maker": "김남희",
-            "thumbnail_path": "/image/article/article_1_thumbnail.jpg"
+            "id": "i-gZ8LLHhodMBqzs67sRO",
+            "title": "나의 12호실/ 북패키지 디자인",
+            "maker": [
+                "최예진"
+            ],
+            "thumbnail_path": "/image/thumbnail/vd/i-gZ8LLHhodMBqzs67sRO.jpg"
         },
         {
-            "id": "iM7bGyJvO-6AoiY1cEOTl",
-            "title": "init_data_article_visual_design_title_5",
-            "maker": "김수현",
-            "thumbnail_path": "/imgs/article_5_thumbnail.jpg"
+            "id": "hlNjriUudqKSUmw9iY_C3",
+            "title": "U.TEA",
+            "maker": [
+                "천융루"
+            ],
+            "thumbnail_path": "/image/thumbnail/vd/hlNjriUudqKSUmw9iY_C3.jpg"
         },
+        ...
         {
-            "id": "oLA9ji6mWnqIyc1XLOHm5",
-            "title": "init_data_article_visual_design_title_6",
-            "maker": "김수현",
-            "thumbnail_path": "/imgs/article_6_thumbnail.jpg"
-        }
+            "id": "8Jdx5wlODTPBFywayxwaY",
+            "title": "Unimal project",
+            "maker": [
+                "김정현",
+                "김남희",
+                "이유리"
+            ],
+            "thumbnail_path": "/image/thumbnail/vd/8Jdx5wlODTPBFywayxwaY.jpg"
+        },
     ]
 }
 ```
@@ -236,9 +244,14 @@
     "data": [
         {
             "id": "SOfcGSM6NXtpqszVhXMZ8",
-            "title": "sample_article_1",
-            "maker": "김남희",
-            "img_path": "/image/article/article_1_original.jpg"
+            "title": "기업광고 / 이노베이션",
+            "maker": [
+                "김남희",
+                "이유리"
+            ],
+            "img_path": "/image/webboard/acd/SOfcGSM6NXtpqszVhXMZ8.jpg",
+            "has_video": false,
+            "video_path": "null"
         }
     ]
 }
@@ -254,7 +267,7 @@
 
 |Attribute|Type|Description|Example|
 |---|---|---|---|
-|title|String|작품 제목|sample|
+|title|String|작품 제목|보|
 
 **Result**
 
@@ -263,24 +276,12 @@
     "state": true,
     "data": [
         {
-            "id": "SOfcGSM6NXtpqszVhXMZ8",
-            "title": "sample_article_1",
-            "thumbnail_path": "/image/article/article_1_thumbnail.jpg"
+            "id": "iwJFW7BoCPWjUOqiyny1g",
+            "title": "LG GRAM17/보건복지부/희망브리지 외 6작"
         },
         {
-            "id": "IUYkBnytp6GoVeTLswq9G",
-            "title": "sample_article_2",
-            "thumbnail_path": "/image/article/article_2_thumbnail.jpg"
-        },
-        {
-            "id": "OmCnmh1QNPdcqi4MmYQPQ",
-            "title": "sample_article_3",
-            "thumbnail_path": "/image/article/article_3_thumbnail.jpg"
-        },
-        {
-            "id": "5v4bdO2qqYVfMBjrLz_wi",
-            "title": "sample_article_4",
-            "thumbnail_path": "/image/article/article_4_thumbnail.jpg"
+            "id": "9XjlhY1dF-6DqaQ6Kslmw",
+            "title": "보보 : 펫로스증후군 극복 UI/UX"
         }
     ]
 }
