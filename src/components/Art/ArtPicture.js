@@ -2,7 +2,7 @@ import React from 'react';
 
 function ArtPicture (props) {
     return(
-        <div className = "art-container1" >
+        <div className = "art-container" >
             <img src={props.image} alt="Avatar" className="art-pic" />  
             <div className = "art-overlay font-s26-w7-w0">
                 {props.title}

@@ -1,14 +1,14 @@
 import React, {useState, useEffect} from 'react';
 import Axios from 'axios';
 import {Image} from 'react-bootstrap';
+
 import Header from '../components/Header/Header'
 import Footer from '../components/Footer/Footer'
 import GuestRegister from '../components/Guest/GuestRegister'
 import GuestCont from '../components/Guest/GuestCont'
 import Title from '../components/Title/Title'
-import '../assets/main.css'
-import '../assets/font.css'
-import '../components/Guest/Guest.css'
+
+import '../assets/guestpage.css'
 
 const Guest = () =>{
     const [state, setState] = useState({isLoading : false, data : []})

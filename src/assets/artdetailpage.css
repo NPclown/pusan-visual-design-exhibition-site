@@ -7,47 +7,44 @@
     height: 55px;
 }
 
-.left {
-    float: left;
-}
-
-.right {
-    float: right;
-    text-decoration: none; 
-    border: #00964f solid; 
-    border-width: 0 0 10px 0;
-}
-
-.right:hover {
-    cursor: pointer;
-}
-
 .comment-cont {
     margin-top: 40px;
     margin-bottom : 70px;
 }
 
-.group {
+.comment-title-left {
+    float: left;
+}
+
+.comment-title-right {
+    float: right;
+    cursor: pointer;
+    text-decoration: none; 
+    border: #00964f solid; 
+    border-width: 0 0 10px 0;
+}
+
+.comment-group {
     display: flex;
     list-style: none;
     margin-bottom: 30px;
 }
 
-.write {
+.comment-group-write {
     min-width: 70px;
     margin-right: 32px;
 }
 
-.cont {
+.comment-group-cont {
     width: 965px;
 }
 
-.date {
+.comment-group-date {
     min-width: 95px;
     margin-left : 32px;
 }
 
-.cont:hover .trash-icon{
+.comment-group-cont:hover .trash-icon{
     display : inline;
     cursor : pointer;
 }

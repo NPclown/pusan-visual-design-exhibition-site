@@ -2,7 +2,6 @@ import React, {useState, useEffect} from 'react';
 import CommentCont from './CommentCont';
 import Axios from 'axios';
 import {Image, Modal, Button, Form} from 'react-bootstrap';
-import './Comment.css'
 import '../../assets/ModalPage.css'
 import '../../assets/DelModal.css'
 import Pagination from './Pagination';
@@ -89,8 +88,8 @@ const Comment = (props) =>{
         ) : (
         <div className="comment">
             <div className="comment-title">
-                <div className="left font-s26-w7-b9">댓글 <span className="font-s18-w5-b9">({state.data.count})</span></div>
-                <div className="right font-s26-w7-b9" onClick={() => setIsRegisterOpen(true)}>댓글쓰기</div>
+                <div className="comment-title-left font-s26-w7-b9">댓글 <span className="font-s18-w5-b9">({state.data.count})</span></div>
+                <div className="comment-title-right font-s26-w7-b9" onClick={() => setIsRegisterOpen(true)}>댓글쓰기</div>
                 <Modal className="modal-size" backdrop="static" show={isRegisterOpen}  onHide={() => setIsRegisterOpen(false)}>
                     <Modal.Header bsPrefix = "modal-title">
                         <Image src="/image/Modal/logo.png" className = "modal-title"/>

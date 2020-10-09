@@ -10,6 +10,8 @@ import Guest from './pages/Guest';
 import NoMatch from './pages/NoMatch';
 import Introduce from './pages/Introduce';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './assets/main.css';
+import './assets/font.css';
 
 
 function App() {

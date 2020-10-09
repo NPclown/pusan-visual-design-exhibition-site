@@ -1,13 +1,14 @@
 import React, {useState, useEffect} from 'react';
 import Axios from 'axios';
+
 import Header from '../components/Header/Header'
 import Footer from '../components/Footer/Footer'
 import ArtContent from '../components/Art/ArtContent'
 import Comment from '../components/Comment/Comment'
 import Title from '../components/Title/Title'
 import Loading from '../components/Etc/Loading';
-import '../assets/main.css'
-import '../assets/font.css'
+
+import '../assets/artdetailpage.css'
 
 
 const ArtDetail = (props) =>{
