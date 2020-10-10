@@ -12,7 +12,7 @@ const GuestRegister = (props) =>{
         }else{
             try{
                 var result = await Axios.post(`/api/add_guest_book`, {comment : guestbook});
-                state = result.data
+                state = result.data.state
             } catch(error) {
                 alert(error)
                 state = false
@@ -26,8 +26,15 @@ const GuestRegister = (props) =>{
             setGuestBook("")
         }
     }
+
+    const handleKeyPress = (e) => {
+        if (e.key === "Enter") {
+            registerGuestBook();
+        }
+    }
+    
     return (
-        <div>
+        <div className="guest">
             <div className="guest-arrows">
                 <Image src="/image/common/upArrows.png" alt="upArrows" fluid />
             </div>
@@ -36,6 +43,7 @@ const GuestRegister = (props) =>{
                     placeholder="응원의 한 마디를 입력해 주세요. 삭제할 수 없으니 신중하게 작성 부탁드립니다."
                     value={guestbook}
                     onChange={e => setGuestBook(e.target.value)}
+                    onKeyDown={e => handleKeyPress(e)}
                     maxLength={80}
                 ></input>
                 <div className="guest-register-button font-s26-w7-b9" onClick={registerGuestBook}>

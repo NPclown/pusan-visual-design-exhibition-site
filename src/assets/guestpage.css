@@ -8,13 +8,13 @@
 .guest-register-input {
     width : 1060px;
     height : 54px;
-    border-bottom: none;
+    border : none;
 }
 
 .guest-register-button {
     margin-right : 15px;
     float : right;
-    line-height: 57px;
+    line-height: 57px !important;
 }
 
 .guest-register-button:hover{

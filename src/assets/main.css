@@ -109,18 +109,18 @@
     text-decoration: none; 
 }
 
-.nav-sub-links.active .fa-circle{
+.nav-sub-links.active .nav-circle{
     display: block;
 }
 
-.nav-sub-links:hover .fa-circle{
+.nav-sub-links:hover .nav-circle{
     display: block;
 }
 .nav-menu>li:hover .nav-sub-menu {
     display: block;
 }
 
-.fa-circle {
+.nav-circle {
     display: none;
     font-size: 26px;
     float: right;

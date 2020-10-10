@@ -15,27 +15,27 @@ const Navbar = (props) => {
                     <Link className={'작품'===props.state?'nav-links active font-s26-w7-b9':'nav-links font-s26-w7-b9'} to="#">작품</Link>
                     <ul className="nav-sub-menu">
                         <li>
-                            <Link className={'광고콘텐츠디자인'===props.sub?'nav-sub-links active font-s26-w7-b9':'nav-sub-links font-s26-w7-b9'} to="/art/advertising_conti_design">
+                            <Link className={'광고콘텐츠디자인'===props.sub?'nav-sub-links active font-s26-w7-b9':'nav-sub-links font-s26-w7-b9'} to="/art/acd">
                                 광고콘텐츠디자인
-                                <i className="fas fa-circle circle"></i>
+                                <i className="fas fa-circle nav-circle"></i>
                             </Link>
                         </li>
                         <li>
-                            <Link className={'디자인세미나'===props.sub?'nav-sub-links active font-s26-w7-b9':'nav-sub-links font-s26-w7-b9'} to="/art/design_seminar">
+                            <Link className={'디자인세미나'===props.sub?'nav-sub-links active font-s26-w7-b9':'nav-sub-links font-s26-w7-b9'} to="/art/ds">
                                 디자인세미나
-                                <i className="fas fa-circle circle"></i>
+                                <i className="fas fa-circle nav-circle"></i>
                             </Link>
                         </li>
                         <li>
-                            <Link className={'디지털미디어디자인'===props.sub?'nav-sub-links active font-s26-w7-b9':'nav-sub-links font-s26-w7-b9'} to="/art/digital_media_design">
+                            <Link className={'디지털미디어디자인'===props.sub?'nav-sub-links active font-s26-w7-b9':'nav-sub-links font-s26-w7-b9'} to="/art/dmd">
                                 디지털미디어디자인
-                                <i className="fas fa-circle circle"></i>
+                                <i className="fas fa-circle nav-circle"></i>
                             </Link>
                         </li>
                         <li>
-                            <Link className={'시각디자인'===props.sub?'nav-sub-links active font-s26-w7-b9':'nav-sub-links font-s26-w7-b9'} to="/art/visual_design">
+                            <Link className={'시각디자인'===props.sub?'nav-sub-links active font-s26-w7-b9':'nav-sub-links font-s26-w7-b9'} to="/art/vd">
                                 시각디자인
-                                <i className="fas fa-circle circle"></i>
+                                <i className="fas fa-circle nav-circle"></i>
                             </Link>
                         </li>
                     </ul>

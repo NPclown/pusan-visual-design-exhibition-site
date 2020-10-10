@@ -3,14 +3,17 @@ import {Redirect} from 'react-router-dom';
 
 const Searchbar = (props) => {
     const [search, setSearch] = useState(props.name ? props.name : "");
+    const [value, setValue] = useState("");
     const [option, setOption] = useState("이름");
     const [check, setCheck] = useState(false);
 
     const checkSearch = () =>{
         if (search === ""){
             alert("검색어를 입력해주세요");
+            setCheck(false);
         }else{
             setCheck(true);
+            setValue(search);
         }
     }
 
@@ -41,7 +44,7 @@ const Searchbar = (props) => {
             </div>
             <i className='fas fa-search searchbar-icon' onClick={checkSearch}></i>
             {
-                check ? (<Redirect to={`/search/name/${search}`} />) : ('')
+                check ? (<Redirect to={`/search/name/${value}`} />) : ('')
             }
         </div>
     )
