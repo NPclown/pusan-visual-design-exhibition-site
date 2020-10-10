@@ -18,7 +18,7 @@
 
 .art-overlay {
   position: absolute;
-  bottom: 36px;
+  bottom: 43px;
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #727272);
   width: 100%;
   transition: .5s ease;

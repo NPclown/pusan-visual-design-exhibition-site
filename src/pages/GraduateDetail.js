@@ -1,5 +1,6 @@
 import React,{useState,useEffect} from 'react';
 import Axios from 'axios';
+import { Redirect} from 'react-router-dom';
 
 import Header from '../components/Header/Header'
 import Footer from '../components/Footer/Footer'
@@ -11,16 +12,16 @@ import BackArrow from '../components/Etc/BackArrow'
 import '../assets/profiledetailpage.css'
 
 const GraduateDetail = (props)=>{
-  const [state, setState] = useState({isLoading : true, data : []})
+  const [state, setState] = useState({isLoading : true, state:false, data : {}})
 
   useEffect(() => {
     const getData = async() => {
         try{
             var result = await Axios.get(`/api/get_profile_detail?user_id=${props.match.params.id}`);
-            setState({isLoading : false, data : result.data})
+            setState({isLoading : false, state: result.data.state , data : result.data.data})
         } catch(error) {
             alert(error)
-            setState({isLoading : false, data : []})
+            setState({isLoading : false, data : {}})
         }
     }
     getData();
@@ -30,11 +31,11 @@ const GraduateDetail = (props)=>{
     <div className="loading">
         <Loading></Loading>
     </div>
-    ) : (      
+    ) : (state.state?(      
         <div className ="GraduateDetail">
           <Header state="프로필"></Header>
           <div className ="content">
-            <Title sub="작품을 클릭하면 해당 작품으로 이동됩니다."></Title>
+            <Title sub={["작품을 클릭하면 해당 작품으로 이동됩니다."]}></Title>
             <div className="detail">
               <div className="detail-left">
                 <div className="detail-name font-s26-w7-g9">
@@ -53,7 +54,9 @@ const GraduateDetail = (props)=>{
             <BackArrow {...props}></BackArrow>
           </div>
         <Footer></Footer>
-      </div>
+      </div>):(
+        <Redirect to="/error"></Redirect>
+      )
   )
   
     };
