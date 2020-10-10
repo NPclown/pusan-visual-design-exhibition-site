@@ -64,8 +64,8 @@ index.get('/api/search_profile', (req, res) => {
             result = [{
                 id: data[0].id,
                 name: data[0].name,
-                thumbnail_color: "/image/profile/" + data.id + "_color.jpg",
-                thumbnail_gray: "/image/profile/" + data.id + "_gray.jpg"
+                thumbnail_color: "/image/profile/" + data[0].id + "_color.jpg",
+                thumbnail_gray: "/image/profile/" + data[0].id + "_gray.jpg"
             }];
         }
 
