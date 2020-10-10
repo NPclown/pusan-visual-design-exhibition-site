@@ -42,10 +42,10 @@ const Introduce = () =>{
                                 디지털미디어디자인
                             </div>
                             <div className ="intro-course-bar"></div>
-                            <div className ="font-s18-w5-b9">
-                                디지털 컨텐츠 디자인의 제작을 통해 디<br/>
-                                지털 미디어의 특성을 갖춰, 미디어 영<br/>
-                                상의 원리와 구조를 이해하고 관련 지식<br/>
+                            <div className ="intro-course-cont font-s18-w5-b9">
+                                디지털 컨텐츠 디자인의 제작을 통해 디
+                                지털 미디어의 특성을 갖춰, 미디어 영
+                                상의 원리와 구조를 이해하고 관련 지식
                                 을 탐구한다.
                             </div>
                         </div>
@@ -55,9 +55,9 @@ const Introduce = () =>{
                                 광고컨텐츠디자인
                             </div>
                             <div className ="intro-course-bar"></div>
-                            <div className =" font-s18-w5-b9">
-                                디자인 마케팅 커뮤니케이션 선행 연구<br/>
-                                를 통한 IMC 크리에이티브 능력을 향<br/>
+                            <div className ="intro-course-cont font-s18-w5-b9">
+                                디자인 마케팅 커뮤니케이션 선행 연구
+                                를 통한 IMC 크리에이티브 능력을 향
                                 상시키고 졸업전시 발표를 진행한다.
                             </div>
                         </div>
@@ -67,10 +67,10 @@ const Introduce = () =>{
                                 디자인세미나
                             </div>
                             <div className ="intro-course-bar"></div>
-                            <div className =" font-s18-w5-b9">
-                                경험디자인 방법을 기반으로 하여 학생<br/>
-                                의 관심사에 맞는 주제와 전시기법을 선<br/>
-                                프로젝트를 수행하고 졸업전시를<br/>
+                            <div className ="intro-course-cont font-s18-w5-b9">
+                                경험디자인 방법을 기반으로 하여 학생
+                                의 관심사에 맞는 주제와 전시기법을 선
+                                프로젝트를 수행하고 졸업전시를
                                 구성한다.
                             </div>
                         </div>
@@ -80,17 +80,24 @@ const Introduce = () =>{
                                 시각디자인
                             </div>
                             <div className ="intro-course-bar"></div>
-                            <div className =" font-s18-w5-b9">
-                                디자인에 대한 개념적ㆍ논리적 접근을<br/>
-                                통해 정보의 시각화에 있어서 매체 연구<br/>
-                                와 편집디자인 프로젝트를 해결하는 능<br/>
+                            <div className ="intro-course-cont font-s18-w5-b9">
+                                디자인에 대한 개념적ㆍ논리적 접근을
+                                통해 정보의 시각화에 있어서 매체 연구
+                                와 편집디자인 프로젝트를 해결하는 능
                                 력과 아이디어의 표현 능력을 높인다.
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className="intro-professor">
-                    <div className="font-s26-w7-b9 intro-title">교수 소개</div>
+                    <div className="font-s26-w7-b9 intro-title">지도교수진</div>
+                    <div className="intro-professor-content font-s26-w7-b9">
+                        <div><i className="fas fa-circle intro-circle"></i>김성계</div>
+                        <div><i className="fas fa-circle intro-circle"></i>손원준</div>
+                        <div><i className="fas fa-circle intro-circle"></i>이창근</div>
+                        <div><i className="fas fa-circle intro-circle"></i>이지혜</div>
+                        <div><i className="fas fa-circle intro-circle"></i>박규태</div>
+                    </div>
                 </div>
                 <div className="intro-commission">
                     <div className="font-s26-w7-b9 intro-title">졸업전시 준비 위원회</div>
@@ -168,7 +175,16 @@ const Introduce = () =>{
                         </div>
                     </div>
                 </div>
+                <div className="intro-designer">
+                    <span className="font-s18-w7-b9">Graphic Designer</span>
+                    <span className="font-s18-w5-b9 intro-designer-name">윤현동</span>
+                    <span className="font-s18-w7-b9">Web Designer</span>
+                    <span className="font-s18-w5-b9 intro-designer-name">주현아</span>
+                    <span className="font-s18-w7-b9">Advisor</span>
+                    <span className="font-s18-w5-b9 intro-designer-name">김남희 김정현 윤이랑 이유리</span>
+                </div>
             </div>
+
             <Footer></Footer>
         </div>
     )
