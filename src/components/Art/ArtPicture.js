@@ -8,7 +8,13 @@ function ArtPicture (props) {
                 {props.title}
             </div>
             <div className = "art-maker font-s18-w7-b9">
-                {props.maker}
+            {
+                props.maker ? (
+                    props.maker.map((item, index) => (
+                        <span key={index}>{item}&nbsp;</span>
+                    ))
+                ): ("")
+                }
             </div>
         </div>
     )
