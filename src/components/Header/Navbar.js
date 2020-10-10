@@ -1,27 +1,51 @@
-import React, {useState} from 'react';
-import { MenuItems } from "./MenuItems"
-import './Navbar.css'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-const Navbar = () => {
-    const [navbar, setNavbar] = useState(false)
-
-    const showNavbar = () => setNavbar(!navbar)
-
+const Navbar = (props) => {
     return(
-        <nav className="NavbarItems">
-            <div className="menu-icon" onClick={showNavbar}>
-                <i className={navbar ? 'fas fa-times' : 'fas fa-bars'}></i>
-            </div>
-            <ul className={navbar ? 'nav-menu active' : 'nav-menu'}>
-                {MenuItems.map((item, index) => {
-                    return (
-                        <li key={index}>
-                            <a className={item.cName} href={item.url}>
-                            {item.title}
-                            </a>
+        <nav className="navbar">
+            <ul className='nav-menu'>
+                <li>
+                    <Link className={'홈'===props.state?'nav-links active font-s26-w7-b9':'nav-links font-s26-w7-b9'} to="/">홈</Link>
+                </li>
+                <li>
+                    <Link className={'프로필'===props.state?'nav-links active font-s26-w7-b9':'nav-links font-s26-w7-b9'} to="/profile">프로필</Link>
+                </li>
+                <li>
+                    <Link className={'작품'===props.state?'nav-links active font-s26-w7-b9':'nav-links font-s26-w7-b9'} to="#">작품</Link>
+                    <ul className="nav-sub-menu">
+                        <li>
+                            <Link className={'광고콘텐츠디자인'===props.sub?'nav-sub-links active font-s26-w7-b9':'nav-sub-links font-s26-w7-b9'} to="/art/acd">
+                                광고콘텐츠디자인
+                                <i className="fas fa-circle nav-circle"></i>
+                            </Link>
                         </li>
-                    )
-                })}
+                        <li>
+                            <Link className={'디자인세미나'===props.sub?'nav-sub-links active font-s26-w7-b9':'nav-sub-links font-s26-w7-b9'} to="/art/ds">
+                                디자인세미나
+                                <i className="fas fa-circle nav-circle"></i>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link className={'디지털미디어디자인'===props.sub?'nav-sub-links active font-s26-w7-b9':'nav-sub-links font-s26-w7-b9'} to="/art/dmd">
+                                디지털미디어디자인
+                                <i className="fas fa-circle nav-circle"></i>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link className={'시각디자인'===props.sub?'nav-sub-links active font-s26-w7-b9':'nav-sub-links font-s26-w7-b9'} to="/art/vd">
+                                시각디자인
+                                <i className="fas fa-circle nav-circle"></i>
+                            </Link>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <Link className={'방명록'===props.state?'nav-links active font-s26-w7-b9':'nav-links font-s26-w7-b9'} to="/guest">방명록</Link>
+                </li>
+                <li>
+                    <Link className={'소개'===props.state?'nav-links active font-s26-w7-b9':'nav-links font-s26-w7-b9'} to="/about">소개</Link>
+                </li>
             </ul>
         </nav>
     )

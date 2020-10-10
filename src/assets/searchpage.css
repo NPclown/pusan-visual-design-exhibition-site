@@ -1,0 +1,20 @@
+.search-title{
+    margin-top: 74px;
+    margin-bottom: 47px;
+    text-align: center;
+}
+
+.search-icon {
+    margin-right : 10px;
+    font-size: 26px;
+}
+
+.search-cont{
+    color: rgba(0, 150, 79, 0.9);
+}
+
+.search-fail{
+    margin-top : 320px;
+    margin-bottom: 450px;
+    text-align: center;
+}

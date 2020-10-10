@@ -1,0 +1,57 @@
+.guest-register {
+    width : 1200px;
+    height: 110px;
+    border: #00964f solid;
+    border-width: 28px;
+}
+
+.guest-register-input {
+    width : 1060px;
+    height : 54px;
+    border : none;
+}
+
+.guest-register-button {
+    margin-right : 15px;
+    float : right;
+    line-height: 57px !important;
+}
+
+.guest-register-button:hover{
+    cursor: pointer;
+}
+
+.guest-arrows {
+    margin-right: auto;
+    margin-left: auto;
+    width: 313px;
+}
+
+.guest-logo {
+    margin-top : -50px;
+    margin-left : -55px;
+    width: 279px;
+
+}
+
+.guest-list {
+    margin-left : 51px;
+    margin-top : 61px;
+    margin-bottom: 58px;
+    width : 1112px;
+}
+
+.guest-group {
+    display: flex;
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.guest-cont {
+    width: 965px;
+}
+
+.guest-date {
+    min-width: 95px;
+    margin-left : 32px;
+}

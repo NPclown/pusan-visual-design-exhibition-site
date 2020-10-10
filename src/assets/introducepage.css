@@ -1,0 +1,77 @@
+.intro-graduate {
+    height: 550px;
+    margin-bottom: 185px;
+}
+
+.intro-course {
+    margin-bottom: 185px;
+}
+
+.intro-professor {
+    margin-bottom: 185px;
+}
+
+.intro-commission{
+    margin-bottom: 185px;
+}
+
+.intro-title {
+    margin-bottom : 80px;
+}
+
+.intro-graduate-left{
+    float: left;
+}
+
+.intro-graduate-right{
+    float: right;
+}
+
+.intro-graduate-comment {
+    margin-top : 177px;
+}
+
+.intro-course-content{
+    display: grid;
+    grid-template-columns: repeat(4, 278px);
+    grid-gap: 29.3px;
+}
+
+.intro-course-cont{
+    text-align: justify;
+} 
+
+.intro-course-bar{
+    width: 278px;
+    height: 10px;
+    border: #00964f solid;
+    border-width: 0 0 10px 0;
+    margin-top : 20px;
+    margin-bottom : 20px;
+}
+
+.intro-professor-content{
+    display: grid;
+    grid-template-columns: repeat(5, 200px);
+    grid-gap: 35px;
+}
+
+.intro-circle {
+    font-size : 16px;
+    color : #00964f;
+    line-height: 36px;
+    margin-left : 30px;
+    margin-right: 30px;
+}
+
+
+.intro-commision-content{
+    display: grid;
+    grid-template-columns: repeat(4, 278px);
+    grid-gap: 29.3px;
+}
+
+.intro-designer-name {
+    margin-left : 10px;
+    margin-right: 50px;
+}

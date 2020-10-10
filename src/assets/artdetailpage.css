@@ -1,0 +1,82 @@
+.comment {
+    width : 100%;
+    margin-top : 65px;
+}
+
+.comment-title {
+    height: 55px;
+}
+
+.comment-cont {
+    margin-top: 40px;
+    margin-bottom : 70px;
+}
+
+.comment-title-left {
+    float: left;
+}
+
+.comment-title-right {
+    float: right;
+    cursor: pointer;
+    text-decoration: none; 
+    border: #00964f solid; 
+    border-width: 0 0 10px 0;
+}
+
+.comment-group {
+    display: flex;
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.comment-group-write {
+    min-width: 70px;
+    margin-right: 32px;
+}
+
+.comment-group-cont {
+    width: 965px;
+}
+
+.comment-group-date {
+    min-width: 95px;
+    margin-left : 32px;
+}
+
+.comment-group-cont:hover .trash-icon{
+    display : inline;
+    cursor : pointer;
+}
+
+.trash-icon {
+    display: none;
+    font-size : 16px;
+    line-height : 20px !important;
+    margin-left : 20px;
+}
+
+.paginate {
+    width : 245px;
+    height: auto;
+    margin-left : auto;
+    margin-right : 0px;
+    text-align: end;
+}
+
+.paginate-link {
+    display: inline-block;
+    width : 30px;
+    margin-left : 10px;
+    margin-bottom: 10px;
+}
+
+.paginate-link:hover{
+    color : rgba(0, 150, 74, 0.9);
+    text-decoration: none;
+}
+
+.paginate-link.active{
+    color : rgba(0, 150, 74, 0.9);
+    text-decoration: none;
+}

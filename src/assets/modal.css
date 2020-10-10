@@ -1,0 +1,96 @@
+.modal{
+    width: 790px !important;
+    right: 0 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: flex;
+    flex-direction: column;
+    pointer-events: auto;
+    background-clip: padding-box;
+    border-radius: .3rem;
+    outline: 0;
+    margin: 1.75rem auto;
+}
+.form-control{
+    width:330px !important;
+    margin-right: auto!important;
+    margin-left: auto!important;
+    padding:.375rem .25rem!important;
+}
+
+.form-group{
+    margin-bottom: 31px !important;
+}
+.modal-content{
+    border: none !important;
+    overflow: hidden;
+    height: 625px !important;
+
+}
+.modal-open .modal {
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+}
+
+.btn{
+    bottom:70px;
+    width: 160px !important;
+    height: 40px;
+    background-color: var(--emerald);
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0rem !important;
+    text-align: center;
+}
+.modal-dialog{
+    max-width: none !important;
+    pointer-events: none !important;
+    margin:auto !important
+}
+.modal-title{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:-15px;
+    width:374px;
+}
+.modal-title2{
+    text-align: center;
+    position: relative;
+    bottom: 72px;
+}
+
+.form-group{
+    margin-bottom: none !important;
+}
+.modal-form{
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:60px;
+}
+.modal-comment{
+    width: 330px;
+    height: 72px;
+    border: solid 1px #ededed;
+    background-color: #ffffff;
+}
+.x-close{
+    object-fit: contain;
+    opacity: 0.9;
+    position: relative;
+    left: 486px;
+    bottom: 177px;
+    cursor: pointer;
+
+}
+.comment-form{
+    height: 72px !important;
+    resize: none;
+}
+
+.middle-modal{
+    margin-top: -141px;
+}
+
+.modal-del-size{
+    height: 393px !important;
+}
