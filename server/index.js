@@ -242,14 +242,14 @@ index.get('/api/get_article_detail', (req, res) => {
         }
 
         let data = db.get('article').find({id: req.query.article_id}).value();
-        let result = [{
+        let result = {
             id: data.id,
             title: data.title,
             maker: get_name_by_id(data.maker_id),
             img_path: "/image/webboard/" + data.type + "/" + data.id + ".jpg",
             has_video: data.has_video,
             video_path: data.has_video ? "/image/video/" + data.type + "/" + data.id + ".mp4" : "null"
-        }];
+        };
 
         res.json({
             "state": true,

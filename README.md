@@ -241,8 +241,7 @@
 ```json
 {
     "state": true,
-    "data": [
-        {
+    "data": {
             "id": "SOfcGSM6NXtpqszVhXMZ8",
             "title": "기업광고 / 이노베이션",
             "maker": [
@@ -253,7 +252,6 @@
             "has_video": false,
             "video_path": "null"
         }
-    ]
 }
 ```
 

@@ -9,7 +9,7 @@ const ArtContent = (props) =>{
     return (
         <div>
             {props.image === "" ? ("") : (<Image src={props.image} alt="logo" fluid />)}
-            {props.video === "" ? ("") : (<Player src={props.video} />)}
+            {props.video === "null" ? ("") : (<Player src={props.video} />)}
         </div>
     );
 }

@@ -27,6 +27,7 @@ function App() {
         <Route exact path="/search/name/:name" render={(props) => <Search {...props} />} />
         <Route exact path="/guest" render={(props) => <Guest {...props} />} />
         <Route exact path="/about" render={(props) => <Introduce {...props} />} />
+        <Route exact path="/error" render={(props) => <NoMatch {...props} />} />
         <Route exact path="*" render={(props) => <NoMatch {...props} />} />
       </Switch>
     </Router>
