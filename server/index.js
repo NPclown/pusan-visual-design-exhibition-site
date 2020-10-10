@@ -81,7 +81,7 @@ index.get('/api/search_profile', (req, res) => {
         });
     }
 });
-//temp
+
 index.get('/api/search_article', (req, res) => {
     try {
         let data = db.get('article').value();
@@ -309,15 +309,7 @@ index.post('/api/add_guest_book', (req, res) => {
         });
     }
 });
-// index.post('/api/del_guest_book', (req, res) => {
-//     try {
-//         db.get('guest_book').remove({id: req.body.id, password: req.body.password}).write();
-//         res.json(true);
-//     } catch (e) {
-//         console.log(e);
-//         res.json(false);
-//     }
-// });
+
 index.get('/api/get_article_comment', (req, res) => {
     try {
         let data = db.get('article_comment').value();
@@ -373,6 +365,7 @@ index.get('/api/get_article_comment', (req, res) => {
         });
     }
 });
+
 index.post('/api/add_article_comment', (req, res) => {
     console.log(req.body)
     try {
@@ -396,6 +389,7 @@ index.post('/api/add_article_comment', (req, res) => {
         });
     }
 });
+
 index.post('/api/del_article_comment', (req, res) => {
     try {
         let data = db.get('article_comment').find({
@@ -424,7 +418,6 @@ index.post('/api/del_article_comment', (req, res) => {
         });
     }
 });
-
 
 index.listen(4000, function () {
     console.log('Example index listening on port 4000!');

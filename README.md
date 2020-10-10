@@ -350,27 +350,6 @@
 }
 ```
 
-### del_guest_book
-
-**URL** : `/del/add_guest_book`
-
-**Method** : `POST`
-
-**Required Attribute**
-
-|Attribute|Type|Description|Example|
-|---|---|---|---|
-|id|String|댓글 고유 id|Ihi4vLLfPRC6PwrbcDkuh|
-|password|Int|댓글 등록시 기입한 4자리 비밀번호|1234|
-
-**Result**
-
-```json
-{
-    "state": true   // true | false
-}
-```
-
 ## 게시글 (article_comment)
 ### get_article_comment
 
@@ -445,7 +424,7 @@
 
 ### del_article_comment
 
-**URL** : `/del/del_article_comment`
+**URL** : `/api/del_article_comment`
 
 **Method** : `POST`
 
