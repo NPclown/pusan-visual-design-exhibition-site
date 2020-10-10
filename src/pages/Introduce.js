@@ -26,7 +26,7 @@ const Introduce = () =>{
                             <div className="intro-graduate-comment font-s18-w5-b9">
                                 우리네 삶은 끊임없이 시작과 끝을 되풀이한다. <br/>
                                 주체와 시기를 초월하는 반복은 점과 닮아 있다. <br/>
-                                우리는 졸업전시 "점"이 전기의 단락을 지으며 새로운 출범까지를 안내하는 매개가 되기를 바란다.
+                                우리는 졸업전시 &lt;점&gt;이 전기의 단락을 지으며 새로운 출범까지를 안내하는 매개가 되기를 바란다.
                             </div>
                         </div>
                         <div className ="intro-graduate-right">

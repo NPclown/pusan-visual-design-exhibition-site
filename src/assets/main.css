@@ -248,3 +248,6 @@ select {
     height: 60px !important;
 }
 
+a {
+    text-decoration: none !important;
+}

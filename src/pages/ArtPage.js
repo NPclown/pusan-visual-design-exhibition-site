@@ -31,7 +31,7 @@ const ArtPage = (props) => {
         setSub("광고콘텐츠디자인");
         break;
       case "ds":
-        setSub("디지인세미나");
+        setSub("디자인세미나");
         break;
       case "dmd":
         setSub("디지털미디어디자인");

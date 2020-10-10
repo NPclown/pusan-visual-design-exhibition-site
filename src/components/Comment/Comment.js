@@ -35,18 +35,20 @@ const Comment = (props) =>{
         var result;
         if(name === "" || pwd === "" || comm ==="" ){
             alert('빈칸을 채워주세요!')
+        }else if(pwd.length < 4){
+            alert('비밀번호 4자리를 입력해주세요!')
         }else{
             try{
                 result = await Axios.post(`/api/add_article_comment`,{article_id : props.id, comment : comm , uploader_name: name, password : pwd});
             } catch(error) {
                 alert(error)
             }
-            if (result.data) {
-                alert(`성공`);
+            if (result.data.state) {
+                alert(`등록되었습니다.`);
                 getData();
 
             }else{
-                alert(`실패`);
+                alert(`등록실패`);
             }
             setIsRegisterOpen(false);
             setName("")
@@ -61,17 +63,19 @@ const Comment = (props) =>{
         var result;
         if(findPwd === ""){
             alert('비밀번호를 입력해주세요.')
+        }else if(findPwd.length < 4){
+            alert('비밀번호 4자리를 입력해주세요!')
         }else{
             try{
                 result = await Axios.post(`/api/del_article_comment`,{article_id : props.id, id : id , password : findPwd}); // api헷갈
             } catch(error) {
                 alert(error)
             }
-            if (result.data) {
-                alert(`성공`);
+            if (result.data.state) {
+                alert(`삭제되었습니다.`);
                 getData();
             }else{
-                alert(`실패`);
+                alert(`삭제실패`);
             }
             setIsDeleteOpen(false);
             setFindPwd("")
@@ -94,12 +98,12 @@ const Comment = (props) =>{
                     <div className="comment-title-right font-s26-w7-b9" onClick={() => setIsRegisterOpen(true)}>댓글쓰기</div>
                     <Modal className="modal-size" backdrop="static" show={isRegisterOpen}  onHide={() => setIsRegisterOpen(false)}>
                         <Modal.Header bsPrefix = "modal-title">
-                            <Image src="/image/Modal/logo.png" className = "modal-title"/>
+                            <Image src="/image/common/logo.png" className = "modal-title"/>
                             <div className = "modal-title2 font-s18-w7-b9">
                                 댓글쓰기
                             </div>
                             <div onClick={() => setIsRegisterOpen(false)} variant="close">
-                            <Image src="/imgs/x.png" className="x-close" alt="logo" />
+                            <Image src="/image/common/x.png" className="x-close" alt="logo" />
                             </div>
                         </Modal.Header>
                         <Modal.Body bsPrefix ="modal-form font-s18-w7-b9">
@@ -111,12 +115,12 @@ const Comment = (props) =>{
 
                                 <Form.Group controlId="formGroupPassword">
                                     <Form.Label>비밀번호</Form.Label>
-                                    <Form.Control value={pwd} onChange={e => setPwd(e.target.value)} className = "font-s14-w5-b5" autoComplete="off" placeholder="●●●●" maxLength="4"/>
+                                    <Form.Control value={pwd} onChange={e => setPwd(e.target.value)} className = "font-s14-w5-b5" autoComplete="off" placeholder="●●●●" maxLength="4" type='password'/>
                                 </Form.Group>
 
                                 <Form.Group controlId="formGroupPassword">
                                     <Form.Label>댓글</Form.Label>
-                                    <Form.Control value={comm} onChange={e => setComm(e.target.value)} className = "comment-form font-s14-w5-b5" autoComplete="off" placeholder="작품 감상평 또는 응원의 댓글을 달아주세요.(80자 제한)" maxLength="80" />
+                                    <Form.Control as ='textarea' value={comm} onChange={e => setComm(e.target.value)} className = "comment-form font-s14-w5-b5" autoComplete="off" placeholder="작품 감상평 또는 응원의 댓글을 달아주세요.(80자 제한)" maxLength="80" type='textarea'/>
                                 </Form.Group>
                             </Form>
                         </Modal.Body>
@@ -132,24 +136,28 @@ const Comment = (props) =>{
                     }
                 </div>
 
-                <Pagination article_id={props.id} current={props.match.params.page} count={state.data.count}></Pagination>
+                { 
+                    state.data.count ? (
+                        <Pagination article_id={props.id} current={props.match.params.page} count={state.data.count}></Pagination>
+                    ) : ("")
+                }   
                 <BackArrow {...props}></BackArrow>
 
                 <Modal backdrop="static" show={isDeleteOpen}  onHide={() => setIsDeleteOpen(false)} className= "modal-del-size" >
                     <Modal.Header bsPrefix = "modal-title">
-                        <Image src="/image/Modal/logo.png" className = "modal-title"/>
+                        <Image src="/image/common/logo.png" className = "modal-title"/>
                         <div className = "modal-title2 font-s18-w7-b9">
                             댓글삭제
                         </div>
                         <div onClick={() => setIsDeleteOpen(false)} variant="close">
-                            <Image src="/imgs/x.png" className="x-close" alt="logo" />
+                            <Image src="/image/common/x.png" className="x-close" alt="logo" />
                         </div>
                     </Modal.Header>
                     <Modal.Body bsPrefix ="modal-form">
                         <Form className="middle-modal" onSubmit={e => e.preventDefault()}>
                             <Form.Group controlId="formGroupPassword">
                                 <Form.Label className="font-s18-w7-b9">비밀번호</Form.Label>
-                                <Form.Control value={findPwd} onChange={e => setFindPwd(e.target.value)} autoComplete="off" className = "font-s14-w5-b5" placeholder="댓글 작성시 입력했던 비밀번호를 입력해 주세요." maxLength="4" />
+                                <Form.Control value={findPwd} onChange={e => setFindPwd(e.target.value)} autoComplete="off" className = "font-s14-w5-b5" placeholder="댓글 작성시 입력했던 비밀번호를 입력해 주세요." maxLength="4" type='password'/>
                             </Form.Group>
                         </Form>
                     </Modal.Body>
