@@ -55,21 +55,30 @@
 **Result**
 
 ```json
-[
-    {
-        "id": "HjWispfgiPOTYc8qEVe0G",
-        "name": "김남희",
-        "thumbnail_color": "/image/profile/HjWispfgiPOTYc8qEVe0G_color.jpg",
-        "thumbnail_gray": "/image/profile/HjWispfgiPOTYc8qEVe0G_gray.jpg"
-    },
-    {
-        "id": "C5wY_m2Lj1GIc6Sl7n6Ry",
-        "name": "김수현",
-        "thumbnail_color": "/image/profile/C5wY_m2Lj1GIc6Sl7n6Ry_color.jpg",
-        "thumbnail_gray": "/image/profile/C5wY_m2Lj1GIc6Sl7n6Ry_gray.jpg"
-    },
-    ...
-]
+{
+    "state": true,
+    "data": [
+        {
+            "id": "HjWispfgiPOTYc8qEVe0G",
+            "name": "김남희",
+            "thumbnail_color": "/image/profile/HjWispfgiPOTYc8qEVe0G_color.jpg",
+            "thumbnail_gray": "/image/profile/HjWispfgiPOTYc8qEVe0G_gray.jpg"
+        },
+        {
+            "id": "C5wY_m2Lj1GIc6Sl7n6Ry",
+            "name": "김수현",
+            "thumbnail_color": "/image/profile/C5wY_m2Lj1GIc6Sl7n6Ry_color.jpg",
+            "thumbnail_gray": "/image/profile/C5wY_m2Lj1GIc6Sl7n6Ry_gray.jpg"
+        },
+        ...
+        {
+            "id": "MSi9Qxu4bN7sJGNTvQOGG",
+            "name": "최예진",
+            "thumbnail_color": "/image/profile/MSi9Qxu4bN7sJGNTvQOGG_color.jpg",
+            "thumbnail_gray": "/image/profile/MSi9Qxu4bN7sJGNTvQOGG_gray.jpg"
+        }
+    ]
+}
 ```
 
 **Description**
@@ -79,8 +88,7 @@
 
 ### get_profile_detail
 
-**Progress**: 입력한 user_id에 대해 id, name, description을 제외한 컬럼은 같은 값이 출력됩니다.
-
+**Caution**: 김수현(C5wY_m2Lj1GIc6Sl7n6Ry)은 ds 컬럼이 모두 "null"로 반환됩니다.
 
 **URL** : `/api/get_profile_detail`
 
@@ -95,26 +103,26 @@
 **Result**
 
 ```json
-[
-    {
+{
+    "state": true,
+    "data": {
         "id": "HjWispfgiPOTYc8qEVe0G",
         "name": "김남희",
         "description": "010nh@naver.com\n010 6777 2408",
-        "vd_id": "SOfcGSM6NXtpqszVhXMZ8",
-        "vd_name": "sample_article_1",
-        "vd_thumbnail": "/image/article/article_1_thumbnail.jpg",
-        "acd_id": "IUYkBnytp6GoVeTLswq9G",
-        "acd_name": "sample_article_2",
-        "acd_thumbnail": "/image/article/article_2_thumbnail.jpg",
-        "ds_id": "OmCnmh1QNPdcqi4MmYQPQ",
-        "ds_name": "sample_article_3",
-        "ds_thumbnail": "/image/article/article_3_thumbnail.jpg",
-        "dmd_id": "5v4bdO2qqYVfMBjrLz_wi",
-        "dmd_name": "sample_article_4",
-        "dmd_thumbnail": "/image/article/article_4_thumbnail.jpg"
+        "vd_id": "8Jdx5wlODTPBFywayxwaY",
+        "vd_name": "Unimal project",
+        "vd_thumbnail": "/image/thumbnail/vd/8Jdx5wlODTPBFywayxwaY.jpg",
+        "acd_id": "SOfcGSM6NXtpqszVhXMZ8",
+        "acd_name": "기업광고 / 이노베이션",
+        "acd_thumbnail": "/image/thumbnail/acd/SOfcGSM6NXtpqszVhXMZ8.jpg",
+        "ds_id": "HfiixYV2Sc7qG87vIDUPI",
+        "ds_name": "디지털 타임 캡슐, EGG",
+        "ds_thumbnail": "/image/thumbnail/ds/HfiixYV2Sc7qG87vIDUPI.jpg",
+        "dmd_id": "8CMbfs_KVuUMKd9frg9ac",
+        "dmd_name": "memory circulation",
+        "dmd_thumbnail": "/image/thumbnail/dmd/8CMbfs_KVuUMKd9frg9ac.jpg"
     }
-    ...
-]
+}
 ```
 
 **Description**
@@ -136,20 +144,30 @@
 **Result**
 
 ```json
-[
-    {
-        "id": "HjWispfgiPOTYc8qEVe0G",
-        "name": "김남희",
-        "thumbnail_color": "/image/profile/HjWispfgiPOTYc8qEVe0G_color.jpg",
-        "thumbnail_gray": "/image/profile/HjWispfgiPOTYc8qEVe0G_gray.jpg"
-    },
-    {
-        "id": "C5wY_m2Lj1GIc6Sl7n6Ry",
-        "name": "김수현",
-        "thumbnail_color": "/image/profile/C5wY_m2Lj1GIc6Sl7n6Ry_color.jpg",
-        "thumbnail_gray": "/image/profile/C5wY_m2Lj1GIc6Sl7n6Ry_gray.jpg"
-    },
-    ...
+{
+    "state": true,
+    "data": [
+        {
+            "id": "HjWispfgiPOTYc8qEVe0G",
+            "name": "김남희",
+            "thumbnail_color": "/image/profile/HjWispfgiPOTYc8qEVe0G_color.jpg",
+            "thumbnail_gray": "/image/profile/HjWispfgiPOTYc8qEVe0G_gray.jpg"
+        },
+        {
+            "id": "C5wY_m2Lj1GIc6Sl7n6Ry",
+            "name": "김수현",
+            "thumbnail_color": "/image/profile/C5wY_m2Lj1GIc6Sl7n6Ry_color.jpg",
+            "thumbnail_gray": "/image/profile/C5wY_m2Lj1GIc6Sl7n6Ry_gray.jpg"
+        },
+        ...
+        {
+            "id": "s6cyBm6On1nzn0JnEDNMV",
+            "name": "김정현",
+            "thumbnail_color": "/image/profile/s6cyBm6On1nzn0JnEDNMV_color.jpg",
+            "thumbnail_gray": "/image/profile/s6cyBm6On1nzn0JnEDNMV_gray.jpg"
+        }
+    ]
+}
 ]
 ```
 
@@ -163,30 +181,49 @@
 
 |Attribute|Type|Description|Example|
 |---|---|---|---|
-|type|String|게시판 타입|visual_design  advertising_conti_design  design_seminar  digital_media_design|
+|type|String|게시판 타입|vd  acd  ds  dmd|
 
 *type 항목은 다음 4가지 중 하나의 값이 전달되어야합니다.*
-- visual_design
-- advertising_conti_design
-- design_seminar
-- digital_media_design
+- vd (visual_design)
+- acd (advertising_conti_design)
+- ds (design_seminar)
+- dmd (digital_media_design)
 
 **Result**
 
 ```json
-[
-    {
-        "id": "SOfcGSM6NXtpqszVhXMZ8",
-        "title": "sample_article_1",
-        "thumbnail_path": "/image/article/article_1_thumbnail.jpg"
-    },
-    {
-        "id": "IUYkBnytp6GoVeTLswq9G",
-        "title": "sample_article_2",
-        "thumbnail_path": "/image/article/article_2_thumbnail.jpg"
-    },
-    ...
-]
+{
+    "state": true,
+    "data": [
+        {
+            "id": "i-gZ8LLHhodMBqzs67sRO",
+            "title": "나의 12호실/ 북패키지 디자인",
+            "maker": [
+                "최예진"
+            ],
+            "thumbnail_path": "/image/thumbnail/vd/i-gZ8LLHhodMBqzs67sRO.jpg"
+        },
+        {
+            "id": "hlNjriUudqKSUmw9iY_C3",
+            "title": "U.TEA",
+            "maker": [
+                "천융루"
+            ],
+            "thumbnail_path": "/image/thumbnail/vd/hlNjriUudqKSUmw9iY_C3.jpg"
+        },
+        ...
+        {
+            "id": "8Jdx5wlODTPBFywayxwaY",
+            "title": "Unimal project",
+            "maker": [
+                "김정현",
+                "김남희",
+                "이유리"
+            ],
+            "thumbnail_path": "/image/thumbnail/vd/8Jdx5wlODTPBFywayxwaY.jpg"
+        },
+    ]
+}
 ```
 ### get_article_detail
 **URL** : `/api/get_article_detail`
@@ -202,14 +239,22 @@
 **Result**
 
 ```json
-[
-    {
-        "id": "SOfcGSM6NXtpqszVhXMZ8",
-        "title": "init_data_article_visual_design_title_1",
-        "maker": "박지홍",
-        "img_path": "/imgs/article_1_original.jpg"
-    }
-]
+{
+    "state": true,
+    "data": [
+        {
+            "id": "SOfcGSM6NXtpqszVhXMZ8",
+            "title": "기업광고 / 이노베이션",
+            "maker": [
+                "김남희",
+                "이유리"
+            ],
+            "img_path": "/image/webboard/acd/SOfcGSM6NXtpqszVhXMZ8.jpg",
+            "has_video": false,
+            "video_path": "null"
+        }
+    ]
+}
 ```
 
 ### search_article
@@ -222,19 +267,24 @@
 
 |Attribute|Type|Description|Example|
 |---|---|---|---|
-|title|String|작품 제목|init_data_article_visual_design_title_5|
+|title|String|작품 제목|보|
 
 **Result**
 
 ```json
-[
-    {
-        "id": "iM7bGyJvO-6AoiY1cEOTl",
-        "title": "init_data_article_visual_design_title_1",
-        "maker": "박지홍",
-        "thumbnail_path": "/imgs/article_5_thumbnail.jpg"
-    }
-]
+{
+    "state": true,
+    "data": [
+        {
+            "id": "iwJFW7BoCPWjUOqiyny1g",
+            "title": "LG GRAM17/보건복지부/희망브리지 외 6작"
+        },
+        {
+            "id": "9XjlhY1dF-6DqaQ6Kslmw",
+            "title": "보보 : 펫로스증후군 극복 UI/UX"
+        }
+    ]
+}
 ```
 
 ## 방명록 (guest_book)
@@ -253,19 +303,31 @@
 **Result**
 
 ```json
-[
-    {
-        "id": "UdJgThjbPMn-sImzMsjOL",
-        "comment": "guest book sample 3",
-        "upload_date": "2020-10-07"
-    },
-    {
-        "id": "Z2F7Re317CtAjeFNlgatK",
-        "comment": "guest book sample 2",
-        "upload_date": "2020-10-07"
-    },
-    ...
-]
+{
+    "state": true,
+    "data": [
+        {
+            "id": "UdJgThjbPMn-sImzMsjOL",
+            "comment": "guest book sample 3",
+            "upload_date": "2020-10-07"
+        },
+        {
+            "id": "Z2F7Re317CtAjeFNlgatK",
+            "comment": "guest book sample 2",
+            "upload_date": "2020-10-07"
+        },
+        {
+            "id": "h3M2z9uP9jmzlULZBW1Jm",
+            "comment": "guest book sample 1",
+            "upload_date": "2020-10-07"
+        },
+        {
+            "id": "kHZZ5panLF6LUNtBKisYB",
+            "comment": "init_data_guest_book_1",
+            "upload_date": "2020-09-21"
+        }
+    ]
+}
 ```
 
 ### add_guest_book
@@ -283,26 +345,9 @@
 **Result**
 
 ```json
-True | False
-```
-
-### del_guest_book
-
-**URL** : `/del/add_guest_book`
-
-**Method** : `POST`
-
-**Required Attribute**
-
-|Attribute|Type|Description|Example|
-|---|---|---|---|
-|id|String|댓글 고유 id|Ihi4vLLfPRC6PwrbcDkuh|
-|password|Int|댓글 등록시 기입한 4자리 비밀번호|1234|
-
-**Result**
-
-```json
-True | False
+{
+    "state": true   // true | false
+}
 ```
 
 ## 게시글 (article_comment)
@@ -325,29 +370,32 @@ True | False
 
 ```json
 {
-    "count": 23,    // 전체 댓글 개수
-    "next": true,   // 댓글이 다음페이지에도 존재할경우 true 없으면 false 
-    "comments": [
-        {
-            "id": "4zcmP_gAkru-pHbsX-IM7",
-            "comment": "sample_20",
-            "uploader_name": "박지홍_20",
-            "upload_date": "2020-10-05"
-        },
-        {
-            "id": "_cW3oYhkd4Tc1eSDF-LB-",
-            "comment": "sample_19",
-            "uploader_name": "박지홍_19",
-            "upload_date": "2020-10-05"
-        },
-        ...
-        {
-            "id": "K8rpcgm1UVspE5oGpQAl-",
-            "comment": "sample_11",
-            "uploader_name": "박지홍_11",
-            "upload_date": "2020-10-05"
-        }
-    ]
+    "state": true,
+    "data": {
+        "count": 21,    // 전체 댓글 개수
+        "next": true,   // 다음 페이지가 존재하는지 여부
+        "comments": [
+            {
+                "id": "4zcmP_gAkru-pHbsX-IM7",
+                "comment": "sample_20",
+                "uploader_name": "박지홍_20",
+                "upload_date": "2020-10-05"
+            },
+            {
+                "id": "_cW3oYhkd4Tc1eSDF-LB-",
+                "comment": "sample_19",
+                "uploader_name": "박지홍_19",
+                "upload_date": "2020-10-05"
+            },
+            ...
+            {
+                "id": "K8rpcgm1UVspE5oGpQAl-",
+                "comment": "sample_11",
+                "uploader_name": "박지홍_11",
+                "upload_date": "2020-10-05"
+            }
+        ]
+    }
 }
 ```
 
@@ -369,12 +417,14 @@ True | False
 **Result**
 
 ```json
-True | False
+{
+    "state": true   // true | false
+}
 ```
 
 ### del_article_comment
 
-**URL** : `/del/del_article_comment`
+**URL** : `/api/del_article_comment`
 
 **Method** : `POST`
 
@@ -389,5 +439,7 @@ True | False
 **Result**
 
 ```json
-True | False
+{
+    "state": true   // true | false
+}
 ```
