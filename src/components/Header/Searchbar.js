@@ -28,7 +28,7 @@ const Searchbar = (props) => {
     return(
         <div className="searchbar">
             <div className='searchbar-selector'>
-                <select className='searchbar-selector font-s26-w7-b9' value={option} onChange={e => setOption(e.target.value)}>
+                <select className='font-s26-w7-b9' value={option} onChange={e => setOption(e.target.value)}>
                     <option value="이름">이름</option>
                 </select>
             </div>

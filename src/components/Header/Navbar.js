@@ -15,25 +15,25 @@ const Navbar = (props) => {
                     <Link className={'작품'===props.state?'nav-links active font-s26-w7-b9':'nav-links font-s26-w7-b9'} to="#">작품</Link>
                     <ul className="nav-sub-menu">
                         <li>
-                            <Link className={'광고콘텐츠디자인'===props.sub?'nav-sub-links active font-s26-w7-b9':'nav-sub-links font-s26-w7-b9'} to="/art/acd">
+                            <Link className={'광고콘텐츠디자인'===props.sub?'nav-sub-links active font-s22-w7-b9':'nav-sub-links font-s22-w7-b9'} to="/art/acd">
                                 광고콘텐츠디자인
                                 <i className="fas fa-circle nav-circle"></i>
                             </Link>
                         </li>
                         <li>
-                            <Link className={'디자인세미나'===props.sub?'nav-sub-links active font-s26-w7-b9':'nav-sub-links font-s26-w7-b9'} to="/art/ds">
+                            <Link className={'디자인세미나'===props.sub?'nav-sub-links active font-s22-w7-b9':'nav-sub-links font-s22-w7-b9'} to="/art/ds">
                                 디자인세미나
                                 <i className="fas fa-circle nav-circle"></i>
                             </Link>
                         </li>
                         <li>
-                            <Link className={'디지털미디어디자인'===props.sub?'nav-sub-links active font-s26-w7-b9':'nav-sub-links font-s26-w7-b9'} to="/art/dmd">
+                            <Link className={'디지털미디어디자인'===props.sub?'nav-sub-links active font-s22-w7-b9':'nav-sub-links font-s22-w7-b9'} to="/art/dmd">
                                 디지털미디어디자인
                                 <i className="fas fa-circle nav-circle"></i>
                             </Link>
                         </li>
                         <li>
-                            <Link className={'시각디자인'===props.sub?'nav-sub-links active font-s26-w7-b9':'nav-sub-links font-s26-w7-b9'} to="/art/vd">
+                            <Link className={'시각디자인'===props.sub?'nav-sub-links active font-s22-w7-b9':'nav-sub-links font-s22-w7-b9'} to="/art/vd">
                                 시각디자인
                                 <i className="fas fa-circle nav-circle"></i>
                             </Link>

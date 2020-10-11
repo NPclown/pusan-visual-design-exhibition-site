@@ -122,10 +122,10 @@
 
 .nav-circle {
     display: none;
-    font-size: 26px;
+    font-size: 22px;
     float: right;
     margin-right: 10px;
-    line-height: 40px;
+    line-height: 32px;
     color : #00964f;
 }
 
@@ -137,6 +137,9 @@
     float : right;
 }
 
+.searchbar-selector{
+    margin-right : -12px;
+}
 select {
     width: 60px;
     border: 0px solid #999;
@@ -152,7 +155,7 @@ select {
     height: 40px;
     text-decoration: none; 
     border: #000000 solid; 
-    border-width: 0 0 1.5px 0;
+    border-width: 0 0 2px 0;
 }
 
 .searchbar-icon {
@@ -180,6 +183,7 @@ select {
     margin-top : auto;
     margin-bottom: 50px;
     opacity: 0.9;
+    line-height: 35px !important;
 }
 
 .error {
