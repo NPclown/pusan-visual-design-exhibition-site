@@ -30,7 +30,7 @@ const Graduate = (props) => {
 },[props.id])
 
   return (
-    <div className="Graduate">
+    <div className="App">
       <Header state="프로필"></Header>
       {state.isLoading ? (
         <Loading></Loading>

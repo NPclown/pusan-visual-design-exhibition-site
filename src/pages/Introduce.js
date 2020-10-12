@@ -10,7 +10,7 @@ import '../assets/introducepage.css'
 
 const Introduce = () =>{
     return(
-        <div className ="Introduce">
+        <div className ="App">
           <Header state="소개"></Header>
             <div className = "content">
                 <Title></Title>

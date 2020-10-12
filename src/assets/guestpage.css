@@ -3,9 +3,11 @@
     height: 110px;
     border: #00964f solid;
     border-width: 28px;
+    margin-top : -227px;
 }
 
 .guest-register-input {
+    margin-left : 10px;
     width : 1060px;
     height : 54px;
     border : none;
@@ -27,11 +29,15 @@
     width: 313px;
 }
 
+.guest-arrows.active {
+    transform: rotate(360deg);
+    transition: all ease 1.5s;
+}
+
 .guest-logo {
     margin-top : -50px;
     margin-left : -55px;
     width: 279px;
-
 }
 
 .guest-list {

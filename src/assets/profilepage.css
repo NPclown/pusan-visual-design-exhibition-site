@@ -11,7 +11,7 @@
 }
 
 .profile-pic{
-    width:100%;
+    width: 277px;
     height: 399px;
     background-color: #d8d8d8;
 }
@@ -26,8 +26,7 @@
 
 .profile-color-picture{
   position: absolute;
-  bottom: 0;
-  width: 100%;
+  bottom: -0.25px;
   opacity: 0;
 
 }

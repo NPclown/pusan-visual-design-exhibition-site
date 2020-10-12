@@ -4,6 +4,8 @@ import {Image} from 'react-bootstrap';
 
 const GuestRegister = (props) =>{
     const [guestbook, setGuestBook] = useState("");
+    const [arrows, setArrows] = useState(false);
+
 
     const registerGuestBook = async() =>{
         var state = false;
@@ -30,16 +32,17 @@ const GuestRegister = (props) =>{
     const handleKeyPress = (e) => {
         if (e.key === "Enter") {
             registerGuestBook();
+            setArrows(true);
         }
     }
     
     return (
         <div className="guest">
-            <div className="guest-arrows">
-                <Image src="/image/common/upArrows.png" alt="upArrows" fluid />
+            <div className={arrows ? "guest-arrows active" : "guest-arrows"}>
+                <Image src="/image/common/arrows.png" alt="upArrows" fluid />
             </div>
             <div className="guest-register">
-                <input className="font-s26-w5-b5 guest-register-input"
+                <input className="font-s20-w5-b5 guest-register-input"
                     placeholder="응원의 한 마디를 입력해 주세요. 삭제할 수 없으니 신중하게 작성 부탁드립니다."
                     value={guestbook}
                     onChange={e => setGuestBook(e.target.value)}
@@ -49,9 +52,6 @@ const GuestRegister = (props) =>{
                 <div className="guest-register-button font-s26-w7-b9" onClick={registerGuestBook}>
                     작성
                 </div>
-            </div>
-            <div className="guest-arrows">
-                <Image src="/image/common/underArrows.png" alt="underArrows" fluid />
             </div>
         </div>
     );
