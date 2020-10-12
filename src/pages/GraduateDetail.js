@@ -32,7 +32,7 @@ const GraduateDetail = (props)=>{
         <Loading></Loading>
     </div>
     ) : (state.state?(      
-        <div className ="GraduateDetail">
+        <div className ="App">
           <Header state="프로필"></Header>
           <div className ="content">
             <Title sub={["작품을 클릭하면 해당 작품으로 이동됩니다."]}></Title>

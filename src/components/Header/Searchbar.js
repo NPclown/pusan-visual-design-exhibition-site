@@ -4,7 +4,6 @@ import {Redirect} from 'react-router-dom';
 const Searchbar = (props) => {
     const [search, setSearch] = useState(props.name ? props.name : "");
     const [value, setValue] = useState("");
-    const [option, setOption] = useState("이름");
     const [check, setCheck] = useState(false);
 
     const checkSearch = () =>{
@@ -28,9 +27,7 @@ const Searchbar = (props) => {
     return(
         <div className="searchbar">
             <div className='searchbar-selector'>
-                <select className='font-s26-w7-b9' value={option} onChange={e => setOption(e.target.value)}>
-                    <option value="이름">이름</option>
-                </select>
+                <div className='font-s26-w7-b9'>이름</div>
             </div>
             <div>
                 <input id="search"

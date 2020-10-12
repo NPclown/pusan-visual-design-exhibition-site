@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Navbar = (props) => {
     return(
-        <nav className="navbar">
+        <nav className="nav-bar">
             <ul className='nav-menu'>
                 <li>
                     <Link className={'홈'===props.state?'nav-links active font-s26-w7-b9':'nav-links font-s26-w7-b9'} to="/">홈</Link>

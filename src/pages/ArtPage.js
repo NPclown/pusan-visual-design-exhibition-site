@@ -53,7 +53,7 @@ const ArtPage = (props) => {
 },[props.match.params.type])
   
   return (
-      <div className="ArtPage">
+      <div className="App">
         <Header state="작품" sub={main}></Header>
           {state.isLoading ? (
             <Loading></Loading>

@@ -16,6 +16,13 @@
     src: url('./font/KoPubWorld_Dotum_Light.ttf') format('truetype');
 }
 
+.App {
+    width : 100%;
+    max-width: 1440px;
+    min-width: 1440px;
+    margin : auto;
+}
+
 .header {
     width: 100%;
     height: 70px;
@@ -23,6 +30,7 @@
     margin-left: auto;
     max-width: 1200px;
     min-width: 1200px;
+    position: relative;
 }
 
 .content {
@@ -40,10 +48,16 @@
     margin-left: auto;
     max-width: 1200px;
     min-width: 1200px;
+    position: relative;
 }
 
-.navbar{
-    background: #ffffff;
+.main-video {
+    margin-left : -120px;
+    margin-top : -200px;
+    margin-bottom : -150px;
+}
+
+.nav-bar{
     height: 70px;
     display: flex;
     align-items: center;
@@ -130,16 +144,12 @@
 }
 
 .searchbar {
-    background: #ffffff;
     height: 70px;
     display: flex;
     align-items: center;
     float : right;
 }
 
-.searchbar-selector{
-    margin-right : -12px;
-}
 select {
     width: 60px;
     border: 0px solid #999;
@@ -156,6 +166,7 @@ select {
     text-decoration: none; 
     border: #000000 solid; 
     border-width: 0 0 2px 0;
+    background: none;
 }
 
 .searchbar-icon {
