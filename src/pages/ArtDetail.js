@@ -12,8 +12,11 @@ import Loading from '../components/Etc/Loading';
 import '../assets/artdetailpage.css'
 
 const ArtDetail = (props) =>{
-
     const [state, setState] = useState({isLoading : true, state : false, data : {}})
+
+    const componentDidUpdate = () => {
+      window.scrollTo(0,0);
+    }
 
     useEffect(() => {
         const getData = async() => {
@@ -26,6 +29,7 @@ const ArtDetail = (props) =>{
             }
         }
         getData();
+        componentDidUpdate()
     },[props.match.params.id])
 
     return (
@@ -38,7 +42,7 @@ const ArtDetail = (props) =>{
                 <div className="content">
                   <Title main={state.data.title} sub={state.data.maker}></Title>
                   <ArtContent image={state.data.img_path} video={state.data.video_path}></ArtContent>
-                  <Comment {...props} id={state.data.id}></Comment>
+                  <Comment {...props} id={state.data.id} type={state.data.type}></Comment>
                 </div>
               ) : (
                 <Redirect to="/error"></Redirect>

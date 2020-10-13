@@ -15,6 +15,10 @@ const Graduate = (props) => {
   
   const [state, setState] = useState({isLoading : true,state:false, data : []})
 
+  const componentDidUpdate = () => {
+    window.scrollTo(0,0);
+  }
+
   useEffect(() => {
     const getData = async() => {
         try{
@@ -27,6 +31,7 @@ const Graduate = (props) => {
         }
     }
     getData();
+    componentDidUpdate();
 },[props.id])
 
   return (

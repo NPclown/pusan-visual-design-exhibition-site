@@ -201,6 +201,7 @@
             "maker": [
                 "최예진"
             ],
+            "type": "acd",
             "thumbnail_path": "/image/thumbnail/vd/i-gZ8LLHhodMBqzs67sRO.jpg"
         },
         {
@@ -209,6 +210,7 @@
             "maker": [
                 "천융루"
             ],
+            "type": "acd",
             "thumbnail_path": "/image/thumbnail/vd/hlNjriUudqKSUmw9iY_C3.jpg"
         },
         ...
@@ -220,6 +222,7 @@
                 "김남희",
                 "이유리"
             ],
+            "type": "acd",
             "thumbnail_path": "/image/thumbnail/vd/8Jdx5wlODTPBFywayxwaY.jpg"
         },
     ]

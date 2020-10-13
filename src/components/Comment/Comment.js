@@ -21,9 +21,11 @@ const Comment = (props) =>{
     const [deleteId, setDeleteId] = useState("");
     const [state, setState] = useState({isLoading : true, state : false, data : {}})
 
+    const [page, setPage] = useState(1);
+
     const getData = async() => {
         try{
-            var result = await Axios.get(`/api/get_article_comment?article_id=${props.id}&page=${props.match.params.page}`);
+            var result = await Axios.get(`/api/get_article_comment?article_id=${props.id}&page=${page}`);
             setState({isLoading : false, state : result.data.state, data : result.data.data})
         } catch(error) {
             alert(error)
@@ -45,7 +47,7 @@ const Comment = (props) =>{
             }
             if (result.data.state) {
                 alert(`등록되었습니다.`);
-                getData();
+                setPage(1);
 
             }else{
                 alert(`등록실패`);
@@ -73,7 +75,7 @@ const Comment = (props) =>{
             }
             if (result.data.state) {
                 alert(`삭제되었습니다.`);
-                getData();
+                setPage(1);
             }else{
                 alert(`삭제실패`);
             }
@@ -84,7 +86,7 @@ const Comment = (props) =>{
 
     useEffect(() => {
         getData();
-    },[props.id, props.match.params.page])
+    },[props.id, page])
 
     return state.isLoading ? (
         <div className="loading">
@@ -138,10 +140,10 @@ const Comment = (props) =>{
 
                 { 
                     state.data.count ? (
-                        <Pagination article_id={props.id} current={props.match.params.page} count={state.data.count}></Pagination>
+                        <Pagination getData={(page) => setPage(page)} article_id={props.id} current={page} count={state.data.count}></Pagination>
                     ) : ("")
                 }   
-                <BackArrow {...props}></BackArrow>
+                <BackArrow {...props} path={`/art/${props.type}`}></BackArrow>
 
                 <Modal backdrop="static" show={isDeleteOpen}  onHide={() => setIsDeleteOpen(false)} className= "modal-del-size" >
                     <Modal.Header bsPrefix = "modal-title">

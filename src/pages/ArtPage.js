@@ -15,6 +15,9 @@ const ArtPage = (props) => {
   const [main, setMain] = useState("");
   const [sub, setSub] = useState("");
 
+  const componentDidUpdate = () => {
+    window.scrollTo(0,0);
+  }
 
   useEffect(() => {
     const getData = async() => {
@@ -49,7 +52,7 @@ const ArtPage = (props) => {
         setMain("");
         setSub("");
     }
-
+    componentDidUpdate();
 },[props.match.params.type])
   
   return (
@@ -64,7 +67,7 @@ const ArtPage = (props) => {
                 <div className = "art">{
                   state.data.map((art, index) => {
                       return(
-                        <Link to = {`detail/${art.id}/1`} key={index}>
+                        <Link to = {`detail/${art.id}`} key={index}>
                           <ArtPicture title = {art.title} maker={art.maker} image={art.thumbnail_path}></ArtPicture>
                         </Link>
                       )

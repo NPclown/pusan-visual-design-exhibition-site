@@ -66,6 +66,7 @@
 
 .paginate-link {
     display: inline-block;
+    cursor: pointer;
     width : 30px;
     margin-left : 10px;
     margin-bottom: 10px;

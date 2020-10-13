@@ -244,6 +244,7 @@ index.get('/api/get_article_detail', (req, res) => {
         let data = db.get('article').find({id: req.query.article_id}).value();
         let result = {
             id: data.id,
+            type: data.type,
             title: data.title,
             maker: get_name_by_id(data.maker_id),
             img_path: "/image/webboard/" + data.type + "/" + data.id + ".jpg",
