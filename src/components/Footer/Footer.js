@@ -5,7 +5,7 @@ const Footer = () =>{
     return (
         <div className="footer">
             <div className="footer-copyright font-s13-w5-b9">
-                copyright <span className="footer-times">@</span> PNU Visual Design Graduation Exhibition All rights reserved.
+                copyright <span className="footer-times">©</span> PNU Visual Design Graduation Exhibition All rights reserved.
             </div>
             <div className="footer-logo">  
                 <Image className="footer-logo-img" src="/image/common/logo.png" alt="logo" fluid />

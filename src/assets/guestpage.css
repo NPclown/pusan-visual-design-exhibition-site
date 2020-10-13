@@ -4,6 +4,7 @@
     border: #00964f solid;
     border-width: 28px;
     margin-top : -227px;
+    position: relative;
 }
 
 .guest-register-input {
