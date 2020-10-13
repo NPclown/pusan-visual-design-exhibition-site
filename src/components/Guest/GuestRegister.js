@@ -6,6 +6,11 @@ const GuestRegister = (props) =>{
     const [guestbook, setGuestBook] = useState("");
     const [arrows, setArrows] = useState(false);
 
+    const resetArrows = () => {
+        setTimeout(()=> {
+            setArrows(false);
+        }, 1000)
+    }
 
     const registerGuestBook = async() =>{
         var state = false;
@@ -21,18 +26,19 @@ const GuestRegister = (props) =>{
             }
             if (state) {
                 alert('방명록 등록에 성공하였습니다!')
+                setArrows(true);
                 props.getData();
             }else{
                 alert('방명록 등록에 실패하였습니다!')
             }
             setGuestBook("")
+            resetArrows();
         }
     }
 
     const handleKeyPress = (e) => {
         if (e.key === "Enter") {
             registerGuestBook();
-            setArrows(true);
         }
     }
     
