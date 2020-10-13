@@ -47,8 +47,7 @@ const Comment = (props) =>{
             }
             if (result.data.state) {
                 alert(`등록되었습니다.`);
-                setPage(1);
-
+                getData();
             }else{
                 alert(`등록실패`);
             }
@@ -75,7 +74,7 @@ const Comment = (props) =>{
             }
             if (result.data.state) {
                 alert(`삭제되었습니다.`);
-                setPage(1);
+		getData();
             }else{
                 alert(`삭제실패`);
             }

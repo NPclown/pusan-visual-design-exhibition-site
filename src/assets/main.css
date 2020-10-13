@@ -55,7 +55,7 @@
 .main-video {
     margin-left : -120px;
     margin-top : -200px;
-    margin-bottom : -150px;
+    margin-bottom : -60px;
 }
 
 .nav-bar{
@@ -186,7 +186,7 @@ select {
 }
 
 .title-main {
-    margin-right : 10px;
+    margin-right : 8px;
     margin-top : auto;
     margin-bottom: 50px;
 }

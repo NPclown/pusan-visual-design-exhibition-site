@@ -368,7 +368,6 @@ index.get('/api/get_article_comment', (req, res) => {
 });
 
 index.post('/api/add_article_comment', (req, res) => {
-    console.log(req.body)
     try {
         db.get('article_comment')
             .push({
