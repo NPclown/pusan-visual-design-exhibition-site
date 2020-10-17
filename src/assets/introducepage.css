@@ -75,3 +75,34 @@
     margin-left : 10px;
     margin-right: 50px;
 }
+
+@media screen and (max-width: 500px){
+
+    .intro-course-content{
+        display: grid;
+        grid-template-columns: repeat(1, 278px);
+        grid-gap: 29.3px;
+        font-size:12px !important;
+
+    }
+    .intro-professor-content{
+        display: grid;
+        grid-template-columns: repeat(1, 200px);
+        font-size:12px !important;
+        grid-gap: 35px;
+    }
+    .intro-commision-content{
+        display: grid;
+        grid-template-columns: repeat(1, 278px);
+        grid-gap: 29.3px;
+        font-size:15px !important;
+    }
+    .intro1{
+        font-size: 12px !important;
+    }
+    .intro-designer{
+        display: grid;
+        margin-left: 50vw;
+        grid-template-columns: repeat(1, 200px);
+    }
+}

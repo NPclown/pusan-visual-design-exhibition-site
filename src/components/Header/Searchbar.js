@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import {Redirect} from 'react-router-dom';
+import { Modal} from 'react-bootstrap';
 
 const Searchbar = (props) => {
     const [search, setSearch] = useState(props.name ? props.name : "");
     const [value, setValue] = useState("");
     const [check, setCheck] = useState(false);
+    const [isRegisterOpen, setIsRegisterOpen] = useState(false);
 
     const checkSearch = () =>{
         if (search === ""){
@@ -27,7 +29,28 @@ const Searchbar = (props) => {
     return(
         <div className="searchbar">
             <div className="search-item-mobile">
-                <i className='fas fa-search searchbar-icon' onClick={checkSearch}></i>
+                <i className='fas fa-search searchbar-icon' onClick={() => setIsRegisterOpen(true)}></i>
+                <Modal dialogClassName="mobile-modal-content" show={isRegisterOpen}  onHide={() => setIsRegisterOpen(false)}> 
+                <div className ="mobile-modal-title font-s15-w5-w9">
+                    작품을 보기를 원하는 분의 <br/>
+                    이름을 입력해 주세요.<br/>
+                </div>
+                
+                    <input id="search"
+                        className="mobile-searchbar-input font-s18-w7-w10"
+                        value={search}
+                        onChange={e => setSearch(e.target.value)}
+                        onKeyPress={e => handleKeyPress(e)}
+                        autoComplete="off"
+                    ></input>
+                    <i className='fas fa-search mobile-icon' onClick={checkSearch}></i>
+                    {
+                        check ? (<Redirect to={`/search/name/${value}`} />) : ('')
+                    }
+            
+                
+                
+                </Modal>
             </div>
             <div className="search-item">
                 <div className='searchbar-selector'>
