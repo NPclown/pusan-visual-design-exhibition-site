@@ -105,7 +105,7 @@ const Comment = (props) =>{
                     <div className="comment-title-right font-s26-w7-b9" onClick={() => setIsRegisterOpen(true)}>댓글쓰기</div>
                     <Modal className="modal-size" backdrop="static" show={isRegisterOpen}  onHide={() => setIsRegisterOpen(false)}>
                         <Modal.Header bsPrefix = "modal-title">
-                            <Image src="/image/common/logo.png" className = "modal-title"/>
+                            <Image src="/image/common/logo.png" className = "modal-title mobile-modalcomm-title" />
                             <div className = "modal-title2 font-s18-w7-b9">
                                 댓글쓰기
                             </div>
@@ -152,7 +152,7 @@ const Comment = (props) =>{
 
                 <Modal backdrop="static" show={isDeleteOpen}  onHide={() => setIsDeleteOpen(false)} className= "modal-del-size" >
                     <Modal.Header bsPrefix = "modal-title">
-                        <Image src="/image/common/logo.png" className = "modal-title"/>
+                        <Image src="/image/common/logo.png" className = "modal-title mobile-modalcomm-title"/>
                         <div className = "modal-title2 font-s18-w7-b9">
                             댓글삭제
                         </div>

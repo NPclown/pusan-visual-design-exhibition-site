@@ -101,5 +101,43 @@
     height: 393px !important;
 }
 
+@media screen and (max-width: 500px){
+    .modal{
+        width: 98vw !important;
+    }
+    
+    
+    .form-control{
+        width:86vw  !important;
+    }
 
+    .modal-content{
+        height: 93vh !important;
+    
+    }
+
+    .modal-title{
+        margin-top:33vw;
+        width:98vw;
+    }
+    
+    .form-group{
+        margin-left:2vw;
+    }
+
+    .x-close{
+        width: 9vw;
+        left: 82vw;
+        bottom: 38vw;
+        cursor: pointer;
+    
+    }
+    
+    .modal-del-size{
+        height: 50vh !important;
+    }
+    .mobile-modalcomm-title{
+        display:none;
+    }
+}
 
