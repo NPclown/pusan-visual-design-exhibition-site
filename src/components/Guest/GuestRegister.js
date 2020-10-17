@@ -14,11 +14,12 @@ const GuestRegister = (props) =>{
 
     const registerGuestBook = async() =>{
         var state = false;
-        if (guestbook === ""){
+	var content = String(guestbook).trim();
+        if (content === ""){
             alert('방명록을 입력해주세요!')
         }else{
             try{
-                var result = await Axios.post(`/api/add_guest_book`, {comment : guestbook});
+                var result = await Axios.post(`/api/add_guest_book`, {comment : content});
                 state = result.data.state
             } catch(error) {
                 alert(error)

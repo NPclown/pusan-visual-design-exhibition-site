@@ -35,13 +35,17 @@ const Comment = (props) =>{
 
     const registerComment = async() => {
         var result;
-        if(name === "" || pwd === "" || comm ==="" ){
+	var name_blank = String(name).trim();
+	var pwd_blank = String(pwd).trim();
+	var comm_blank = String(comm).trim();
+
+        if(name_blank === "" || pwd_blank === "" || comm_blank ==="" ){
             alert('빈칸을 채워주세요!')
         }else if(pwd.length < 4){
             alert('비밀번호 4자리를 입력해주세요!')
         }else{
             try{
-                result = await Axios.post(`/api/add_article_comment`,{article_id : props.id, comment : comm , uploader_name: name, password : pwd});
+                result = await Axios.post(`/api/add_article_comment`,{article_id : props.id, comment : comm_blank , uploader_name: name_blank, password : pwd_blank});
             } catch(error) {
                 alert(error)
             }
@@ -62,13 +66,15 @@ const Comment = (props) =>{
         e.preventDefault()
 
         var result;
-        if(findPwd === ""){
+	var findPwd_blank = String(findPwd).trim();
+
+        if(findPwd_blank === ""){
             alert('비밀번호를 입력해주세요.')
         }else if(findPwd.length < 4){
             alert('비밀번호 4자리를 입력해주세요!')
         }else{
             try{
-                result = await Axios.post(`/api/del_article_comment`,{article_id : props.id, id : id , password : findPwd}); // api헷갈
+                result = await Axios.post(`/api/del_article_comment`,{article_id : props.id, id : id , password : findPwd_blank});
             } catch(error) {
                 alert(error)
             }
