@@ -230,3 +230,14 @@
     letter-spacing: normal;
     color: rgba(0, 0, 0, 0.9);
 }
+
+.font-s9-w5-b9{
+    font-family: 'KoPubDotum';
+    font-size: 9px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 60px;
+    letter-spacing: normal;
+    color: rgba(0, 0, 0, 0.9);
+}

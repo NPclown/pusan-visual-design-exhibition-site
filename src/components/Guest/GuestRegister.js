@@ -14,7 +14,7 @@ const GuestRegister = (props) =>{
 
     const registerGuestBook = async() =>{
         var state = false;
-	var content = String(guestbook).trim();
+	    var content = String(guestbook).trim();
         if (content === ""){
             alert('방명록을 입력해주세요!')
         }else{

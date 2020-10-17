@@ -1,9 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Image } from 'react-bootstrap';
 
 const Navbar = (props) => {
     return(
         <nav className="nav-bar">
+            <div className="nav-menu-mobile">
+                <div>
+                    <i className='fas fa-bars bars-icon'></i>
+                </div>
+                <div>
+                    <Image className="nav-mobile-img" src="/image/common/logo.png" alt="logo" fluid />
+                </div>
+            </div>
             <ul className='nav-menu'>
                 <li>
                     <Link className={'홈'===props.state?'nav-links active font-s26-w7-b9':'nav-links font-s26-w7-b9'} to="/">홈</Link>

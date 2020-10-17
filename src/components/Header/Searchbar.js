@@ -26,23 +26,28 @@ const Searchbar = (props) => {
 
     return(
         <div className="searchbar">
-            <div className='searchbar-selector'>
-                <div className='font-s26-w7-b9'>이름</div>
+            <div className="search-item-mobile">
+                <i className='fas fa-search searchbar-icon' onClick={checkSearch}></i>
             </div>
-            <div>
-                <input id="search"
-                    className="searchbar-input font-s26-w7-b5"
-                    placeholder="검색어 입력"
-                    value={search}
-                    onChange={e => setSearch(e.target.value)}
-                    onKeyPress={e => handleKeyPress(e)}
-                    autoComplete="off"
-                ></input>
+            <div className="search-item">
+                <div className='searchbar-selector'>
+                    <div className='font-s26-w7-b9'>이름</div>
+                </div>
+                <div>
+                    <input id="search"
+                        className="searchbar-input font-s26-w7-b5"
+                        placeholder="검색어 입력"
+                        value={search}
+                        onChange={e => setSearch(e.target.value)}
+                        onKeyPress={e => handleKeyPress(e)}
+                        autoComplete="off"
+                    ></input>
+                </div>
+                <i className='fas fa-search searchbar-icon' onClick={checkSearch}></i>
+                {
+                    check ? (<Redirect to={`/search/name/${value}`} />) : ('')
+                }
             </div>
-            <i className='fas fa-search searchbar-icon' onClick={checkSearch}></i>
-            {
-                check ? (<Redirect to={`/search/name/${value}`} />) : ('')
-            }
         </div>
     )
 }
