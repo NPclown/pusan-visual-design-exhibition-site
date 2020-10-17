@@ -209,6 +209,17 @@
     color: rgba(0,0,0, 0.9);
 }
 
+.font-s15-w7-b9{
+    font-family: 'KoPubDotum';
+    font-size: 15px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: rgba(0,0,0, 0.9);
+}
+
 .font-s14-w5-b9{
     font-family: 'KoPubDotum';
     font-size: 14px;
@@ -240,6 +251,17 @@
     line-height: 60px;
     letter-spacing: normal;
     color: rgba(0, 0, 0, 0.9);
+}
+
+.font-s12-w5-b5{
+    font-family: 'KoPubDotum';
+    font-size: 12px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 60px;
+    letter-spacing: normal;
+    color: rgba(0, 0, 0, 0.5);
 }
 
 .font-s9-w5-b9{
