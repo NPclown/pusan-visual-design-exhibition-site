@@ -17,7 +17,7 @@
     font-style: normal;
     line-height: normal;
     letter-spacing: normal;
-    color: rgba(0, 0, 0, 0.5);
+    color: rgba(0, 0, 0, 0.9);
 }
 
 .font-s26-w7-g9{
@@ -97,6 +97,17 @@
     line-height: normal;
     letter-spacing: normal;
     color: rgba(0, 0, 0, 0.9);
+}
+
+.font-s20-w7-b9{
+    font-family: 'KoPubDotum';
+    font-size: 20px;
+    font-weight: blod;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: rgba(0,0,0, 0.9);
 }
 
 .font-s20-w5-b5{

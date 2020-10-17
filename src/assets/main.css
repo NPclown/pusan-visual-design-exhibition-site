@@ -277,7 +277,7 @@ a {
 }
 
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 720px) {
     .App {
         width : 100%;
         min-width: 320px;
@@ -342,6 +342,112 @@ a {
         width: 119px;
     }
 
+    .side-bar{
+        padding-left: 26px;
+        display: none;
+        list-style: none;
+        position: fixed;
+        top : 0;
+        width: 255px;
+        height: 100vh;
+        background: #ffffff;
+        box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+        border-radius: 20px;
+        transition : 850ms;
+    }
+
+    .side-bar.active{
+        display: block;
+        left: 0;
+        transition : 350ms;
+    }
+
+    .times-icon {
+        font-size : 27px;
+        position : relative;
+        top : 18px;
+        left : 177px;
+        margin-bottom : 70px;
+        cursor: pointer;
+    } 
+
+    .side-menu {
+        margin-bottom: 25px;
+    }
+
+    .side-links {    
+        color: rgba(0, 0, 0, 0.9);
+        font-weight: bold !important;
+        text-decoration: none;
+    }
+    
+    .side-links:hover{
+        text-decoration: none;
+        color: rgba(0,150,79, 0.9); 
+    }
+
+    .side-links.active{
+        color: rgba(0,150,79, 0.9); 
+        text-decoration: none;
+    }
+
+    .side-bar-sub{
+        display: none;
+        list-style: none;
+        padding : 0px;
+    }
+
+    .side-bar-sub.active{
+        display: block;
+    }
+
+    .side-sub-menu{
+        margin-top : 10px;
+        margin-bottom: 10px;
+    }
+    .side-sub-links{
+        color: rgba(0, 0, 0, 0.9);
+        font-weight: bold !important;
+        text-decoration: none;
+    }
+
+    .side-sub-links:hover{
+        color: rgba(0,150,79, 0.9); 
+        text-decoration: none;
+    }
+    
+    .side-sub-links.active{
+        color: rgba(0,150,79, 0.9); 
+        text-decoration: none;
+    }
+
+    .side-sub-links.active .side-circle{
+        display: inline;
+    }
+    
+    .side-sub-links:hover .side-circle{
+        display: inline;
+    }
+
+    .caret-icon {
+        margin-left : 10px;
+        font-size : 24px;
+        color: rgba(0,150,79, 0.9); 
+    }
+
+    .side-circle{
+        display: none;
+        font-size : 16px;
+        margin-left : 10px;
+    }
+
+    .side-menu-logo{
+        position: absolute;
+        bottom : 15px;
+        left : 0px;
+        cursor: pointer;
+    }
+
     .searchbar {
         height: 67px;
     }
@@ -358,6 +464,7 @@ a {
         margin-left: 12px;
         font-size : 27px;
         line-height: 67px !important;
+        cursor: pointer;
     }
     
     .footer-item{
@@ -372,5 +479,9 @@ a {
 
     .footer-copyright {
         line-height: 15px !important;
+    }
+
+    .modal-dialog1 .modal-content{
+
     }
 }
