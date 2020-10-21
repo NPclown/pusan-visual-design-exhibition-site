@@ -57,14 +57,14 @@ const Navbar = (props) => {
                             <Link className={'소개'===props.state?'side-links active font-s20-w7-b9':'side-links font-s20-w7-b9'} to="/about">소개</Link>
                         </li>
                         <li className="side-menu-logo">
-                            <Link to='#'>
+                            <Link to='/'>
                                 <Image className="nav-mobile-img" src="/image/common/logo.png" alt="logo" fluid />
                             </Link>
                         </li>
                     </ul>
                 </div>
                 <div>
-                    <Link to='#'>
+                    <Link to='/'>
                         <Image className="nav-mobile-img" src="/image/common/logo.png" alt="logo" fluid />
                     </Link>
                 </div>

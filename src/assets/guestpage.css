@@ -24,6 +24,10 @@
     cursor: pointer;
 }
 
+.guest-register-mobile-content{
+    display: none;
+}
+
 .guest-arrows {
     margin-right: auto;
     margin-left: auto;
@@ -63,3 +67,99 @@
     margin-left : 32px;
 }
 
+.guest-mobile-content {
+    display: none;
+}
+
+@media screen and (max-width: 720px) {
+    .guest-content {
+        display: none;
+    }
+
+    .guest-mobile-content {
+        display: block;
+    }
+
+    .guest-title {
+        margin-left : 7vw;
+    }
+
+    .guest-list {
+        margin-left : 7vw;
+        margin-top : 70px;
+        margin-bottom: 58px;
+        width : 100vw;
+    }
+
+    .guest-group {
+        display: flex;
+        list-style: none;
+        margin-bottom: 10px;
+    }
+    
+    .guest-cont {
+        width: 64vw;
+        word-break: break-all;
+        line-height: 15px !important;
+    }
+    
+    .guest-date {
+        min-width: 2vw;
+        margin-left : 4vw;
+        line-height: 15px !important;
+    }
+
+    .guest-arrows {
+        margin-right: auto;
+        margin-left: auto;
+        width: 155px;
+    }
+    
+    .guest-arrows.active {
+        transform: rotate(360deg);
+        transition: all ease 1.5s;
+    }
+    
+    .guest-register-content{
+        display: none;
+    }
+
+    .guest-register-mobile-content{
+        display: block;
+    }
+
+    .guest-register {
+        margin-left: auto;
+        margin-right: auto;
+        width : 90vw;
+        height: 55px;
+        border: #00964f solid;
+        border-width: 13px;
+        margin-top : -112px;
+        position: relative;
+    }
+    
+    .guest-register-input {
+        margin-left: 0px;
+        padding-left : 6px;
+        width : 70vw;
+        height : 29px;
+        border : none;
+    }
+    
+    .guest-register-button {
+        margin-right : 10px;
+        float : right;
+        line-height: 30px !important;
+    }
+    
+    .guest-register-button:hover{
+        cursor: pointer;
+    }
+
+    .guest-register-help{
+        float:right;
+        margin-right : -45px;
+        margin-top : 17px;
+    }
+}
