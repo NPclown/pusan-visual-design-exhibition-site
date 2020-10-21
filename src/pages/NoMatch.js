@@ -6,7 +6,7 @@ import Footer from '../components/Footer/Footer'
 
 
 
-const NoMatch = () =>{
+const NoMatch = (props) =>{
     return (
         <div className="App">
           <Header></Header>
@@ -19,7 +19,7 @@ const NoMatch = () =>{
                 <Link to="/" className="font-s18-w7-b9">홈으로 이동</Link>
               </div>
           </div>
-          <Footer></Footer>
+          <Footer {...props} type={false}></Footer>
       </div>
     );
 }

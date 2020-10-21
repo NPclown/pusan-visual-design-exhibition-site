@@ -80,7 +80,7 @@ const ArtPage = (props) => {
             )
           )
         }
-          <Footer></Footer>
+        <Footer {...props} type={false}></Footer>
       </div>
   );
  }

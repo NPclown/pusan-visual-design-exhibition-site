@@ -12,7 +12,7 @@ import Loading from '../components/Etc/Loading'
 
 import '../assets/guestpage.css'
 
-const Guest = () =>{
+const Guest = (props) =>{
     const [state, setState] = useState({isLoading : true, state : false, data : {}})
 
     const getData = async() => {
@@ -76,7 +76,7 @@ const Guest = () =>{
               )
             )
           }
-          <Footer></Footer>
+        <Footer {...props} type={false}></Footer>
       </div>
     );
 }

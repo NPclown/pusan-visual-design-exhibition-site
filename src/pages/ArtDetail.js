@@ -40,7 +40,7 @@ const ArtDetail = (props) =>{
             ) : (
               state.state ? (
                 <div className="content">
-                  <Title main={state.data.title} sub={state.data.maker}></Title>
+                  <Title main={state.data.title} sub={state.data.maker} mobile_main={state.data.title} mobile_sub={state.data.maker}></Title>
                   <ArtContent image={state.data.img_path} video={state.data.video_path}></ArtContent>
                   <Comment {...props} id={state.data.id} type={state.data.type}></Comment>
                 </div>
@@ -48,7 +48,7 @@ const ArtDetail = (props) =>{
                 <Redirect to="/error"></Redirect>
               )
             )}
-          <Footer></Footer>
+            <Footer {...props} type={false}></Footer>
       </div>
     );
 }

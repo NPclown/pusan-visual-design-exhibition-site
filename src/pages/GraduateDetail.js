@@ -53,7 +53,7 @@ const GraduateDetail = (props)=>{
             </div>
             <BackArrow {...props} path="/profile"></BackArrow>
           </div>
-        <Footer></Footer>
+          <Footer {...props} type={false}></Footer>
       </div>):(
         <Redirect to="/error"></Redirect>
       )

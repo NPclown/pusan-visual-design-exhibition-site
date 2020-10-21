@@ -18,7 +18,7 @@ const Search = (props) =>{
             </div>
             <Profile name={props.match.params.name}></Profile>     
           </div>
-          <Footer></Footer>
+          <Footer {...props} type={false}></Footer>
       </div>
     );
 }
