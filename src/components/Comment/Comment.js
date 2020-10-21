@@ -148,7 +148,10 @@ const Comment = (props) =>{
                         <Pagination getData={(page) => setPage(page)} article_id={props.id} current={page} count={state.data.count}></Pagination>
                     ) : ("")
                 }   
-                <BackArrow {...props} path={`/art/${props.type}`}></BackArrow>
+                <div className="comment-mobile">
+                    <BackArrow {...props} path={`/art/${props.type}`}></BackArrow>
+
+                </div>
 
                 <Modal backdrop="static" show={isDeleteOpen}  onHide={() => setIsDeleteOpen(false)} className= "modal-del-size" >
                     <Modal.Header bsPrefix = "modal-title">

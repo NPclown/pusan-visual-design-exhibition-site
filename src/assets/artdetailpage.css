@@ -150,4 +150,8 @@
         font-size : 12px !important;
         width : 5px;
     }
+
+    .comment-mobile{
+        display: none;
+    }
 }

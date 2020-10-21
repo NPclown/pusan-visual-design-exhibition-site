@@ -101,12 +101,14 @@
         width: 64vw;
         word-break: break-all;
         line-height: 15px !important;
+        font-size : 10px !important;
     }
     
     .guest-date {
         min-width: 2vw;
         margin-left : 4vw;
         line-height: 15px !important;
+        font-size : 10px !important;
     }
 
     .guest-arrows {

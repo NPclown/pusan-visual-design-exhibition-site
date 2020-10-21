@@ -567,5 +567,17 @@ a {
     .footer-mobile{
         display: none;
     }
-    
+
+    .mobile-error{
+        font-size : 12px !important;
+        margin-top : 30vh;
+    }
+
+    .error-button {
+        width: 200px;
+        margin-top : 70px;
+        margin-bottom: 0px;
+        margin-left : auto;
+        margin-right : auto;
+    }
 }
