@@ -18,3 +18,34 @@
     margin-bottom: 450px;
     text-align: center;
 }
+
+.search-mobile-content{
+    display: none;
+}
+
+
+@media screen and (max-width: 720px) {
+    .search-content{
+        display : none;
+    }
+
+    .search-mobile-content{
+        display: block;
+    }
+
+    .search-title{
+        font-size : 15px !important; 
+    }
+
+    .search-icon {
+        margin-right : 10px;
+        font-size: 15px;
+    }
+
+    .search-fail{
+        margin-top : 35vh;
+        margin-bottom: auto;
+        text-align: center;
+        font-size : 12px !important;
+    }
+}
