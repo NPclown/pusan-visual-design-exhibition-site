@@ -37,3 +37,30 @@
 .profile:hover .profile-color-picture {
   opacity: 0.9;
 }
+@media screen and (max-width: 720px) {
+  .profile {
+    width: 100%;
+    max-width: 277px;
+    margin-left: auto;
+    margin-right : auto;
+  }
+
+  .profile-pic {
+    width: 277px;
+    height: 341px;
+    border-radius: 14px;
+
+}
+  .profile-row {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    grid-gap: 15px;
+  }
+  .background{
+    width: 277px;
+    height: 341px;
+    border-radius: 14px;
+    box-shadow: 0 14px 23px 14px rgba(0, 0, 0, 0.1);
+    background-color: #b576bc;
+  }
+}

@@ -6,7 +6,7 @@ function ArtPictureDetail (props) {
     return(
         <div className = "detail-right" >
             <Link to = {`/art/detail/${props.vd_id}`}>
-                <div className = "detail-art-container" >
+                <div className = "detail-art-container " >
                     <img src={props.vd_img} alt="Avatar" className="detail-pic" />  
                     <div className = "detail-art-overlay font-s26-w7-w0">
                         {props.vd_name}

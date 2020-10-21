@@ -56,4 +56,32 @@
 .detail-art-container:hover .detail-art-overlay {
     opacity: 0.9;
 }
-  
+@media screen and (max-width: 720px) {
+
+    .detail-pic{
+        border-radius: 14px;
+        margin-left: auto;
+        margin-right : auto;
+    }
+    .detail-art-container{
+        width: 90%;
+        height: 208px;
+        margin-left: auto;
+        margin-right: auto;
+        
+    }
+    .detail-right {
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+        grid-gap: 100px;
+        
+    }
+    .detail-center{
+        display: none;
+    }
+    .background2{
+        width: 277px;
+        height: 208px;
+        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #000000);
+    }
+}

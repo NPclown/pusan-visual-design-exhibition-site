@@ -45,7 +45,7 @@ const GraduateDetail = (props)=>{
                   {state.data.description}
                 </div>
               </div>
-              <div className="detail-center"></div>
+              <div className="detail-center "></div>
               <ArtPictureDetail 
                 vd_name={state.data.vd_name} vd_img = {state.data.vd_thumbnail} acd_name={state.data.acd_name} acd_img={state.data.acd_thumbnail} ds_name={state.data.ds_name} ds_img={state.data.ds_thumbnail} dmd_name={state.data.dmd_name} dmd_img={state.data.dmd_thumbnail} 
                 vd_id={state.data.vd_id} acd_id={state.data.acd_id} ds_id={state.data.ds_id} dmd_id={state.data.dmd_id}>     
