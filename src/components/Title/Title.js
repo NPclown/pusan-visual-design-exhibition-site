@@ -23,7 +23,7 @@ const Title = (props) =>{
                 </div>
                 <div className={props.mobile_sub ? "title-sub-mobile font-s12-w5-b5" : ""}>
                     {
-                        props.sub ? (
+                        props.mobile_sub ? (
                             props.mobile_sub.map((item, index) => (
                                 <span key={index}>{item}&nbsp;</span>
                             ))

@@ -12,33 +12,41 @@ const Introduce = () =>{
     return(
         <div className ="App">
           <Header state="소개"></Header>
-            <div className = "content">
+            <div className = "content mobile-content">
                 <Title></Title>
                 <div className="intro-graduate">
-                    <div className="intro1 font-s26-w7-b9 intro-title">졸업 소개</div>
+                    <div className="intro1 font-s26-w7-b9 intro-title">
+                    <i className="fas fa-circle intro-circle2"></i>    
+                        졸업전시 소개
+
+                    </div>
                     <div>
-                        <div className="intro-graduate-left">
+                        <div className="intro-graduate-left intro-right">
                             <div className="intro1 font-s26-w7-g9">
                                 점에서, 점으로.<br/>
                                 열여덟 개의 지향점을 응원하며<br/><br/>
                                 -
                             </div>
-                            <div className="intro1 intro1 intro-graduate-comment font-s18-w5-b9">
+                            <div className ="intro-graduate-right" >
+                            <Image src="/image/common/main(rotate).jpg" className=" intro-respond-img"></Image>
+                            </div>
+                            <div className="intro2 intro-graduate-comment font-s18-w5-b9">
                                 우리네 삶은 끊임없이 시작과 끝을 되풀이한다. <br/>
                                 주체와 시기를 초월하는 반복은 점과 닮아 있다. <br/>
                                 우리는 졸업전시 &lt;점&gt;이 전기의 단락을 지으며 새로운 출범까지를 안내하는 매개가 되기를 바란다.
                             </div>
                         </div>
-                        <div className ="intro-graduate-right">
-                            <Image src="/image/common/main(rotate).jpg" width="381px"></Image>
-                        </div>
+
                     </div>
                 </div>
                 <div className="intro-course">
-                    <div className="intro1 font-s26-w7-b9 intro-title">과목 소개</div>
+                    <div className="intro1 font-s26-w7-b9 intro-title2">
+                    <i className="fas fa-circle intro-circle2"></i>    
+                        과목 소개
+                    </div>
                     <div className="intro-course-content">
                         <div>
-                            <div className ="intro1 font-s26-w7-b9">
+                            <div className ="intro-respond-font font-s26-w7-b9">
                                 디지털미디어디자인
                             </div>
                             <div className ="intro-course-bar"></div>
@@ -51,7 +59,7 @@ const Introduce = () =>{
                         </div>
 
                         <div>
-                            <div className ="intro1 font-s26-w7-b9">
+                            <div className ="intro-respond-font font-s26-w7-b9">
                                 광고컨텐츠디자인
                             </div>
                             <div className ="intro-course-bar"></div>
@@ -63,7 +71,7 @@ const Introduce = () =>{
                         </div>
                         
                         <div>
-                            <div className ="intro1 font-s26-w7-b9">
+                            <div className ="intro-respond-font font-s26-w7-b9">
                                 디자인세미나
                             </div>
                             <div className ="intro-course-bar"></div>
@@ -76,7 +84,7 @@ const Introduce = () =>{
                         </div>
 
                         <div>
-                            <div className ="intro1 font-s26-w7-b9">
+                            <div className ="intro-respond-font font-s26-w7-b9">
                                 시각디자인
                             </div>
                             <div className ="intro-course-bar"></div>
@@ -89,8 +97,11 @@ const Introduce = () =>{
                         </div>
                     </div>
                 </div>
-                <div className="intro-professor">
-                    <div className="intro1 font-s26-w7-b9 intro-title">지도교수진</div>
+                <div className="intro-professor ">
+                    <div className="intro4 font-s26-w7-b9">
+                        <i className="fas fa-circle intro-circle2"></i>    
+                       지도교수진
+                    </div>
                     <div className="intro-professor-content font-s26-w7-b9">
                         <div><i className="fas fa-circle intro-circle"></i>김성계</div>
                         <div><i className="fas fa-circle intro-circle"></i>손원준</div>
@@ -100,21 +111,24 @@ const Introduce = () =>{
                     </div>
                 </div>
                 <div className="intro-commission">
-                    <div className="intro1 font-s26-w7-b9 intro-title">졸업전시 준비 위원회</div>
+                    <div className="intro4 font-s26-w7-b9 intro-title">
+                    <i className="fas fa-circle intro-circle2"></i>    
+                        졸업전시 준비 위원회
+                    </div>
                     <div className="intro-commision-content">
                         <div>
                             <div className = "intro1 font-s26-w7-g9">
                                 운영팀<br/>-
                             </div>
-                            <div className ="intro1 font-s18-w7-g9">
+                            <div className ="intro3 font-s18-w7-g9">
                                 졸전장/과대표
-                                <span className ="intro1 font-s18-w5-g9">
+                                <span className ="intro3 font-s18-w5-g9">
                                     &ensp; 김정현
                                 </span>
                             </div>
                             <div className ="intro1 font-s18-w7-g9">
-                                부졸전장/총무/서기
-                                <span className ="intro1 font-s18-w5-g9">
+                                총무/서기/부졸전장
+                                <span className ="intro3 font-s18-w5-g9">
                                     &ensp; 김남희
                                 </span>
                             </div>
@@ -124,15 +138,15 @@ const Introduce = () =>{
                             <div className = "intro1 font-s26-w7-g9">
                                 전시팀<br/>-
                             </div>
-                            <div className ="intro1 font-s18-w7-g9">
+                            <div className ="intro3 font-s18-w7-g9">
                                 전시팀장
-                                <span className ="intro1 font-s18-w5-g9">
+                                <span className ="intro3 font-s18-w5-g9">
                                     &ensp; 주현아
                                 </span>
                             </div>
-                            <div className ="intro1 font-s18-w7-g9">
+                            <div className ="intro3 font-s18-w7-g9">
                                 전시팀원
-                                <span className ="intro1 font-s18-w5-g9">
+                                <span className ="intro3 font-s18-w5-g9">
                                     &ensp; 김수현 신반석 이명철  
                                 </span>
                             </div>
@@ -142,15 +156,15 @@ const Introduce = () =>{
                             <div className = "intro1 font-s26-w7-g9">
                                 홍보팀<br/>-
                             </div>
-                            <div className ="intro1 font-s18-w7-g9">
+                            <div className ="intro3 font-s18-w7-g9">
                                 홍보팀장
-                                <span className ="intro1 font-s18-w5-g9">
+                                <span className ="intro3 font-s18-w5-g9">
                                     &ensp; 이유리
                                 </span>
                             </div>
-                            <div className ="intro1 font-s18-w7-g9">
+                            <div className ="intro3 font-s18-w7-g9">
                                 홍보팀원
-                                <span className ="intro1 font-s18-w5-g9">
+                                <span className ="intro3 font-s18-w5-g9">
                                     &ensp; 손수진 윤현동
                                 </span>
                             </div>
@@ -160,15 +174,15 @@ const Introduce = () =>{
                             <div className = "intro1 font-s26-w7-g9">
                                 인쇄팀<br/>-
                             </div>
-                            <div className ="intro1 font-s18-w7-g9">
+                            <div className ="intro3 font-s18-w7-g9">
                                 인쇄팀장
-                                <span className ="intro1 font-s18-w5-g9">
+                                <span className ="intro3 font-s18-w5-g9">
                                     &ensp; 윤이랑
                                 </span>
                             </div>
-                            <div className ="intro1 font-s18-w7-g9">
+                            <div className ="intro3 font-s18-w7-g9">
                                 인쇄팀원
-                                <span className ="intro1 font-s18-w5-g9">
+                                <span className ="intro3 font-s18-w5-g9">
                                     &ensp; 박민지 차지윤
                                 </span>
                             </div>
@@ -181,7 +195,7 @@ const Introduce = () =>{
                     <span className="intro1 font-s18-w7-b9">Web Designer</span>
                     <span className="intro1 font-s18-w5-b9 intro-designer-name">주현아</span>
                     <span className="intro1 font-s18-w7-b9">Advisor</span>
-                    <span className="intro1 font-s18-w5-b9 intro-designer-name">김남희 김정현 윤이랑 이유리</span>
+                    <span className="intro1 font-s18-w5-b9 intro-designer-name">김정현 윤이랑 이유리</span>
                 </div>
             </div>
 

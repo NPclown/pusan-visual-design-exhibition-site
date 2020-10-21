@@ -25,10 +25,17 @@
 
 .intro-graduate-right{
     float: right;
+    width: 0;
+    position: relative;
+    left: 137px;
+    top: -173px;
 }
 
 .intro-graduate-comment {
     margin-top : 177px;
+}
+.intro-respond-img{
+    width:381px;
 }
 
 .intro-course-content{
@@ -75,7 +82,16 @@
     margin-left : 10px;
     margin-right: 50px;
 }
+.intro-circle2{
+    display: none;
+}
+.intro-title2{
+    margin-bottom: 3vh;
+}
+.intro4{
+    margin-bottom: 3vh;
 
+}
 @media screen and (max-width: 500px){
 
     .intro-course-content{
@@ -98,11 +114,84 @@
         font-size:15px !important;
     }
     .intro1{
-        font-size: 12px !important;
+        font-size: 15px !important;
+    }
+    .intro2{
+        font-size: 12px!important;
+        text-align: center;
+    }
+    .intro3{
+        font-size:12px !important;
+    }
+    .intro4{
+        margin-bottom: 2vh;
+        font-size:15px !important;
+
     }
     .intro-designer{
         display: grid;
         margin-left: 50vw;
         grid-template-columns: repeat(1, 200px);
+        margin-top: -42vh;
+    }
+    .intro-right{
+        position: relative;
+        text-align: right;
+        left: -4vw;
+        top:-13vw;
+    }
+    .intro-graduate-right{
+        width:70vw;
+        margin-left: auto;
+        margin-right: auto;
+        float: none;
+        position: initial;
+    }
+    .intro-respond-img{
+        width: 70vw;
+        
+    }
+    .intro-graduate-comment {
+        margin-top: 2vh;
+    }
+    .intro-title2 {
+        margin-top:-33vh;
+        margin-bottom: 1vh;
+    }
+    .intro-respond-font{
+        font-size: 15px !important;
+        color: #00964f !important;
+        margin-bottom: 2vh;
+    }
+    .intro-course-bar{
+        display: none;
+        height: 2vh;
+
+    }
+    .intro-professor-content{
+        display: grid;
+        grid-template-columns: repeat(5, 13vw);
+        grid-gap: 5vw;
+        margin-top: 4vh;
+    }
+    .intro-circle{
+        display: none;
+    }
+    .intro-circle2{
+        display: inline;
+        font-size : 4vw;
+        color : #00964f;
+        line-height: 36px;
+        margin-right: 2vw;
+    }
+    .intro-professor{
+        position: relative;
+        top: -29vh;
+        margin-bottom: 3vh;
+    }
+    .intro-commission {
+        position: relative;
+        margin-bottom: 191px;
+        bottom: 23vh;
     }
 }
