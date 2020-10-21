@@ -8,7 +8,7 @@ import Title from '../components/Title/Title'
 import '../assets/introducepage.css'
 
 
-const Introduce = () =>{
+const Introduce = (props) =>{
     return(
         <div className ="App">
           <Header state="소개"></Header>
@@ -199,7 +199,7 @@ const Introduce = () =>{
                 </div>
             </div>
 
-            <Footer></Footer>
+            <Footer {...props} type={false}></Footer>
         </div>
     )
 }

@@ -12,7 +12,7 @@ import Loading from '../components/Etc/Loading'
 
 import '../assets/guestpage.css'
 
-const Guest = () =>{
+const Guest = (props) =>{
     const [state, setState] = useState({isLoading : true, state : false, data : {}})
 
     const getData = async() => {
@@ -37,21 +37,38 @@ const Guest = () =>{
             ) : (
               state.state ? (
                 <div className="content">
-                  <Title></Title>
-                  <div className="guest-logo">  
-                      <Image src="/image/common/logo.png" alt="logo" fluid />
+                  <Title mobile_main="방명록"></Title>
+                  <div className="guest-content">
+                    <div className="guest-logo">  
+                        <Image src="/image/common/logo.png" alt="logo" fluid />
+                    </div>
+                    <div className="font-s26-w7-g9">
+                        2020 부산대학교 디자인학과 시각디자인전공 졸업전시<br/>
+                        열여덟 개의 지향점을 응원하며
+                    </div>
+                    <GuestRegister getData={() => getData()}></GuestRegister>
+                    <div className="guest-list">
+                      {
+                        state.data.map((item, index) => (
+                            <GuestCont key={index} id={item.id} cont={item.comment} date={item.upload_date}></GuestCont>
+                        ))
+                      }
+                    </div>
                   </div>
-                  <div className="font-s26-w7-g9">
-                      2020 부산대학교 디자인학과 시각디자인전공 졸업전시<br/>
-                      열여덟 개의 지향점을 응원하며
-                  </div>
-                  <GuestRegister getData={() => getData()}></GuestRegister>
-                  <div className="guest-list">
-                    {
-                      state.data.map((item, index) => (
-                          <GuestCont key={index} id={item.id} cont={item.comment} date={item.upload_date}></GuestCont>
-                      ))
-                    }
+                  <div className="guest-mobile-content">
+                    <div className="guest-title font-s15-w7-g9">
+                        2020 부산대학교 디자인학과<br/>
+                        시각디자인전공 졸업전시<br/>
+                        열여덟 개의 지향점을 응원하며
+                    </div>
+                    <GuestRegister getData={() => getData()}></GuestRegister>
+                    <div className="guest-list">
+                      {
+                        state.data.map((item, index) => (
+                            <GuestCont key={index} id={item.id} cont={item.comment} date={item.upload_date}></GuestCont>
+                        ))
+                      }
+                    </div>
                   </div>
                 </div>
               ) : (
@@ -59,7 +76,7 @@ const Guest = () =>{
               )
             )
           }
-          <Footer></Footer>
+        <Footer {...props} type={false}></Footer>
       </div>
     );
 }

@@ -26,7 +26,7 @@ const Profile = (props) =>{
         state.state ? (
         state.data.length === 0 ? (
           <div className='search-fail font-s26-w5-b9'>
-            찾으시는 검색결과가 없습니다. 검색어가 올바르게 입력되었는지 확인해 주세요.
+            찾으시는 검색결과가 없습니다. <br/>검색어가 올바르게 입력되었는지 확인해 주세요.
           </div>
         ) :(
           <div className = "profile-row">{

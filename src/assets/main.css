@@ -305,7 +305,7 @@ a {
     
     .content {
         width: 100%;
-        height: 80vh;
+        height: 78vh;
         margin-right: auto;
         margin-left: auto;
         min-width: 320px;
@@ -313,8 +313,8 @@ a {
     }
     
     .footer {
-        position : absolute;
-        top : 95vh;
+        position : fixed;
+        top : 86vh;
         width: 100%;
         height: 15px;
         margin-right: auto;
@@ -487,6 +487,7 @@ a {
     }
 
     .footer-copyright {
+        padding-top : 10vh;
         line-height: 15px !important;
     }
     
@@ -533,13 +534,13 @@ a {
         border-width: 0 0 2px 0;
         background: none;
     }
+
     .title{
         display: none;
     }
 
     .title-mobile {
         width: 100%;
-        height: 80px;
         margin-bottom: 21px;
         display: block;
     }
@@ -555,5 +556,33 @@ a {
         margin-top : 17px;
         margin-left : 18px;
         line-height: 17px !important;
+    }
+
+    .backarrow{
+        display: block;
+        margin-top : 1vh;
+        margin-left : 0px;
+    }
+    
+    .backarrow-logo {
+        cursor: pointer;
+        height: 80px !important;
+    }
+
+    .footer-mobile{
+        display: none;
+    }
+
+    .mobile-error{
+        font-size : 12px !important;
+        margin-top : 30vh;
+    }
+
+    .error-button {
+        width: 200px;
+        margin-top : 70px;
+        margin-bottom: 0px;
+        margin-left : auto;
+        margin-right : auto;
     }
 }

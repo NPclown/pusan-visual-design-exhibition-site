@@ -60,8 +60,9 @@ const Graduate = (props) => {
 
       )
         )
-}
-      <Footer></Footer>
+    }   
+    <Footer {...props} type={false}></Footer>
+
     </div>
   );
  }

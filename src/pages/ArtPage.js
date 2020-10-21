@@ -63,7 +63,7 @@ const ArtPage = (props) => {
           ) : (
             state.state?(
               <div className = "content">
-              <Title main={main} sub={[sub]} mobile_sub={['작품을 클릭하면 해당 작품으로 이동됩니다.']}></Title>
+              <Title main={main} sub={[sub]} mobile_main={main} mobile_sub={['작품을 클릭하면 해당 작품으로 이동됩니다.']}></Title>
                 <div className = "art">{
                   state.data.map((art, index) => {
                       return(
@@ -80,7 +80,7 @@ const ArtPage = (props) => {
             )
           )
         }
-          <Footer></Footer>
+        <Footer {...props} type={false}></Footer>
       </div>
   );
  }

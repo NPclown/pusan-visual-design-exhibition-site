@@ -66,7 +66,7 @@ const Comment = (props) =>{
         e.preventDefault()
 
         var result;
-	var findPwd_blank = String(findPwd).trim();
+	    var findPwd_blank = String(findPwd).trim();
 
         if(findPwd_blank === ""){
             alert('비밀번호를 입력해주세요.')
@@ -101,7 +101,7 @@ const Comment = (props) =>{
         state.state ? (
             <div className="comment">
                 <div className="comment-title">
-                    <div className="comment-title-left font-s26-w7-b9">댓글 <span className="font-s18-w5-b9">({state.data.count})</span></div>
+                    <div className="comment-title-left font-s26-w7-b9">댓글 <span className="comment-title-left-small font-s18-w5-b9">({state.data.count})</span></div>
                     <div className="comment-title-right font-s26-w7-b9" onClick={() => setIsRegisterOpen(true)}>댓글쓰기</div>
                     <Modal className="modal-size" backdrop="static" show={isRegisterOpen}  onHide={() => setIsRegisterOpen(false)}>
                         <Modal.Header bsPrefix = "modal-title">
@@ -148,7 +148,10 @@ const Comment = (props) =>{
                         <Pagination getData={(page) => setPage(page)} article_id={props.id} current={page} count={state.data.count}></Pagination>
                     ) : ("")
                 }   
-                <BackArrow {...props} path={`/art/${props.type}`}></BackArrow>
+                <div className="comment-mobile">
+                    <BackArrow {...props} path={`/art/${props.type}`}></BackArrow>
+
+                </div>
 
                 <Modal backdrop="static" show={isDeleteOpen}  onHide={() => setIsDeleteOpen(false)} className= "modal-del-size" >
                     <Modal.Header bsPrefix = "modal-title">

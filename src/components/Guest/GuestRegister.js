@@ -45,19 +45,41 @@ const GuestRegister = (props) =>{
     
     return (
         <div className="guest">
-            <div className={arrows ? "guest-arrows active" : "guest-arrows"}>
-                <Image src="/image/common/arrows.png" alt="upArrows" fluid />
+            <div className="guest-register-content">
+                <div className={arrows ? "guest-arrows active" : "guest-arrows"}>
+                    <Image src="/image/common/arrows.png" alt="upArrows" fluid />
+                </div>
+                <div className="guest-register">
+                    <input className="font-s20-w5-b5 guest-register-input"
+                        placeholder="응원의 한 마디를 입력해 주세요. 삭제할 수 없으니 신중하게 작성 부탁드립니다."
+                        value={guestbook}
+                        onChange={e => setGuestBook(e.target.value)}
+                        onKeyDown={e => handleKeyPress(e)}
+                        maxLength={80}
+                    ></input>
+                    <div className="guest-register-button font-s26-w7-b9" onClick={registerGuestBook}>
+                        작성
+                    </div>
+                </div>
             </div>
-            <div className="guest-register">
-                <input className="font-s20-w5-b5 guest-register-input"
-                    placeholder="응원의 한 마디를 입력해 주세요. 삭제할 수 없으니 신중하게 작성 부탁드립니다."
-                    value={guestbook}
-                    onChange={e => setGuestBook(e.target.value)}
-                    onKeyDown={e => handleKeyPress(e)}
-                    maxLength={80}
-                ></input>
-                <div className="guest-register-button font-s26-w7-b9" onClick={registerGuestBook}>
-                    작성
+            <div className="guest-register-mobile-content">
+                <div className={arrows ? "guest-arrows active" : "guest-arrows"}>
+                    <Image src="/image/common/arrows.png" alt="upArrows" fluid />
+                </div>
+                <div className="guest-register">
+                    <input className="font-s12-w5-b5 guest-register-input"
+                        placeholder="응원의 한 마디를 입력해 주세요. (80자 제한)"
+                        value={guestbook}
+                        onChange={e => setGuestBook(e.target.value)}
+                        onKeyDown={e => handleKeyPress(e)}
+                        maxLength={80}
+                    ></input>
+                    <div className="guest-register-button font-s12-w7-b9" onClick={registerGuestBook}>
+                        작성
+                    </div>
+                    <div className="guest-register-help font-s7-w5-b5">
+                        *삭제할 수 없으니 신중하게 작성 부탁드립니다.
+                    </div>
                 </div>
             </div>
         </div>

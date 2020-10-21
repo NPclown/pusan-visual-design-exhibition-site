@@ -12,7 +12,7 @@ const Home = () =>{
                 <video className='main-video' src="/image/common/main.mp4" type="video/mp4" autoPlay muted loop playsInline></video>
               </div>
           </div>
-          <Footer></Footer>
+          <Footer type={true}></Footer>
       </div>
     );
 }
