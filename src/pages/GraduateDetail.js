@@ -35,7 +35,7 @@ const GraduateDetail = (props)=>{
         <div className ="App">
           <Header state="프로필"></Header>
           <div className ="content">
-            <Title sub={["작품을 클릭하면 해당 작품으로 이동됩니다."]}></Title>
+            <Title sub={["작품을 클릭하면 해당 작품으로 이동됩니다."]} mobile_main={state.data.name} mobile_main_sub ={state.data.description} mobile_sub={['작품을 클릭하면 해당학생의 작품을 볼 수 있습니다.']}></Title>
             <div className="detail">
               <div className="detail-left">
                 <div className="detail-name font-s26-w7-g9">

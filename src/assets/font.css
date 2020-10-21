@@ -211,9 +211,6 @@
 
 
 .font-s15-w5-w9{
- 
-    width: 320px;
-    height: 42px;
     font-family: KoPubDotum;
     font-size: 15px;
     font-weight: 500;
@@ -222,7 +219,6 @@
     line-height: 1.39;
     letter-spacing: -0.31px;
     color: #ffffff;
-
 }
 
 .font-s15-w7-b9{

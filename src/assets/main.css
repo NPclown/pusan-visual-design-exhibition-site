@@ -282,11 +282,6 @@ a {
 
 
 @media screen and (max-width: 720px) {
-    .mobile-content{
-
-        max-width: 250px;
-        min-width: 280px !important;
-    }
     .App {
         width : 100%;
         min-width: 320px;
@@ -584,5 +579,12 @@ a {
         margin-bottom: 0px;
         margin-left : auto;
         margin-right : auto;
+    }
+
+    .mobile_main_sub {
+        float : right;
+        font-weight: bold !important;
+        line-height: 26px !important;
+        margin-right: 2vw;
     }
 }

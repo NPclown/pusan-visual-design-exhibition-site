@@ -19,7 +19,14 @@ const Title = (props) =>{
             </div>
             <div className="title-mobile">
                 <div className={props.mobile_main ? "title-main-mobile font-s15-w7-b9" : ""}>
-                    {props.mobile_main}
+                    {props.mobile_main} 
+                    {
+                        props.mobile_main_sub ? (
+                            <span className="mobile_main_sub font-s9-w5-b9">
+                                {props.mobile_main_sub}
+                            </span>
+                        ) : ("")
+                    }
                 </div>
                 <div className={props.mobile_sub ? "title-sub-mobile font-s12-w5-b5" : ""}>
                     {

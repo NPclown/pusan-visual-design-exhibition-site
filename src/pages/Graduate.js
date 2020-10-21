@@ -42,7 +42,7 @@ const Graduate = (props) => {
       ):(
         state.state?(
           <div className = "content">
-          <Title sub={["프로필을 클릭하거나 이름을 검색하여 원하는 분의 작품을 볼 수 있습니다."]}></Title>
+          <Title sub={["프로필을 클릭하거나 이름을 검색하여 원하는 분의 작품을 볼 수 있습니다."]} mobile_main={"프로필"} mobile_sub={['프로필을 클릭하면 해당 학생의 작품을 볼 수 있습니다.']}></Title>
           <div className = "profile-row">{
                   state.data.map((person, index) => {
                     return(

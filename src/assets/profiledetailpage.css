@@ -84,4 +84,8 @@
         height: 208px;
         background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #000000);
     }
+
+    .detail-left {
+        display: none;
+    }
 }
