@@ -112,7 +112,7 @@ const Introduce = (props) =>{
                     </div>
                 </div>
                 <div className="intro-commission">
-                    <div className="intro4 font-s26-w7-b9 intro-title">
+                    <div className="intro4 font-s26-w7-b9 ">
                     <i className="fas fa-circle intro-circle2"></i>    
                         졸업전시 준비 위원회
                     </div>
