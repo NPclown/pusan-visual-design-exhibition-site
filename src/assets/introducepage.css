@@ -92,14 +92,17 @@
     margin-bottom: 3vh;
 
 }
-@media screen and (max-width: 500px){
+@media screen and (max-width: 720px){
     .intro-graduate {
         height: 550px;
-        margin-left : 6vw;
-        margin-bottom: 30px;
+        /* margin-left: 6vw; */
+        margin-bottom: 0;
+        position: relative;
+        top: auto;
     }
     
     .intro-course {
+        margin-top: 1vh;
         margin-bottom: 185px;
         margin-left : 6vw;
     }
@@ -175,7 +178,8 @@
         
     }
     .intro-graduate-comment {
-        margin-top: 2vh;
+        position: relative;
+        bottom:23vh;
     }
     .intro-title2 {
         margin-bottom: 1vh;
