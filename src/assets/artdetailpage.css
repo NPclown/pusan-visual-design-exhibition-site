@@ -82,7 +82,7 @@
     text-decoration: none;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 500px) {
     .comment {
         width: 95%;
         margin-top : 30px;

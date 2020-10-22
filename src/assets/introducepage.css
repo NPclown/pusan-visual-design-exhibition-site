@@ -93,7 +93,7 @@
     margin-bottom: 3vh;
 
 }
-@media screen and (max-width: 720px){
+@media screen and (max-width: 500px){
     .intro-graduate {
         height: 550px;
         margin-bottom: 0;
@@ -202,7 +202,6 @@
         display: grid;
         grid-template-columns: repeat(5, 13vw);
         grid-gap: 5vw;
-        margin-top: 4vh;
     }
     .intro-circle{
         display: none;

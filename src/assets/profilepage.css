@@ -37,7 +37,7 @@
 .profile:hover .profile-color-picture {
   opacity: 0.9;
 }
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 500px) {
   .profile {
     width: 100%;
     max-width: 277px;
