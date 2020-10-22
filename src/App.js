@@ -8,7 +8,10 @@ import ArtPage from './pages/ArtPage';
 import Search from './pages/Search';
 import Guest from './pages/Guest';
 import NoMatch from './pages/NoMatch';
+import Popup from './pages/Popup';
 import Introduce from './pages/Introduce';
+import { CookiesProvider } from 'react-cookie';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/main.css';
 import './assets/font.css';
@@ -16,6 +19,7 @@ import './assets/font.css';
 
 function App() {
   return (
+    <CookiesProvider>
     <Router>
       <Switch>
         <Route exact path="/" render={(props) => <Home {...props} />} />
@@ -28,9 +32,11 @@ function App() {
         <Route exact path="/guest" render={(props) => <Guest {...props} />} />
         <Route exact path="/about" render={(props) => <Introduce {...props} />} />
         <Route exact path="/error" render={(props) => <NoMatch {...props} />} />
+        <Route exact path="/popup" render={(props) => <Popup {...props} />} />
         <Route exact path="*" render={(props) => <NoMatch {...props} />} />
       </Switch>
     </Router>
+    </CookiesProvider>
   );
 }
 

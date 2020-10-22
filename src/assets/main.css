@@ -280,6 +280,10 @@ a {
     text-decoration: none !important;
 }
 
+.popup-right{
+    margin-left : 30px;
+}
+
 
 @media screen and (max-width: 720px) {
     .App {
