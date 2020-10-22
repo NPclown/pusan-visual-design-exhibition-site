@@ -12,7 +12,7 @@ const Footer = (props) =>{
                             copyright <span className="footer-times">©</span> PNU Visual Design Graduation Exhibition All rights reserved.
                         </div>
                     ) : (
-                        <BackArrow {...props}></BackArrow>
+                        ""
                     )
                 }
             </div>

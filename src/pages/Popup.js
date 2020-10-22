@@ -18,6 +18,9 @@ const Popup = (props) =>{
             오늘 하루 보지 않기&nbsp;&nbsp;
             <input type="checkbox" onChange={closePopup}></input> 
           </div>
+          <div className="popup-button">
+            <button onClick={e => window.close()}>닫기</button>
+          </div>
         </div>
     );
 }

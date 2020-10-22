@@ -9,7 +9,7 @@ const Home = (props) =>{
       if(document.cookie.split('=')[1] === 'true'){
 
       }else{
-        window.open("/popup", "window", "width=405px,height=600px,toolbar=no,scrollbars=no");
+        window.open("/popup", "window", "width=450px, height=700px, toolbar=no, scrollbars=no");
       }
     })
 

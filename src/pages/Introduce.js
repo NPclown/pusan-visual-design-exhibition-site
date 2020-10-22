@@ -116,12 +116,6 @@ const Introduce = (props) =>{
                                     &ensp; 김정현
                                 </span>
                             </div>
-                            <div className ="intro3 font-s18-w7-g9">
-                                총무/서기/부졸전장
-                                <span className ="intro3 font-s18-w5-g9">
-                                    &ensp; 김남희
-                                </span>
-                            </div>
                         </div>
 
                         <div>

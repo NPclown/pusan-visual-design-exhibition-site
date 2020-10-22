@@ -281,7 +281,19 @@ a {
 }
 
 .popup-right{
-    margin-left : 30px;
+    float: left;
+    margin-left : 10px;
+}
+
+.popup-button{
+    margin-left : auto;
+    margin-right: auto;
+    width: 20%;
+}
+
+.popup-button button{
+    background: #ffffff;
+    color : #000000;
 }
 
 
@@ -304,7 +316,7 @@ a {
     
     .content {
         width: 100%;
-        height: 78vh;
+        height: 100%;
         margin-right: auto;
         margin-left: auto;
         min-width: 320px;
@@ -312,10 +324,7 @@ a {
     }
     
     .footer {
-        position : fixed;
-        top : 76vh;
         width: 100%;
-        height: 15px;
         margin-right: auto;
         margin-left: auto;
         min-width: 320px;
@@ -478,12 +487,6 @@ a {
     
     .footer-item{
         display: none;
-    }
-
-    .footer-item-mobile{
-        display: block;
-        height: 100%;
-        margin-left: 5px;
     }
 
     .footer-copyright {
