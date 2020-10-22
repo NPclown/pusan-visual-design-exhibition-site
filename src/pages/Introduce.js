@@ -52,10 +52,7 @@ const Introduce = (props) =>{
                             </div>
                             <div className ="intro-course-bar"></div>
                             <div className ="intro1 intro-course-cont font-s18-w5-b9">
-                                디지털 컨텐츠 디자인의 제작을 통해 디
-                                지털 미디어의 특성을 갖춰, 미디어 영
-                                상의 원리와 구조를 이해하고 관련 지식
-                                을 탐구한다.
+                                디지털 컨텐츠 디자인의 제작을 통해 디지털 미디어의 특성을 갖춰, 미디어 영상의 원리와 구조를 이해하고 관련 지식을 탐구한다.
                             </div>
                         </div>
 
@@ -65,9 +62,7 @@ const Introduce = (props) =>{
                             </div>
                             <div className ="intro-course-bar"></div>
                             <div className ="intro1 intro-course-cont font-s18-w5-b9">
-                                디자인 마케팅 커뮤니케이션 선행 연구
-                                를 통한 IMC 크리에이티브 능력을 향
-                                상시키고 졸업전시 발표를 진행한다.
+                                디자인 마케팅 커뮤니케이션 선행 연구를 통한 IMC 크리에이티브 능력을 향상시키고 졸업전시 발표를 진행한다.
                             </div>
                         </div>
                         
@@ -77,10 +72,7 @@ const Introduce = (props) =>{
                             </div>
                             <div className ="intro-course-bar"></div>
                             <div className ="intro1 intro-course-cont font-s18-w5-b9">
-                                경험디자인 방법을 기반으로 하여 학생
-                                의 관심사에 맞는 주제와 전시기법을 선
-                                프로젝트를 수행하고 졸업전시를
-                                구성한다.
+                                경험디자인 방법을 기반으로 하여 학생의 관심사에 맞는 주제와 전시기법을 선프로젝트를 수행하고 졸업전시를 구성한다.
                             </div>
                         </div>
 
@@ -90,10 +82,7 @@ const Introduce = (props) =>{
                             </div>
                             <div className ="intro-course-bar"></div>
                             <div className ="intro1 intro-course-cont font-s18-w5-b9">
-                                디자인에 대한 개념적ㆍ논리적 접근을
-                                통해 정보의 시각화에 있어서 매체 연구
-                                와 편집디자인 프로젝트를 해결하는 능
-                                력과 아이디어의 표현 능력을 높인다.
+                                디자인에 대한 개념적ㆍ논리적 접근을 통해 정보의 시각화에 있어서 매체 연구와 편집디자인 프로젝트를 해결하는 능력과 아이디어의 표현 능력을 높인다.
                             </div>
                         </div>
                     </div>
@@ -127,7 +116,7 @@ const Introduce = (props) =>{
                                     &ensp; 김정현
                                 </span>
                             </div>
-                            <div className ="intro1 font-s18-w7-g9">
+                            <div className ="intro3 font-s18-w7-g9">
                                 총무/서기/부졸전장
                                 <span className ="intro3 font-s18-w5-g9">
                                     &ensp; 김남희

@@ -42,6 +42,7 @@
     display: grid;
     grid-template-columns: repeat(4, 278px);
     grid-gap: 29.3px;
+    word-break: break-all;
 }
 
 .intro-course-cont{
@@ -101,7 +102,7 @@
     }
     
     .intro-course {
-        margin-top: 80px;
+        margin-top : 6vh;
         margin-bottom: 185px;
         margin-left : 6vw;
     }
@@ -121,22 +122,24 @@
     }
     .intro-course-content{
         display: grid;
-        grid-template-columns: repeat(1, 278px);
+        grid-template-columns: repeat(1, 80vw);
         grid-gap: 29.3px;
         font-size:12px !important;
-        margin-left: 8vw;
+        margin-left : 6vw;
     }
     .intro-professor-content{
         display: grid;
-        grid-template-columns: repeat(1, 200px);
+        grid-template-columns: repeat(5, auto);
         font-size:12px !important;
         grid-gap: 35px;
+        margin-left : 6vw;
     }
     .intro-commision-content{
         display: grid;
-        grid-template-columns: repeat(1, 278px);
+        grid-template-columns: repeat(1, 80vw);
         grid-gap: 29.3px;
         font-size:15px !important;
+        margin-left : 6vw;
     }
     .intro1{
         font-size: 15px !important;
@@ -156,7 +159,7 @@
     }
     .intro-designer{
         display: grid;
-        margin-left: 63vw;
+        margin-left: 54vw;
         grid-template-columns: repeat(1, 200px);
         margin-top: -146px;
     }
