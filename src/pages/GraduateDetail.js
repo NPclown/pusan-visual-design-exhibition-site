@@ -51,7 +51,9 @@ const GraduateDetail = (props)=>{
                 vd_id={state.data.vd_id} acd_id={state.data.acd_id} ds_id={state.data.ds_id} dmd_id={state.data.dmd_id}>     
               </ArtPictureDetail>
             </div>
-            <BackArrow {...props} path="/profile"></BackArrow>
+            <div className="comment-mobile">
+              <BackArrow {...props} path="/profile"></BackArrow>
+            </div>
           </div>
           <Footer {...props} type={false}></Footer>
       </div>):(
