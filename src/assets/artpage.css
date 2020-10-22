@@ -35,7 +35,7 @@
   opacity: 0.9;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 460px) {
   .art {
     display: grid;
     grid-template-columns: repeat(1, auto);

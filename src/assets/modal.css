@@ -101,7 +101,7 @@
     height: 393px !important;
 }
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 460px){
     .modal{
         width: 98vw !important;
     }
