@@ -294,6 +294,8 @@ a {
 .popup-button button{
     background: #ffffff;
     color : #000000;
+    position: relative;
+    left : 45vw;
 }
 
 
@@ -370,7 +372,7 @@ a {
         height: 100vh;
         background: #ffffff;
         box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
-	border-top-right-radius: 20px;
+        border-top-right-radius: 20px;
         border-bottom-right-radius: 20px;
         transition : 850ms;
     }

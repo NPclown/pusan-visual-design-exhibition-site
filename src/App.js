@@ -9,6 +9,7 @@ import Search from './pages/Search';
 import Guest from './pages/Guest';
 import NoMatch from './pages/NoMatch';
 import Popup from './pages/Popup';
+import PopupMobile from './pages/PopupMobile';
 import Introduce from './pages/Introduce';
 import { CookiesProvider } from 'react-cookie';
 
@@ -33,6 +34,7 @@ function App() {
         <Route exact path="/about" render={(props) => <Introduce {...props} />} />
         <Route exact path="/error" render={(props) => <NoMatch {...props} />} />
         <Route exact path="/popup" render={(props) => <Popup {...props} />} />
+        <Route exact path="/popup/mobile" render={(props) => <PopupMobile {...props} />} />
         <Route exact path="*" render={(props) => <NoMatch {...props} />} />
       </Switch>
     </Router>
