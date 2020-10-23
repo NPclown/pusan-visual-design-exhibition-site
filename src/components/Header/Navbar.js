@@ -21,7 +21,7 @@ const Navbar = (props) => {
                         <li className='side-menu'>
                             <Link className={'작품'===props.state?'side-links active font-s20-w7-b9':'side-links font-s20-w7-b9'} to="#" onClick={e => showSubSidebar()}>
                                 작품
-                                <i className={subSidebar ? "fas fa-caret-up caret-icon" : "fas fa-caret-down caret-icon"}></i>
+                                <i className={subSidebar ? "fas fa-caret-up caret-up-icon" : "fas fa-caret-down caret-down-icon"}></i>
                             </Link>
                             <ul className={subSidebar ? "side-bar-sub active" :"side-bar-sub"}>
                                 <li className="side-sub-menu">

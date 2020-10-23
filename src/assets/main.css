@@ -447,9 +447,15 @@ a {
         display: inline;
     }
 
-    .caret-icon {
+    .caret-up-icon {
         margin-left : 10px;
-        font-size : 24px;
+        font-size : 20px;
+        color: rgba(0,150,79, 0.9); 
+    }
+
+    .caret-down-icon {
+        margin-left : 10px;
+        font-size : 20px;
         color: rgba(0,150,79, 0.9); 
     }
 
