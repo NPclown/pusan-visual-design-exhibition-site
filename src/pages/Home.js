@@ -21,7 +21,7 @@ const Home = (props) =>{
         }
 
         if(tmp[0] === 'popup_mobile'){
-          if(tmp[1] !== 'true'){
+          if(tmp[1] === 'true'){
 
           }else{
             window.open("/popup/mobile", "window", "width=400px, height=150px, toolbar=no, scrollbars=no");
