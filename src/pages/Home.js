@@ -11,8 +11,9 @@ const Home = (props) =>{
       for ( var i in cookie ) {
         var tmp = String(cookie[i]).trim().split('=');
         if(tmp[0] === 'popup'){
-            if(tmp[1] !== 'true'){
-              alert("test1");
+            if(tmp[1] === 'true'){
+
+            }else{
               window.open("/popup", "window", "width=450px, height=700px, toolbar=no, scrollbars=no");
             }
         }else{
@@ -21,11 +22,12 @@ const Home = (props) =>{
 
         if(tmp[0] === 'popup_mobile'){
           if(tmp[1] !== 'true'){
-            alert("test2");
-            window.open("/popup/mobile", "window", "width=380px, height=150px, toolbar=no, scrollbars=no");
+
+          }else{
+            window.open("/popup/mobile", "window", "width=400px, height=150px, toolbar=no, scrollbars=no");
           }
         }else{
-          window.open("/popup/mobile", "window", "width=380px, height=150px, toolbar=no, scrollbars=no");
+          window.open("/popup/mobile", "window", "width=400px, height=150px, toolbar=no, scrollbars=no");
         }
       }
     })
