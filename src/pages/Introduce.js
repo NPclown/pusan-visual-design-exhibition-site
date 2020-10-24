@@ -34,7 +34,7 @@ const Introduce = (props) =>{
                             <div className="intro2 intro-graduate-comment font-s18-w5-b9">
                                 우리네 삶은 끊임없이 시작과 끝을 되풀이한다. <br/>
                                 주체와 시기를 초월하는 반복은 점과 닮아 있다. <br/>
-                                우리는 졸업전시 &lt;점&gt;이 전기의 단락을 지으며 <br/>새로운 출범까지를 안내하는 매개가 되기를 바란다.
+                                우리는 졸업전시 &lt;점&gt;이 전기의 단락을 지으며 새로운 출범까지를 안내하는 매개가 되기를 바란다.
                             </div>
                         </div>
 
@@ -174,12 +174,18 @@ const Introduce = (props) =>{
                     </div>
                 </div>
                 <div className="intro-designer">
-                    <span className="intro1 font-s18-w7-b9">Graphic Designer</span>
-                    <span className="intro1 font-s18-w5-b9 intro-designer-name">윤현동</span>
-                    <span className="intro1 font-s18-w7-b9">Web Designer</span>
-                    <span className="intro1 font-s18-w5-b9 intro-designer-name">주현아</span>
-                    <span className="intro1 font-s18-w7-b9">Advisor</span>
-                    <span className="intro1 font-s18-w5-b9 intro-designer-name">김정현 윤이랑 이유리</span>
+                    <div>
+                        <span className="intro1 font-s18-w7-b9">Graphic Designer</span>
+                        <span className="intro1 font-s18-w5-b9 intro-designer-name">윤현동</span>
+                    </div>
+                    <div>
+                        <span className="intro1 font-s18-w7-b9">Web Designer</span>
+                        <span className="intro1 font-s18-w5-b9 intro-designer-name">주현아</span>
+                    </div>
+                    <div>
+                        <span className="intro1 font-s18-w7-b9">Advisor</span>
+                        <span className="intro1 font-s18-w5-b9 intro-designer-name">김정현 윤이랑 이유리</span>
+                    </div>
                 </div>
             </div>
 

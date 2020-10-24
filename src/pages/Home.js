@@ -6,30 +6,14 @@ import Footer from '../components/Footer/Footer'
 const Home = (props) =>{
 
     useEffect(() => {
-      const cookie = document.cookie.split(';');
+      const cookie = document.cookie.split('=');
 
-      for ( var i in cookie ) {
-        var tmp = String(cookie[i]).trim().split('=');
-        if(tmp[0] === 'popup'){
-            if(tmp[1] === 'true'){
+      if(cookie[1] === 'true'){
 
-            }else{
-              window.open("/popup", "window", "width=450px, height=700px, toolbar=no, scrollbars=no");
-            }
-        }else{
-          window.open("/popup", "window", "width=450px, height=700px, toolbar=no, scrollbars=no");
-        }
-
-        if(tmp[0] === 'popup_mobile'){
-          if(tmp[1] === 'true'){
-
-          }else{
-            window.open("/popup/mobile", "window", "width=400px, height=150px, toolbar=no, scrollbars=no");
-          }
-        }else{
-          window.open("/popup/mobile", "window", "width=400px, height=150px, toolbar=no, scrollbars=no");
-        }
+      }else{
+        window.open("/popup", "window", "width=450px, height=650px, toolbar=no, scrollbars=no");
       }
+        
     })
 
     return (

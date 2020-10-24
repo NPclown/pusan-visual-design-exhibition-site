@@ -21,6 +21,7 @@ const Searchbar = (props) => {
     const handleKeyPress = (e) => {
         if (e.key === "Enter") {
             checkSearch();
+            setIsRegisterOpen(false);
         }else{
             setCheck(false)
         }

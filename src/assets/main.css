@@ -498,6 +498,10 @@ a {
         display: none;
     }
 
+    .footer-item-mobile{
+        display: block;
+    }
+
     .footer-copyright {
         padding-top : 10vh;
         line-height: 15px !important;

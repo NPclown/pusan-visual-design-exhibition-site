@@ -60,7 +60,7 @@
     width: 277px;
     height: 341px;
     border-radius: 14px;
-    box-shadow: 0 14px 23px 14px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.1);
     background-color: #b576bc;
   }
 }

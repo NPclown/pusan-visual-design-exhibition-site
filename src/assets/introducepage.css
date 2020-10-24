@@ -21,14 +21,15 @@
 
 .intro-graduate-left{
     float: left;
+    width: 700px;
 }
 
 .intro-graduate-right{
     float: right;
     width: 0;
     position: relative;
-    left: 137px;
-    top: -173px;
+    left: 117px;
+    top: -163px;
 }
 
 .intro-graduate-comment {
@@ -91,24 +92,25 @@
 }
 .intro4{
     margin-bottom: 3vh;
-
 }
 @media screen and (max-width: 460px){
     .intro-graduate {
-        height: 550px;
-        margin-bottom: 0;
+        margin-bottom: 68px;
         position: relative;
         top: auto;
     }
     
     .intro-course {
-        margin-top : 6vh;
-        margin-bottom: 185px;
+        margin-bottom: 68px;
         margin-left : 6vw;
     }
     
+    .intro-title {
+        margin-bottom : 20px;
+    }
+    
     .intro-professor {
-        margin-bottom: 185px;
+        margin-bottom: 68px;
         margin-left : 6vw;
     }
     
@@ -153,26 +155,27 @@
         font-size:12px !important;
     }
     .intro4{
-        margin-bottom: 5px;
+        margin-bottom: 20px;
         font-size:15px !important;
 
     }
     .intro-designer{
         display: grid;
-        margin-left: 54vw;
+        margin-right: 5vw;
         grid-template-columns: repeat(1, 200px);
-        margin-top: -146px;
+        text-align: right;
+        float: right;
     }
     .intro-right{
         position: relative;
         text-align: right;
-        left: -16vw;
-        bottom: 60px;
+        width : 85vw;
+        margin : auto;
     }
     .intro-graduate-right{
         width:70vw;
         margin-left: auto;
-        margin-right: 2vw;
+        margin-right: auto;
         float: none;
         position: initial;
     }
@@ -182,11 +185,15 @@
     }
     .intro-graduate-comment {
         position: relative;
-        bottom: 163px;
-        right: -15vw;
+        width: 252px;
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        word-break: break-all;
     }
+
     .intro-title2 {
-        margin-bottom: 10px;
+        margin-bottom: 20px;
     }
     .intro-respond-font{
         font-size: 15px !important;
@@ -213,20 +220,16 @@
         line-height: 36px;
         margin-right: 2vw;
     }
-    .intro-professor{
-        margin-top: -210px;    
-    }
+
     .intro-commission {
-        /* position: relative; */
-        margin-bottom: 191px;
-        /* bottom: 23vh; */
-        margin-top: -114px
+        margin-bottom: 68px;
     }
 
-    .intro-course {
-        margin-bottom: 246px;
-    }
     .intro-title {
         margin-left: 6vw;
+    }
+
+    .intro-designer-name {
+        margin-right: 0px;
     }
 }
