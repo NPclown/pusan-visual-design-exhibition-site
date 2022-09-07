@@ -10,7 +10,7 @@ const {nanoid} = require("nanoid");
 const types = ["vd", "acd", "ds", "dmd"]
 
 index.use('/', express.static(path.resolve(__dirname, '../build')));
-// index.use(express.json());
+index.use(express.json());
 
 function date_format(time) {
     let date = new Date();
